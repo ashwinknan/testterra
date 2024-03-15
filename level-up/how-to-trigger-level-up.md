@@ -8,7 +8,7 @@ The example describes an update in the assets score after the main score reaches
 
 * Add all the assets onto the plane that you wish to contribute to the main score. Cube has been utilized, and the Collectable behavior has been implemented. Every time the player collides with the`Collectable`, the primary score will rise by 50.&#x20;
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 *
 
@@ -24,7 +24,7 @@ The example describes an update in the assets score after the main score reaches
 * Define `update_score` (Custom) as G**roup**, `Resource` as **Cost Type**, and `Main Score`(Ref to Main Score\_GameScore group) as the **Resource Tag**.
 * Navigate back to the Collectable template of Cube in the Inspector Panel. Choose the `IsMultiLevel` checkbox. As a result, the property can advance to a higher level. Following this, a Group drop-down menu will appear beneath IsMultiLevel. From the selection menu choose the update\_score (you created this in Level Mapper) group.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Now back to **Level Mapper** and define value and currency. You can read about these parameters here. To give you a brief overview of what these parameters do:&#x20;
 

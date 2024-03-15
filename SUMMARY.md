@@ -1,10 +1,16 @@
 # Table of contents
 
-## GETTING STARTED
+* [Home](README.md)
 
-* [What is Terra Studio?](README.md)
-* [How do I download Terra Studio?](getting-started/how-do-i-download-terra-studio.md)
-* [Getting set up](getting-started/getting-set-up.md)
+## OVERVIEW
+
+* [Getting Started](overview/getting-started/README.md)
+  * [Frameworks](overview/getting-started/frameworks.md)
+  * [Mood](overview/getting-started/mood.md)
+* [How do I download Terra Studio?](overview/how-do-i-download-terra-studio.md)
+* [FAQs](overview/faqs.md)
+* [Terra Studio Wiki](overview/terra-studio-wiki.md)
+* [Getting set up](overview/getting-set-up.md)
 
 ## Editor Essentials
 
