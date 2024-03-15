@@ -9,7 +9,6 @@
   * [Mood](overview/getting-started/mood.md)
 * [How do I download Terra Studio?](overview/how-do-i-download-terra-studio.md)
 * [FAQs](overview/faqs.md)
-* [Terra Studio Wiki](overview/terra-studio-wiki.md)
 * [Getting set up](overview/getting-set-up.md)
 
 ## Editor Essentials
