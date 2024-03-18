@@ -6,36 +6,36 @@ This section is Work in Progress. Expect more details about each behaviour templ
 
 Terra Studio currently supports the following behaviour templates:
 
-| Behaviour Template                           | What it Achieves                                                     |
-| -------------------------------------------- | -------------------------------------------------------------------- |
-| [`Collectible`](broken-reference)            | Collect this item and add / subtract points to your score            |
-| [`Push`](broken-reference)                   | Makes the object pushable by player                                  |
-| [`Kill`](broken-reference)                   | Kills a player / NPC instantly                                       |
-| [`Teleport`](broken-reference)               | Instantly moves the player to a defined position                     |
-| [`Destroy`](broken-reference)                | Eliminates the object from the scene upon interaction                |
-| [`Rotate`](broken-reference)                 | Adds rotational movement to the object                               |
-| [`Move`](broken-reference)                   | Adds linear movement to the object                                   |
-| [`Switch`](broken-reference)                 | Creates an "On" and "Off" State                                      |
-| [`Click`](broken-reference)                  | Broadcasts when the object is clicked                                |
-| [`Collide`](broken-reference)                | Broadcasts when the object is collided with                          |
-| [`Damageable`](broken-reference)             | Makes the object's health damageable with weapons                    |
-| [`Update Timer`](broken-reference)           | Adds / subtracts defined seconds to the game timer                   |
-| [`Update Score`](broken-reference)           | Adds / subtracts defined to the player's score                       |
-| [`Reset Time`](broken-reference)             | Resets timer to the original defined time                            |
-| [`Reset Score`](broken-reference)            | Resets the player’s score to 0                                       |
-| [`Melee Weapon`](broken-reference)           | A close-range weapon for hand-to-hand combat meant to inflict damage |
-| [`Instantiate`](broken-reference)            | Create instance(s) of the object at different times and/or areas     |
-| [`Increase Player Health`](broken-reference) | Adds to player health                                                |
-| [`Decrease Player Health`](broken-reference) | Damages or reduces player health                                     |
-| `Checkpoint`                                 | Save state for player progress in-game                               |
-| Level Up                                     | Alters object properties as game progresses                          |
-| Load New Scene                               | Triggers scene change                                                |
-| Start Player Movement                        | Player is allowed to move in the environment                         |
-| Stop Player Movement                         | Player movement is blocked                                           |
-| Move to Player                               | Objects move towards the player                                      |
-| Update Magnet                                | Updates magnet range of the player                                   |
-| Jump Pad                                     | Triggers a jump movement                                             |
-|                                              |                                                                      |
+| Behaviour Template                                    | What it Achieves                                                  |
+| ----------------------------------------------------- | ----------------------------------------------------------------- |
+| [`Collectable`](collectable.md)                       | Collect this item and add / subtract points to your score         |
+| [`Kill Player`](kill-player.md)                       | Kills a player instantly                                          |
+| `Teleport`                                            | Instantly moves the player to a defined position                  |
+| `Destroy`                                             | Eliminates the object from the scene upon interaction             |
+| `Rotate`                                              | Adds rotational movement to the object                            |
+| [`Move`](move.md)                                     | Adds linear movement to the object                                |
+| `Switch`                                              | Creates an "On" and "Off" State                                   |
+| `Click`                                               | Broadcasts when the object is clicked                             |
+| [`Collide`](collide.md)                               | Broadcasts when the object is collided with                       |
+| `Update Timer`                                        | Adds / subtracts defined seconds to the game timer                |
+| [`Update Player Score`](update-player-score.md)       | Adds / subtracts defined to the player's score                    |
+| `Reset Timer`                                         | Resets timer to the original defined time                         |
+| [`Reset Player Score`](reset-player-score.md)         | Resets the player’s score to 0                                    |
+| `Instantiate`                                         | Create instance(s) of the object at different times and/or areas  |
+| [`Increase Player Health`](increase-player-health.md) | Adds to player health                                             |
+| [`Decrease Player Health`](decrease-player-health.md) | Damages or reduces player health                                  |
+| [`Reset Player Health`](reset-player-health.md)       | Resets player health to full                                      |
+| [`Checkpoint`](checkpoint.md)                         | Save state for player progress in-game                            |
+| Level Up                                              | Alters object properties as game progresses                       |
+| [`Load New Scene`](load-new-scene.md)                 | Triggers scene change                                             |
+| [`Start Player Movement`](start-player-movement.md)   | Player is allowed to move in the environment                      |
+| [`Stop Player Movement`](stop-player-movement.md)     | Player movement is blocked                                        |
+| [`Move to Player`](move-to-player.md)                 | Objects move towards the player                                   |
+| Update Magnet                                         | Updates magnet range of the player                                |
+| Jump Pad                                              | Triggers a jump movement                                          |
+| Show UI                                               |                                                                   |
+| [`And Operator`](and-operator.md)                     | Requires all of the mentioned broadcasts to trigger the event     |
+| [`Or Operator`](or-operator.md)                       | Requires any one of the mentioned broadcasts to trigger the event |
 
 
 
