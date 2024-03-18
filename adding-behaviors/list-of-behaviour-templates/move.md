@@ -1,6 +1,6 @@
 # Move
 
-Move Template template can be attached to objects to provide <mark style="color:purple;">`mobility.`</mark>  Objects can move in `all three axes`, `oscillate between the 2 points`, and `send broadcast` to trigger another action.
+Move Template can be attached to objects to provide <mark style="color:purple;">`mobility.`</mark>  Objects can move in `all three axes`, `oscillate between the 2 points`, and `send broadcast` to trigger another action.
 
 You can customize the following parameters:
 

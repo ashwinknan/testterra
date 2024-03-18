@@ -1,6 +1,6 @@
 # Or Operator
 
-We use the Or Operator when we want an event to occur when <mark style="color:purple;">`either`</mark> of the defined events has taken place. When broadcasts are received from <mark style="color:purple;">`any event indicated`</mark> in the Or Operator behavior template, the template will perform a particular action.
+The Or Operator is used when you want an event to occur when <mark style="color:purple;">`either`</mark> one of the defined events has taken place. When broadcasts are received from <mark style="color:purple;">`any event indicated`</mark> in the Or Operator behavior template, the template will perform a particular action.
 
 Example: When the player completes either of the two checkpoints and the operator receives a broadcast message from <mark style="color:purple;">`either`</mark> of them, the next event scheduled by the behavior template is triggered.
 

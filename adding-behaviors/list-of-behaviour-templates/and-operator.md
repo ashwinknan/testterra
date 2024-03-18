@@ -1,6 +1,6 @@
 # And Operator
 
-We use the And Operator when we want an event to occur <mark style="color:purple;">`only`</mark> after a specific number of other events have taken place. When broadcasts are received from <mark style="color:purple;">`every event`</mark> indicated in the And Operator behavior template, the template will perform a particular action.
+The And Operator is used when you want an event to occur <mark style="color:purple;">`only`</mark> after a specific number of other events have taken place. When broadcasts are received from <mark style="color:purple;">`every event`</mark> indicated in the And Operator behavior template, the template will perform a particular action.
 
 Example: The player only wins the game if he completes both of the game's checkpoints. So here both the checkpoints will send a broadcast to the template when <mark style="color:red;">you reach those checkpoints</mark>. Once the behavior <mark style="color:red;">receives both broadcasts,</mark> the game will end.
 

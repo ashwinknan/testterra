@@ -45,6 +45,8 @@
   * [Stop Move](adding-behaviors/list-of-behaviour-templates/stop-move.md)
   * [Click](adding-behaviors/list-of-behaviour-templates/click.md)
   * [Delay](adding-behaviors/list-of-behaviour-templates/delay.md)
+  * [Update Timer](adding-behaviors/list-of-behaviour-templates/update-timer.md)
+  * [Reset Timer](adding-behaviors/list-of-behaviour-templates/reset-timer.md)
   * [Or Operator](adding-behaviors/list-of-behaviour-templates/or-operator.md)
   * [And Operator](adding-behaviors/list-of-behaviour-templates/and-operator.md)
   * [Reset Player Health](adding-behaviors/list-of-behaviour-templates/reset-player-health.md)
