@@ -40,6 +40,7 @@
 * [About Behaviour Templates](adding-behaviors/about-behaviour-templates.md)
 * [List of Behaviour Templates](adding-behaviors/list-of-behaviour-templates/README.md)
   * [Jump Pad](adding-behaviors/list-of-behaviour-templates/jump-pad.md)
+  * [Switch](adding-behaviors/list-of-behaviour-templates/switch.md)
   * [Destroy Self](adding-behaviors/list-of-behaviour-templates/destroy-self.md)
   * [Interpolate Points](adding-behaviors/list-of-behaviour-templates/interpolate-points.md)
   * [Instantiate](adding-behaviors/list-of-behaviour-templates/instantiate.md)
