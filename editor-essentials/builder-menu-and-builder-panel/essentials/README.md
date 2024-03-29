@@ -17,7 +17,7 @@ Some of the Essentials available in Terra Studio are:
 
 1.  &#x20;**How do I locate the player in the editor?**
 
-    Navigate to the Essentials Tab, click on the Player Controller Drawer, and press F. The player will be displayed.
+    Navigate to the Essentials Tab in the builder menu, click on the Player Controller Drawer, and press F. The player will be displayed.
 
 
 
