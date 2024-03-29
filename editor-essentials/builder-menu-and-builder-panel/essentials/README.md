@@ -13,11 +13,7 @@ Some of the Essentials available in Terra Studio are:
 **Note**: GlobalRenderSetting and LevelMapper are available by Default. The other essentials need to be manually added depending on your use-case. You can get more details about by clicking on their respective page links
 {% endhint %}
 
-#### FAQs:
 
-1.  &#x20;**How do I locate the player in the editor?**
-
-    Navigate to the Essentials Tab in the builder menu, click on the Player Controller Drawer, and press F. The player will be displayed.
 
 
 
