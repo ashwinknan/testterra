@@ -32,3 +32,11 @@ Below you can find all shortcuts and key commands that make working with Terra S
 | `Undo`                   | Ctrl + Z            | ⌘ + Z               | Undoes the last editing step.                                   |
 | `Redo`                   | Ctrl + Y            | ⇧ or ⌘ + Y          | Redoes the last editing step.                                   |
 | `Toggle Snap`            | Ctrl + 5            | ⇧ or ⌘ + 5          | Enable or disable snapping an object to another objects surface |
+
+### Steps to locate the player in the editor:
+
+1. Click on "Essentials" in the builder menu.
+2. Select "PlayerControllerDrawer."
+3. Press "F".
+
+You will then see the player.
