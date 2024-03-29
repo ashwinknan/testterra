@@ -16,7 +16,7 @@ layout:
 
 <figure><img src=".gitbook/assets/letsterra_cover (1).jpg" alt=""><figcaption></figcaption></figure>
 
-## Welcome to the official **Terra Studio Wiki** page!
+## Welcome to the official **Terra Studio Wiki** page
 
 Here, you'll find all the information you need to understand **Terra Studio**, a place where we're dedicated to bringing your imagination to life. Our Wiki is your one-stop destination for answers to all your questions.&#x20;
 
