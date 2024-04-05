@@ -4,4 +4,4 @@ Terra Studio is currently in closed alpha access.  You can apply on [our website
 
 <figure><img src="../.gitbook/assets/image (6) (1).png" alt="" width="563"><figcaption><p>Apply for early access from our website!</p></figcaption></figure>
 
-You can also join our  [Discord](https://discord.gg/XfrWb3P6) server to be updated.
+Join our [Discord server](https://discord.gg/XfrWb3P6) for updates.
