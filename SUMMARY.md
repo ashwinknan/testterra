@@ -124,7 +124,3 @@
 
 * [How to Upgrade Using An Asset](level-up/how-to-upgrade-using-an-asset.md)
 * [How To Trigger Level Up](level-up/how-to-trigger-level-up.md)
-
-***
-
-* [FAQs](faqs.md)
