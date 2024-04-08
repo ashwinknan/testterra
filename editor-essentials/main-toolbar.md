@@ -43,9 +43,5 @@ Once you hit the Publish button, your project will be sent for review purposes.&
 
 Once your project passes our standard procedures, it will be live on our app in 2-4 days.
 
-##
 
-
-
-###
 

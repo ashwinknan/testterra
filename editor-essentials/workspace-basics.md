@@ -38,7 +38,5 @@ Direct access to the Terra Team is available via the Support Chat. Here, you can
 
 Simply type your query into the chat, and a Terra Team member will provide you with the assistance you need.
 
-##
-
 
 

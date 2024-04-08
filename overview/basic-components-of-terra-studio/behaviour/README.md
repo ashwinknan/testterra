@@ -111,3 +111,18 @@ Dependent Behaviour:
 1. Delay
 2. Or operator&#x20;
 3. And operator&#x20;
+
+### How to add Behaviour?
+
+You can add a behavior to any asset using the following steps, in sequence:&#x20;
+
+* Select the asset by clicking on the asset, either in the workspace or on the [`Layers Panel`](../../../editor-essentials/builder-menu-and-builder-panel/layers.md)
+* Click on **`Add Behaviour`** in the [`Inspector Panel`](../../../editor-essentials/inspector-panel.md) on the right to open up a list of all available behaviour&#x20;
+* Select the relevant behaviour and Click **`Done`**.&#x20;
+* You can now scroll down the [`Inspector Panel`](../../../editor-essentials/inspector-panel.md) to find the added behaviors and all its customizable parameters
+
+### What is Broadcast?
+
+The Broadcast Property is a communication tool within our game editor that enables interactive and dynamic relationships between assets in your game. This feature allows one asset to send out a signal (broadcast) and other assets to respond to this signal by changing their behaviour or performing specific actions.
+
+This system of broadcasting and listening enables you to create complex, interactive environments where assets can influence each other's state and behaviour, making your game more immersive and dynamic.
