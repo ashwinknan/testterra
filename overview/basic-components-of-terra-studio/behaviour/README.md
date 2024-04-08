@@ -91,7 +91,7 @@ This structured approach to behaviors in Terra Studio significantly eases the ga
 31. Advance rotate&#x20;
 32. Play player's animation&#x20;
 33. Level up
-34. Debris&#x20;
+34. Debris Destructible&#x20;
 35. Destroy On Persistence
 36. Instantiate on element
 37. Instantiate persistently&#x20;
@@ -104,7 +104,7 @@ Dependent Behaviour:
 4. Stop move
 5. Start player movement
 6. Deposit&#x20;
-7. Debris Destructible&#x20;
+7. Debris&#x20;
 
 #### Joiners:&#x20;
 
