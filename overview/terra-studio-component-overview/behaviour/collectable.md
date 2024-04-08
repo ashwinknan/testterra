@@ -12,9 +12,9 @@ One or multiple triggers can be created, resulting in one or multiple outcomes.
 
 To add the Collectable behavior to an asset, follow these steps:
 
-1. In the Inspector panel, click on **Add Behavior**.
-2. From the list of behaviors, choose **Collectable**.
-3. Select the asset you wish to apply the Collectable behavior to.
+1. Select the asset you wish to apply the Collectable behavior to.
+2. In the Inspector panel, click on **Add Behavior**.
+3. From the list of behaviors, choose **Collectable**.
 
 You can customize the below-mentioned parameters according to your requirements:
 
