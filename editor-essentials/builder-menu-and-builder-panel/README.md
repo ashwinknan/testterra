@@ -8,7 +8,7 @@ This menu is found on the leftmost side of your screen, equipped with all the ne
 * [`Layers`](layers.md) - Allows for organising & duplicating assets across different layers
 * [`Essentials`](essentials/) - Includes properties of the game that are unrelated to the player or objects, such as the game timer, player characteristics etc
 * [`Particles`](particle.md) - Offers special effects like smoke, fire, or sparkles to enhance visual appeal
-* [`SFX`](../../overview/terra-studio-component-overview/playground/sfx.md) - Provides a selection of sound effects to improve the game's auditory experience
+* [`SFX`](../../overview/basic-components-of-terra-studio/playground/sfx.md) - Provides a selection of sound effects to improve the game's auditory experience
 * [`Scene`](scene-panel.md)- Enables setting up and customising the game's environments and levels
 
 ## Builder Panel

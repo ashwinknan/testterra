@@ -10,6 +10,14 @@ In Terra Studio, a "behavior" is a key component that allows game developers to 
 
 These behaviors are highly customizable, featuring adjustable parameters that empower developers to fine-tune their games to perfection. At its core, a behavior is defined by its trigger and the subsequent outcome it brings into the gaming environment.
 
+Behaviors, this refer to the scripts or logic assigned to individual assets within the game environment. These assets can be characters, objects, or any element that players can interact with or that can perform actions automatically. Behaviors are what make the game world dynamic and responsive to player actions. They can range from simple (e.g., moving an object) to complex (e.g., an NPC making decisions based on the player's actions) systems, depending on the game's requirements.&#x20;
+
+Behaviors are characterized by:
+
+* **Modularity**: Behaviors are often designed as modular logic blocks that can be easily attached to or detached from assets, allowing for flexible and reusable code.
+* **Interactivity and Responsiveness**: They directly influence how assets react to player inputs or other in-game events, creating an interactive gameplay environment.
+* **Customizability**: Developers can quickly implement and adjust behaviors to fine-tune the game's feel and mechanics, often without altering the core game systems.
+
 ### Trigger
 
 There are two primary categories of triggers:
