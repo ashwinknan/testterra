@@ -1,13 +1,22 @@
 # Jump Pad
 
-The Jump Pad behavior template multiplies the jump height of the player. When you come in contact with this behavior attached to an object, you jump at an increased height. After the jump action, the jump height is `restored` to the `initial value.`\
-\
-So, `every time` you collide with an object containing Jump Pad behavior, you will jump at an increased height.\
-\
-To add Jump Pad to an object:\
-<mark style="color:yellow;">Step 1</mark>: Select the object
+The Jump Pad boosts the player's jump height when attached to an asset. Upon touching an object with the Jump Pad behavior, the player's jump is elevated. After the jump action, the jump height is restored to the initial value.
 
-<mark style="color:yellow;">Step 2</mark>: Click on Add Behavior in the inspector panel, and select Jump Pad from the list of behaviors. You can customize the below-mentioned parameters according to your requirements:
+| Parameters  | Type                                                                                                 |
+| ----------- | ---------------------------------------------------------------------------------------------------- |
+| Trigger     | Interaction based triggers-  "Jump"                                                                  |
+| Outcome     | Visual or auditory effects (like - SFX,VFX), Change in player properties ,  Trigger another behavior |
+| Type        | Independent                                                                                          |
+
+One or multiple triggers can be created, resulting in one or multiple outcomes.
+
+To add the Jump Pad behavior to an asset, follow these steps:
+
+1. Select the asset you wish to apply the Jump Pad behavior to.
+2. In the Inspector panel, click on **Add Behavior**.
+3. From the list of behaviors, choose **Jump Pad**.
+
+You can customize the below-mentioned parameters according to your requirements:
 
 | Parameters     | Description                                                                                                                                                                   |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

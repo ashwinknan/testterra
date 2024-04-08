@@ -1,16 +1,22 @@
 # Collectable
 
-A Collectable is a behaviour in a game that can be collected for an increase in score or towards another goal.
+A Collectible is a behavior added to an asset in a game that can be collected to increase score or to achieve another goal.
 
-| Parameters  | Type                                                                                                               | Example                                                        |
-| ----------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
-| Trigger     | Interaction based triggers. For example:                                                                           |                                                                |
-| Outcome     | Visual or auditory effects, Change in game systems, Creation or elimination game objects, Trigger another behavior | score increase, SFX,VFX, destruction of collection, broadcast  |
-| Type        | Dependent                                                                                                          |                                                                |
+| Parameters  | Type                                                                                                                                                                    |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Trigger     | <p>Interaction based triggers. <br>For example: mouse clicks, player-asset collisions, On Trigger Stay, Magnet Range</p>                                                |
+| Outcome     | Visual or auditory effects (like - SFX,VFX ), Change in game systems (like change in score), Creation or elimination game objects, Trigger another behavior (broadcast) |
+| Type        | Independent                                                                                                                                                             |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 
-Customization Options available:
+To add the Collectable behavior to an asset, follow these steps:
+
+1. In the Inspector panel, click on **Add Behavior**.
+2. From the list of behaviors, choose **Collectable**.
+3. Select the asset you wish to apply the Collectable behavior to.
+
+You can customize the below-mentioned parameters according to your requirements:
 
 | Parameter               | Description                                                                                                                                                                                                           |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
