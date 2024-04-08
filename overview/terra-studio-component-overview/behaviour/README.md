@@ -6,40 +6,37 @@ description: The basic building blocks of game logic in Terra Studio
 
 ## Understanding Behaviors in Terra Studio
 
-In Terra Studio, a "behavior" is a key component that allows game developers to bring specific functionalities to life within their projects seamlessly, without any coding knowledge. Each behavior acts as a modular logic block that can be easily assigned to 3D objects through a drag-and-drop interface, followed by a simple configuration to meet the game’s design requirements.
+In Terra Studio, a "behavior" is a key component that allows game developers to bring specific functionalities to life within their projects seamlessly, without any coding knowledge. Each behavior acts as a modular logic block that can be easily assigned to Assets through a drag-and-drop interface, followed by a simple configuration to meet the game’s design requirements.
 
-These behaviors are highly customizable, featuring adjustable parameters that empower developers to fine-tune their games to perfection. At its core, a behavior is defined by its trigger mechanism and the subsequent effect it brings into the gaming environment.
+These behaviors are highly customizable, featuring adjustable parameters that empower developers to fine-tune their games to perfection. At its core, a behavior is defined by its trigger and the subsequent outcome it brings into the gaming environment.
 
-### Trigger Mechanisms
+### Trigger
 
 There are two primary categories of triggers:
 
 #### Interaction-Based Triggers
 
-These triggers are activated by direct player interaction within the game world, affecting both static and movable objects. They include:
+These triggers are activated by direct player interaction within the playground. They include:
 
 * **Mouse Clicks:** Actions are initiated by clicking on various elements in the game.
-* **Player-Asset Collisions:** Triggered when the player's character interacts with objects.
-* **Asset-Asset Collisions:** Activated through interactions between non-player objects.
+* **Player-Asset Collisions:** Triggered when the player's character interacts with Assets.
+* **Asset-Asset Collisions:** Activated through interactions between assets.
 
-#### Event-Based Triggers
+#### Event-Based Trigger
 
-Alternatively, these triggers respond to specific events within the game, further divided into:
+Other occurrences in the game can also act as triggers. For example, reaching significant game milestones like the start of the game or checkpoints, or receiving a broadcast from another event.
 
-* **Game Event Triggers:** Occur during significant game milestones, like the start of the game.
-* **Custom Event Triggers:** Triggered by custom-defined events within the gameplay environment.
+### Outcome:&#x20;
 
-### Potential Outcomes
+The activation of a trigger can lead to various outcomes, such as:
 
-The activation of a trigger can lead to diverse outcomes, such as:
-
-* Modifying player or asset attributes.
-* Environmental changes.
-* Game system updates.
-* Reorientation of game elements.
-* Enabling other behaviors.
-* Imparting visual or sound effects.
-* Creating or eliminating game entities.
+* Change in player or asset properties&#x20;
+* Change in environment
+* Change in game systems&#x20;
+* Change in asset's orientation&#x20;
+* Trigger another behavior
+* Visual or auditory effects
+* Creation or elimination game objects.
 
 ### Behavior Categories
 
@@ -50,3 +47,59 @@ To streamline development, behaviors are grouped into three distinct categories:
 * **Joiners:** Serve as a bridge, connecting various behaviors together.
 
 This structured approach to behaviors in Terra Studio significantly eases the game development process, enabling creators to bring their visions to life with greater efficiency and less technical complexity.
+
+#### **Independent Behaviors:**
+
+1. Click
+2. [Collectable](https://app.gitbook.com/o/qrOp5exMLmnPZxfhxQgu/s/Gd8RR9TPbiGza2LHqkh7/\~/changes/59/overview/terra-studio-component-overview/behaviour/behavior-categories/collectable)
+3. Collider&#x20;
+4. Destroy Self
+5. Grow or shrink
+6. Instantiate&#x20;
+7. Jump
+8. Pad
+9. Load scene
+10. Reset player Health
+11. Increase player Health
+12. Decrease player Health
+13. Modify&#x20;
+14. Reset Score&#x20;
+15. Reset Timer
+16. Kill player
+17. Rotate (Oscillate)&#x20;
+18. Rotate
+19. Teleport self
+20. Teleport player
+21. Move
+22. Update Score
+23. Update Timer
+24. Update Magnet
+25. Move to Player&#x20;
+26. Teleport
+27. Carriable
+28. Cinematic&#x20;
+29. Advance move
+30. Kill player old&#x20;
+31. Advance rotate&#x20;
+32. Play player's animation&#x20;
+33. Level up
+34. Debris&#x20;
+35. Destroy On Persistence
+36. Instantiate on element
+37. Instantiate persistently&#x20;
+
+Dependent Behaviour:
+
+1. Stop object animation&#x20;
+2. Stop player movement
+3. Stop rotate&#x20;
+4. Stop move
+5. Start player movement
+6. Deposit&#x20;
+7. Debris Destructible&#x20;
+
+#### Joiners:&#x20;
+
+1. Delay
+2. Or operator&#x20;
+3. And operator&#x20;
