@@ -35,7 +35,7 @@ The example describes an update in the assets score after the main score reaches
 
 <figure><img src="../../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
-* For the cubes to update their value when the main score reaches 200, you have to use the [`Broadcast feature`](../../../../adding-behaviors/broadcast.md). As the cubes have to keep track of the main score, you have to add `Special Broadcast` to the Main Score group.
+* For the cubes to update their value when the main score reaches 200, you have to use the [`Broadcast feature`](broken-reference). As the cubes have to keep track of the main score, you have to add `Special Broadcast` to the Main Score group.
 * Click on the Main Score Group in the Essential Builder Panel, this will open up the properties in the Inspector Panel. Now go to Special Broadcasts and define the parameters. You can read about the properties here.
 
 <figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
