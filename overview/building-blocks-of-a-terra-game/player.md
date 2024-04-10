@@ -1,5 +1,15 @@
 # Player
 
+**Primary Properties**: These properties are essential attributes that define the player's initial conditions and fundamental interactions with the game:
+
+* **Spawn Position**: The location within the game world where the player initially appears.
+* **Spawn Orientation**: The direction the player is facing upon entering the game world.
+* **Spawn Scale**: The size of the player's avatar upon spawning.
+* **Gameplay Controller**: The system that interprets the player's input (from keyboards, mice, gamepads, etc.) into actions performed by the player's avatar.
+* **Camera**: The perspective through which the player views the game world
+
+**Behavior Specific Properties**:  These properties dictate the specific actions and reactions of the player within the game world. They directly influence how the player interacts with the environment and other entities.
+
 ## Finding and Selecting the Player
 
 You can select the player by clicking on the player's avatar that is visible in the editor mode. If you are unable to find the player, you can follow these steps:&#x20;

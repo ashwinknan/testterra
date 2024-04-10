@@ -1,4 +1,13 @@
-# Playground
+# Game Scene Objects
+
+#### Game Scene Objects in Terra Studio
+
+In Terra Studio, everything in the game scene that contributes to the immersive gameplay experience falls under the category of game scene objects. These are the elements that players can see, hear, or interact with during gameplay through the player's perspective. Terra Studio classifies these objects into four main categories:
+
+* **Assets:** These are the visual elements, such as characters, items, and structures, that players can see and interact with in the game world.
+* **SFX (Sound Effects):** These are the auditory elements that enhance the game's atmosphere and realism. They include sounds from characters, environments, and actions.
+* **Particles:** These are small, graphical effects that simulate certain behaviors or natural elements, like smoke, fire, and magical effects, adding depth and realism to the game's visual presentation.
+* **Environment:** This includes the broader setting or backdrop of the game scene, encompassing weather conditions, lighting, and landscape features, which sets the mood and context for the player's adventure.
 
 ## Assets
 
