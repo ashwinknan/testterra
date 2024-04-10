@@ -1,21 +1,25 @@
-# Game Scene Objects
+# Setting up the Game Scene
 
-#### Game Scene Objects in Terra Studio
+Once you have the Player configured, you then proceed to set up your interactive world - game scene. There are four types of Game Scene blocks you need to set up to finish setting up your game scene:&#x20;
 
-In Terra Studio, everything in the game scene that contributes to the immersive gameplay experience falls under the category of game scene objects. These are the elements that players can see, hear, or interact with during gameplay through the player's perspective. Terra Studio classifies these objects into four main categories:
-
-* **Assets:** These are the visual elements, such as characters, items, and structures, that players can see and interact with in the game world.
-* **SFX (Sound Effects):** These are the auditory elements that enhance the game's atmosphere and realism. They include sounds from characters, environments, and actions.
-* **Particles:** These are small, graphical effects that simulate certain behaviors or natural elements, like smoke, fire, and magical effects, adding depth and realism to the game's visual presentation.
+* **Assets:** 3D elements, items, and structures, that players can see and interact with in the game world.
+* **SFX :** Auditory elements and sound effects
+* **Particles:** Visual effects like smoke, fire, and magical effects, adding depth and realism to the game's visual presentation.
 * **Environment:** This includes the broader setting or backdrop of the game scene, encompassing weather conditions, lighting, and landscape features, which sets the mood and context for the player's adventure.
+
+Here is how you can set up each of the above blocks in your scene:
 
 ## Assets
 
-Assets are any 3D objects that can be added to the game scene. You can view all assets by selecting "Asset" from the Builder Menu. You will be shown a library of all assets and their preview in the Library view. You can perform the following actions with Assets:&#x20;
+### Viewing and Adding New Assets to the Scene
 
-* **Add a Pre-made Asset**: To include a pre-made asset in your game, simply click on the desired asset, then drag and drop it into the game workspace. The In-Scene View will update to show a list of all assets you've added.
-* **Search for a Pre-made Asset**: Use the Asset Search Bar to find specific assets by typing in their names.
-* **Filter Assets**: Assets can be filtered by theme or category tags, making it easier to find what you need
+Terra Studio has a thousands of pre-made assets for creators to use directly in their game without having to bother about creating their assets. Here are the steps you need to follow:
+
+* Click on "Asset" in the Quick Access Menu.&#x20;
+* Select the "Library View" in the Asset Panel that shows up. You will be shown a library of all assets and their preview. You can search for your desired asset by&#x20;
+  * Typing Keywords in the Asset Search Bar
+  * Filtering Assets by theme or category tags
+* Once you find your desired asset, drag and drop it into the game workspace.&#x20;
 
 {% hint style="info" %}
 :dart:  Currently you cannot import your own assets in the game. However, in an upcoming release cycle, you'll be able to upload your assets directly into the Terra Studio environment, making it easier than ever to personalise your games and bring your unique visions to life.
@@ -23,13 +27,58 @@ Assets are any 3D objects that can be added to the game scene. You can view all 
 
 The In-Scene view lists all the assets you've selected and placed in your game workspace, allowing for easy tracking and management of your game's 3D objects.
 
+### Editing Asset Properties
+
+Once an Asset is added to the scene, you can click on it and view a list of its editable properties in the Inspector Panel. You can edit the following properties of the asset:&#x20;
+
+#### Editing Asset Initial Configuration
+
+You can adjust the initial position, initial rotation and initial scale of the Asset by changing the values manually in the inspector panel or by adjusting the Configuration Gizmo next to the Asset
+
+#### Editing Asset Appearance
+
+You can edit the asset's visual appearance by editing its material properties:&#x20;
+
+* _Color:_ Pick from the color wheel or set RGB values
+* _Emission Color_: Pick from the color wheel or set RGB values
+* _Texture_: Select from a list of available textures
+* _Metallic_: Specify a numerical value between 0 to 1
+* _Smoothness:_ Specify a numerical value between 0 to 1
+* _Shader_: Select from a list of available shaders
+* _Tiling_: Specify the X and Y tiling
+
+#### Specifying Asset Collider
+
+A Collider defines the physical boundaries of an object for collision detection. Colliders help determine when one object makes contact with another within a virtual space.
+
+For any object in Terra Studio, you select from one of four types of collider shapes from the Inspector Panel dropdown:
+
+* **Capsule:** Wraps the object in a capsule shape. Touching anywhere on the capsule counts as touching the object.
+* **Sphere:** Surrounds the object with a spherical barrier. Touching the sphere means you've touched the object.
+* **Box:** Encases the object in a box shape. Any contact with the box is like touching the object itself.
+* **Mesh:** Follows the exact shape of the object. You have to touch the actual surface of the object to register a touch.
+
+<mark style="color:red;">In addition, there is also an IsTrigger Toggle.</mark>
+
+### Adding Behaviors to Assets
+
+To add a Behavior block to your asset, follow these steps:
+
+1. Select the Asset either directly or through the Layers Panel
+2. Click the "Add Behavior" button located in the Inspector Panel when the asset is selected.
+3. A selection window will pop up, showing you the available Behavior Blocks that can be added to your asset. Choose the one you need.
+4. Click "OK" to add the selected Behavior block to your asset
+5. You will now see the added Behavior block along with its editable options at the bottom of the Inspector Panel, right under the sections for Transform, Material, and Collider Properties.&#x20;
+6. You can customise the default settings of the editable options to make the asset work as you wish.
+7. If you need to, you can add more than one Behavior block to an asset by  and repeating the steps above.
+
 ## SFX
 
 To infuse your game with more life and interactivity, sound effects (SFX) play a crucial role. Here's how to seamlessly integrate them into your game.
 
 ### **Selecting and Adding SFX**
 
-* **Navigate to the Builder Menu:** Start by opening the `Builder Menu` and selecting the `SFX` option. This will reveal a catalog of available sound effects suitable for your game's atmosphere and mechanics.
+* **Navigate to the Builder Menu:** Start by opening the Quick Access Menu and selecting the `SFX` option. This will reveal a catalog of available sound effects suitable for your game's atmosphere and mechanics.
 * **Preview SFX:** Ensure your selected SFX aligns with your vision by using the play button for a quick preview. This step is essential before setting the sound effect in stone.
 * **Add Sound Effects:** Spot the `+` icon next to your chosen SFX in the list. Clicking this will automatically add the sound effect into your game's environment.
 
@@ -46,15 +95,13 @@ Once an SFX is added, it appears in the Layers panel. Here, you can select it to
   * **Max Distance:** This helps you set the furthest distance at which the sound can be heard from its source.
   * **Minimum Distance:** Establishes the closest distance to the source needed to hear the sound, applicable when 3D audio is enabled.
 
-
-
 ## **Particles**
 
 Particles allow you to add moving elements such as fire, beams, aurora lights etc within the game environment.&#x20;
 
 ### **Selecting and Adding Particles**
 
-* **Selecting the Particles:** Start by opening the `Builder Menu` and selecting the Particles option. This will reveal a catalog of available particle effects with their preview suitable for your game's atmosphere and mechanics.
+* **Selecting the Particles:** Start by opening the Quick Access Menu and selecting the Particles option. This will reveal a catalog of available particle effects with their preview suitable for your game's atmosphere and mechanics.
 * **Adding Particles :**Click on the effect you want and drag and drop it to the desired location in your game.&#x20;
 
 ### Customizing Particle Properties
@@ -70,6 +117,6 @@ Once you have added a particle effect to the game, select it from the Layers Pan
 
 ## Game Environment
 
-This feature allows you to modify the visual aspects of the game's environment, providing tools to enhance the aesthetic and mood of your game world. You can alter the following&#x20;
+This feature allows you to modify the visual aspects of the game's environment, providing tools to enhance the aesthetic and mood of your game world. You can alter the following parameters of the skybox by selecting Essentials from the Quick Access Menu and the selecting GlobalRenderSettings in the Quick Access Panel. You will see the following editable parameters in the Inspector Panel.&#x20;
 
 <table><thead><tr><th width="271">Property</th><th>Description</th></tr></thead><tbody><tr><td><mark style="color:blue;"><code>Skybox</code></mark></td><td>Adjusts the game's backdrop to give the illusion of a more expansive space. It's like changing the scenery outside a window to make a room feel bigger.</td></tr><tr><td><mark style="color:blue;"><code>Bloom</code></mark></td><td>Creates a glow effect around bright areas in the game, simulating the way light behaves in the real world. It adds a touch of realism by making lights and reflections seem to spill over their boundaries.</td></tr><tr><td><mark style="color:blue;"><code>Vignette</code></mark></td><td>Applies a shading around the screen's edges, drawing the player's focus to the center. This effect can give your game a more dramatic and cinematic feel, as if you're peering through a lens.</td></tr><tr><td><mark style="color:blue;"><code>Fog</code></mark></td><td><p></p><p>Introduces a misty overlay that can be adjusted for depth and density, perfect for setting a mysterious or eerie atmosphere. It's like adding a thin veil over the game world that can make far-off objects seem obscured and distant.</p><p><br></p></td></tr></tbody></table>

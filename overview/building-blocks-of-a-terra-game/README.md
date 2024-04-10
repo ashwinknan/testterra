@@ -36,5 +36,9 @@ Game Systems can be divided into two categories:
 * **Primitive**: These are the basic systems that handle elementary functions such as timing (e.g., countdowns, time limits), scoring (e.g., points awarded for achievements). They are fundamental to almost all games and provide the necessary structure for more complex systems to build upon.
 * **Advanced**: These involve more sophisticated mechanics that can include progression mechanics (e.g., levels, unlocking features) AI behavior and economy systems (e.g., currency, trade)
 
+## Summary
+
+In summary, games are made with a "Player" block for the character avatar you control, and "Game Scene" blocks to build the world around them. "Behaviour" blocks make everything interactive, letting you play in the world. "Game System" blocks are the rules and setups that make the game fun and challenging, covering everything from keeping score to making things harder as you go.
+
 
 
