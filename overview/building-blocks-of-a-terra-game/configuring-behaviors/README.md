@@ -40,17 +40,21 @@ When you choose "Broadcast Listened" as the Start event, the Behavior only start
 
 ## Effects of Behavior Blocks
 
-A Behavior block when added to an Asset can be set up to not only affect that Asset, but also other Assets, the Player, the Game Scene or even Game Systems. The most common effects of Behavior blocks are :&#x20;
+A Behavior block when added to an Asset can be set up to not only affect that Asset, but also other Assets, the Player, the Game Scene or even Game Systems.&#x20;
+
+The most common effects of Behavior blocks are :&#x20;
 
 * Change in Player or Asset properties&#x20;
 * Change in Game Scene Environment
 * Change in Game Systems&#x20;
 * Change in an Asset's Orientation&#x20;
-* Trigger another behavior
-* Enable an SFX or Particle
 * Create or Elimination existing Game Scene Objects.
+* Generate a Broadcast Signal
+* Enable an SFX or Particle
 
-These effects can be configured in the Editable Properties of each behavior.&#x20;
+The last two effects - generating a broadcast signal and enabling an SFX or VFX is present in every behavior.&#x20;
+
+The other effects can be configured in the Editable Properties of each behavior.&#x20;
 
 ## Adding Behavior Blocks
 
@@ -64,7 +68,7 @@ To add behavior to an asset and customise it, follow these steps:
 
 ## Parallel Execution of Behavior Blocks
 
-You can add multiple Behaviors on the same Asset, each of which can function independently and gets independently triggered by its own Start Event. &#x20;
+You can execute multiple Behaviors on the same Asset in parallel. Each behavior can function independently and gets triggered by its own Start Event. &#x20;
 
 ## Sequential Execution of Behaviors&#x20;
 
@@ -77,7 +81,7 @@ You can execute behaviors sequentially one after the other  with broadcast signa
    * Change the Start Event of the second behavior to **Broadcast Listened**.
    * Specify the alphanumetic signal you set in the first step as the signal to listen for. This ensures the behavior only starts after receiving signal from the first behavior.
 
-### Behavior Categories
+## Behavior Categories
 
 To streamline development, behaviors are grouped into three distinct categories:
 
@@ -85,61 +89,41 @@ To streamline development, behaviors are grouped into three distinct categories:
 * **Independent Behaviors:** Operate without any external dependencies.
 * **Joiners:** Serve as a bridge, connecting various behaviors together.
 
-This structured approach to behaviors in Terra Studio significantly eases the game development process, enabling creators to bring their visions to life with greater efficiency and less technical complexity.
+## List of Available Behavior Blocks
 
-#### **Independent Behaviors:**
+Terra Studio has a wide selection of Behavior blocks for you to choose from. A Behavior can be added to any Asset and configured to elicit the interactivity you want in the game. The table below shows a list of Behavior blocks and a short description of what they do. A detailed description of each behavior is given in the respective behavior page.&#x20;
 
-1. Click
-2. [Collectable](https://app.gitbook.com/o/qrOp5exMLmnPZxfhxQgu/s/Gd8RR9TPbiGza2LHqkh7/\~/changes/59/overview/terra-studio-component-overview/behaviour/behavior-categories/collectable)
-3. Collider&#x20;
-4. Destroy Self
-5. Grow or shrink
-6. Instantiate&#x20;
-7. Jump
-8. Pad
-9. Load scene
-10. Reset player Health
-11. Increase player Health
-12. Decrease player Health
-13. Modify&#x20;
-14. Reset Score&#x20;
-15. Reset Timer
-16. Kill player
-17. Rotate (Oscillate)&#x20;
-18. Rotate
-19. Teleport self
-20. Teleport player
-21. Move
-22. Update Score
-23. Update Timer
-24. Update Magnet
-25. Move to Player&#x20;
-26. Teleport
-27. Carriable
-28. Cinematic&#x20;
-29. Advance move
-30. Kill player old&#x20;
-31. Advance rotate&#x20;
-32. Play player's animation&#x20;
-33. Level up
-34. Debris Destructible&#x20;
-35. Destroy On Persistence
-36. Instantiate on element
-37. Instantiate persistently&#x20;
+### Basic Behavior Blocks
 
-Dependent Behaviour:
+<table><thead><tr><th width="263">Behavior Block</th><th>Description</th></tr></thead><tbody><tr><td>Click</td><td>Can generate a broadcast signal or enable SFX / VFX on a mouse-click by the user</td></tr><tr><td>Collide</td><td>Can generate a broadcast signal or enable SFX / VFX on collision by another Asset or the Player</td></tr></tbody></table>
 
-1. Stop object animation&#x20;
-2. Stop player movement
-3. Stop rotate&#x20;
-4. Stop move
-5. Start player movement
-6. Deposit&#x20;
-7. Debris&#x20;
+### Behavior blocks that affect Asset position, size and movement
 
-#### Joiners:&#x20;
+<table><thead><tr><th width="261">Behavior Block</th><th>Description</th></tr></thead><tbody><tr><td>Move</td><td>Moves the Asset in a straight line path to a specified new position from its starting point.</td></tr><tr><td>Interpolate</td><td>Shifts the Asset from its starting spot through a path of straight or curved points as needed.</td></tr><tr><td>Move To Player</td><td>Moves the Asset to the Player</td></tr><tr><td>Advance Move</td><td>An enhanced Move block that moves an Asset but includes more sophisticated options for customisation</td></tr><tr><td>Stop Move</td><td>Disables the Move block on the Asset</td></tr><tr><td>Rotate</td><td>Rotates the Asset about a chosen axis</td></tr><tr><td>Advance Rotate</td><td>An enhanced Rotate block that allows you to rotate an Asset about a chosen axis, offering additional sophisticated options.</td></tr><tr><td>Rotate (Oscillate)</td><td>Oscilates the Asset about a specified axis within a specified rotation about the initial position</td></tr><tr><td>Stop Rotate</td><td>Disables the Rotate block on the Asset</td></tr><tr><td>Grow / Shrink</td><td>Increases or decreases the size of the Asset</td></tr><tr><td>Teleport</td><td>Instantly spawns the Asset in a new specified position </td></tr></tbody></table>
 
-1. Delay
-2. Or operator&#x20;
-3. And operator&#x20;
+### Behavior blocks that affect Player position and movement
+
+<table><thead><tr><th width="261">Behavior block</th><th>Description</th></tr></thead><tbody><tr><td>Teleport Player</td><td>Instantly spawns the Player in a new specified position</td></tr><tr><td>Jump Pad</td><td>Creates a jump enhancement for the player upon contact</td></tr><tr><td>Stop Player Movement</td><td>Stops any movement of the player</td></tr></tbody></table>
+
+
+
+### Behavior blocks that affect Game Systems
+
+<table><thead><tr><th width="259">Behavior block</th><th>Description</th></tr></thead><tbody><tr><td>Update Score</td><td>Updates a specific score group to a new specified value</td></tr><tr><td>Reset Score</td><td>Resets the specified score group to zero</td></tr><tr><td>Update Timer</td><td>Updates the timer  to a new specified value</td></tr><tr><td>Reset Timer</td><td>Resets the timer to zero</td></tr><tr><td>Increase Player Health</td><td>Increases the player Health value by the specific amount</td></tr><tr><td>Decrease Player Health</td><td>Decreases the player Health value by a specific amount</td></tr><tr><td>Reset Player Health</td><td>Resets the player Health value to zero</td></tr><tr><td>Level Up</td><td>Guides the Level Mapper on how to increase a property's level to the next tier.</td></tr><tr><td>Load Scene</td><td>Loads a New Scene</td></tr><tr><td>ShowUI</td><td>Displays a UI on the screen</td></tr></tbody></table>
+
+### Behavior blocks that affect the relationship of an Asset with the player
+
+<table><thead><tr><th width="261">Behavior block</th><th>Description</th></tr></thead><tbody><tr><td>Carriable</td><td>Enables an Asset to be carried by the Player. The Asset will now move with the Player</td></tr><tr><td>Deposit</td><td>Enables the Player to transfer the Carriable Asset and deposit it to a new Asset which is a storage</td></tr><tr><td>Collectable</td><td>Enables an object to be collected by the player and update the game score. Used in Power-ups. </td></tr></tbody></table>
+
+### Behavior blocks that create or destroy the Player or Assets
+
+<table><thead><tr><th width="262">Behavior block</th><th>Description</th></tr></thead><tbody><tr><td>Destroy Self</td><td>Destroys the Asset from the scene</td></tr><tr><td>Kill Player</td><td>Respawns the player to the start of the level</td></tr><tr><td>Instantiate</td><td>Spawns new instances of an Asset at a specified rate (per x seconds)</td></tr><tr><td>Instantiate On Event</td><td>Spawns new instances of an Asset when a Start Event happens </td></tr></tbody></table>
+
+### Miscellaneous Behavior blocks
+
+<table><thead><tr><th width="263">Behavior block</th><th>Description</th></tr></thead><tbody><tr><td>Cinematic</td><td>Changes the camera position and angle during play</td></tr><tr><td>Play Player Animation</td><td>Plays a specified player animation</td></tr><tr><td>Stop Player Animation</td><td>Stops any player animation</td></tr></tbody></table>
+
+### Behavior blocks that act as joiners
+
+<table><thead><tr><th width="264">Behavior Block</th><th></th></tr></thead><tbody><tr><td>Delay</td><td>Introduces a delay of a specified time</td></tr><tr><td>And Operator</td><td>Acts as a gate that sends out a broadcast signal only after all required conditions are met. These conditions are broadcast signals from various sources. It won't activate until every condition is satisfied.</td></tr><tr><td>Or Operator</td><td>Acts as a gate that sends out a broadcast signal only after any one of the  required conditions are met. These conditions are broadcast signals from various sources. </td></tr></tbody></table>
 
