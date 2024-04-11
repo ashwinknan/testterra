@@ -1,6 +1,6 @@
 # Update Score
 
-You may want to enhance the gameplay experience by adjusting the game score when specific conditions are met. For instance:
+You may want to enhance the gameplay experience by adjusting the game [score ](../setting-up-game-systems/#score)when specific conditions are met. For instance:
 
 * Update the score when the player collects items such as coins, gems, or power-ups. This promotes exploration and rewards the player's curiosity.
 * Increase the score upon completing a level or reaching a milestone, such as finishing a race track or solving a puzzle.
