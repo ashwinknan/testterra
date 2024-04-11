@@ -4,11 +4,11 @@ The destroy self behaviour is used when you want to remove or destroy assets fro
 
 This behaviour is very similar to the Collectable behaviour, the only difference being that the Collectable contributes to a score group and this does not. In both behaviour, the asset disappears after the trigger.
 
-| Parameters  | Type                                                                                                                                                |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | Interaction based triggers(For example: player collides, mouse clicked, other assets collides), Event based trigger (Broadcast listen, game starts) |
-| Effect      | Visual or auditory effects (like - SFX,VFX), Elimination game object, Change in game systems(Win or loose), Trigger another behavior                |
-| Type        | Independent                                                                                                                                         |
+| Parameters  | Type                                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------------- |
+| Start Event | game start, player touches, other object touches, mouse clicked, broadcast listened             |
+| Effect      | Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                     |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 

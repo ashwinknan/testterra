@@ -8,11 +8,11 @@ The debris resulting from destruction is defined using the Debris Behavior. Thus
 
 This integration fosters a dynamic and immersive destruction sequence, augmenting the realism and immersion of the game world.
 
-| Parameters  | Type                                                                                                                                                                      |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | Interaction based triggers(For example: player collides, mouse clicked, other assets collides), Event based trigger (Broadcast listen)                                    |
-| Effect      | Visual or auditory effects (like - SFX,VFX),  Change in environment, Creation or elimination game objects, Change in game systems(Win or loose), Trigger another behavior |
-| Type        | Independent                                                                                                                                                               |
+| Parameters  | Type                                                                                            |
+| ----------- | ----------------------------------------------------------------------------------------------- |
+| Start Event | player touches, other object touches, mouse clicked, broadcast listened                         |
+| Effect      | Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                     |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 

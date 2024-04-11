@@ -2,11 +2,11 @@
 
 A Collectible is a behavior added to an asset in a game that can be collected to increase score or to achieve another goal.
 
-| Parameters  | Type                                                                                                                                                                    |
-| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | <p>Interaction based triggers. <br>For example: mouse clicks, player-asset collisions, On Trigger Stay, Magnet Range</p>                                                |
-| Effects     | Visual or auditory effects (like - SFX,VFX ), Change in game systems (like change in score), Creation or elimination game objects, Trigger another behavior (broadcast) |
-| Type        | Independent                                                                                                                                                             |
+| Parameters  | Type                                                                                                                              |
+| ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| Start Event | player touches, mouse clicked, On Trigger Stay, magnetic range                                                                    |
+| Effects     | Change in Game Systems, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                                                       |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 
@@ -26,5 +26,5 @@ You can customize the below-mentioned parameters according to your requirements:
 | Score Group             | The point of the Collectable will be contributed to the score group. You can either add it to Main Score group or make your own custom group                                                                          |
 | Update Score By         | <p>Enter a numerical score value to update when collected.<br>✨ Note: to reduce a score when collected, enter a negative value!</p>                                                                                   |
 | IsMultiLevel            | Enabling this parameter can upgrade to a higher value on level up                                                                                                                                                     |
-| Broadcast On Collection | <p>Choose to enter a broadcast that can be used as a trigger for any other behaviour.<br><code>The broadcast is sent when the item is collected</code></p>                                                            |
+| Broadcast On Collection | <p>Choose to enter a broadcast that can be used as a trigger for any other behaviour.<br>The broadcast is sent when the item is collected</p>                                                                         |
 
