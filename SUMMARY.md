@@ -44,11 +44,7 @@
       * [Show UI Icons](overview/building-blocks-of-a-terra-game/configuring-behaviors/showui/show-ui-icons.md)
     * [Kill Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/kill-player.md)
     * [Checkpoint](overview/building-blocks-of-a-terra-game/configuring-behaviors/checkpoint.md)
-  * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems/README.md)
-    * [Primitive Game System](overview/building-blocks-of-a-terra-game/setting-up-game-systems/primitive-game-system.md)
-    * [Complex Game System](overview/building-blocks-of-a-terra-game/setting-up-game-systems/complex-game-system/README.md)
-      * [How to Upgrade Using An Asset](overview/building-blocks-of-a-terra-game/setting-up-game-systems/complex-game-system/how-to-upgrade-using-an-asset.md)
-      * [How To Trigger Level Up](overview/building-blocks-of-a-terra-game/setting-up-game-systems/complex-game-system/how-to-trigger-level-up.md)
+  * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems.md)
 
 ## Editor Essentials
 
