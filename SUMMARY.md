@@ -22,15 +22,15 @@
     * [Delay](overview/building-blocks-of-a-terra-game/configuring-behaviors/delay.md)
     * [Update Timer](overview/building-blocks-of-a-terra-game/configuring-behaviors/update-timer.md)
     * [Or Operator](overview/building-blocks-of-a-terra-game/configuring-behaviors/or-operator.md)
-    * [Reset Timer](overview/building-blocks-of-a-terra-game/configuring-behaviors/reset-timer.md)
     * [And Operator](overview/building-blocks-of-a-terra-game/configuring-behaviors/and-operator.md)
+    * [Reset Timer](overview/building-blocks-of-a-terra-game/configuring-behaviors/reset-timer.md)
     * [Reset Player Health](overview/building-blocks-of-a-terra-game/configuring-behaviors/reset-player-health.md)
     * [Increase Player Health](overview/building-blocks-of-a-terra-game/configuring-behaviors/increase-player-health.md)
     * [Update Magnet](overview/building-blocks-of-a-terra-game/configuring-behaviors/update-magnet.md)
     * [Decrease Player Health](overview/building-blocks-of-a-terra-game/configuring-behaviors/decrease-player-health.md)
     * [Stop Rotate](overview/building-blocks-of-a-terra-game/configuring-behaviors/stop-rotate.md)
+    * [Update Score](overview/building-blocks-of-a-terra-game/configuring-behaviors/update-score.md)
     * [Stop Move](overview/building-blocks-of-a-terra-game/configuring-behaviors/stop-move.md)
-    * [Update Player Score](overview/building-blocks-of-a-terra-game/configuring-behaviors/update-player-score.md)
     * [Reset Player Score](overview/building-blocks-of-a-terra-game/configuring-behaviors/reset-player-score.md)
     * [Move](overview/building-blocks-of-a-terra-game/configuring-behaviors/move.md)
     * [Rotate](overview/building-blocks-of-a-terra-game/configuring-behaviors/rotate.md)
@@ -44,7 +44,7 @@
       * [Show UI Icons](overview/building-blocks-of-a-terra-game/configuring-behaviors/showui/show-ui-icons.md)
     * [Kill Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/kill-player.md)
     * [Checkpoint](overview/building-blocks-of-a-terra-game/configuring-behaviors/checkpoint.md)
-  * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems.md)
+  * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems/README.md)
 
 ## Editor Essentials
 

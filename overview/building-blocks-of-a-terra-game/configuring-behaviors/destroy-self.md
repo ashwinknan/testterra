@@ -6,8 +6,8 @@ This behaviour is very similar to the Collectable behaviour, the only difference
 
 | Parameters  | Type                                                                                                                                                |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trigger     | Interaction based triggers(For example: player collides, mouse clicked, other assets collides), Event based trigger (Broadcast listen, game starts) |
-| Outcome     | Visual or auditory effects (like - SFX,VFX), Elimination game object, Change in game systems(Win or loose), Trigger another behavior                |
+| Start Event | Interaction based triggers(For example: player collides, mouse clicked, other assets collides), Event based trigger (Broadcast listen, game starts) |
+| Effect      | Visual or auditory effects (like - SFX,VFX), Elimination game object, Change in game systems(Win or loose), Trigger another behavior                |
 | Type        | Independent                                                                                                                                         |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.

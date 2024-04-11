@@ -6,8 +6,8 @@ For instance, suppose a cube possesses a switch behavior. In that case, when the
 
 | Parameters  | Type                                                                                                                                                  |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trigger     | Interaction based triggers(For example: Player exits, player collides, mouse clicked, other assets collides,), Event based trigger (Broadcast listen) |
-| Outcome     | Visual or auditory effects (like - SFX,VFX),  Trigger another behavior                                                                                |
+| Start Event | Interaction based triggers(For example: Player exits, player collides, mouse clicked, other assets collides,), Event based trigger (Broadcast listen) |
+| Effect      | Visual or auditory effects (like - SFX,VFX),  Trigger another behavior                                                                                |
 | Type        | Independent                                                                                                                                           |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.

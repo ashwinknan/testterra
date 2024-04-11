@@ -4,11 +4,11 @@ The Instantiate behavior facilitates the dynamic spawning of identical objects i
 
 You can determine where objects appear in the game scene by specifying a range of X, Y, and Z coordinates or by randomizing their location within a designated area. With the first method, you have precise control over the specific combinations of coordinates where objects will spawn. Alternatively, using the random allocation option, you can define an area using the record feature, allowing objects to appear randomly within that area during gameplay.
 
-| Parameters  | Type                                                                                                                  |
-| ----------- | --------------------------------------------------------------------------------------------------------------------- |
-| Trigger     | Event based trigger (Broadcast listen, game starts)                                                                   |
-| Outcome     | Visual or auditory effects (like - SFX,VFX), Creation of game object, Trigger another behavior, Change in environment |
-| Type        | Independent                                                                                                           |
+| Parameters   | Type                                                                                                                  |
+| ------------ | --------------------------------------------------------------------------------------------------------------------- |
+| Start Event  | Event based trigger (Broadcast listen, game starts)                                                                   |
+| Effect       | Visual or auditory effects (like - SFX,VFX), Creation of game object, Trigger another behavior, Change in environment |
+| Type         | Independent                                                                                                           |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 

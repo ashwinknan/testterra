@@ -1,12 +1,21 @@
 # Or Operator
 
-The Or Operator is used when you want an event to occur when <mark style="color:purple;">`either`</mark> one of the defined events has taken place. When broadcasts are received from <mark style="color:purple;">`any event indicated`</mark> in the Or Operator behavior template, the template will perform a particular action.
+The Or Operator is used when you want an event to occur when either one of the defined events has taken place. When broadcasts are received from any event indicated in the Or Operator behavior, the behaviour will perform a particular action.
 
-Example: When the player completes either of the two checkpoints and the operator receives a broadcast message from <mark style="color:purple;">`either`</mark> of them, the next event scheduled by the behavior template is triggered.
+Example: When the player completes either of the two checkpoints and the operator receives a broadcast message from either of them, the next event scheduled by the behavour is triggered.
 
-To add this behavior, follow these steps:&#x20;
+| Parameters  | Type                        |
+| ----------- | --------------------------- |
+| Start Event | broadcast listened          |
+| Effects     | Generate a Broadcast Signal |
+| Type        | joiner                      |
 
-* <mark style="color:yellow;">Step 1</mark>: Select the object or trigger to which you want to apply this template
-* <mark style="color:yellow;">Step 2</mark>: Enter the following parameters to customize the behavior:
+To add the Or operator  behavior to an asset, follow these steps:
 
-<table><thead><tr><th width="257">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Wait For (Listen for)</td><td>Choose the broadcasts that are <mark style="color:yellow;">prerequisites</mark> for the operator to do further tasks. You can choose broadcasts from the selection menu. </td></tr><tr><td>Broadcast Data</td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br><code>The broadcast is sent when the behaviour template has received either of the  broadcast messages.</code></td></tr><tr><td></td><td></td></tr></tbody></table>
+1. Select the asset you wish to apply the Or operator  behavior to.
+2. In the Inspector panel, click on **Add Behavior**.
+3. From the list of behaviors, choose **Or operator** **.**
+
+You can customize the below-mentioned parameters according to your requirements:
+
+<table><thead><tr><th width="257">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Wait For (Listen for)</td><td>Choose the broadcasts that are prerequisites for the operator to do further tasks. You can choose broadcasts from the selection menu. </td></tr><tr><td>Broadcast Data</td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the behaviour has received either of the  broadcast messages.</td></tr><tr><td></td><td></td></tr></tbody></table>

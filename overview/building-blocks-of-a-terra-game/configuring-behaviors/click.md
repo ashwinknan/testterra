@@ -9,8 +9,8 @@ The Click behavior enables you to send a broadcast when you click on an asset. H
 
 | Parameters  | Type                                                                                                                             |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| Trigger     | Interaction based triggers- "mouse clicks"                                                                                       |
-| Outcome     | Visual or auditory effects (like - SFX,VFX ), Change in game systems (like change in score),Trigger another behavior (broadcast) |
+| Start Event | Interaction based triggers- "mouse clicks"                                                                                       |
+| Effect      | Visual or auditory effects (like - SFX,VFX ), Change in game systems (like change in score),Trigger another behavior (broadcast) |
 | Type        | Independent                                                                                                                      |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.

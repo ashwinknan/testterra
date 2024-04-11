@@ -10,8 +10,8 @@ This integration fosters a dynamic and immersive destruction sequence, augmentin
 
 | Parameters  | Type                                                                                                                                                                      |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Trigger     | Interaction based triggers(For example: player collides, mouse clicked, other assets collides), Event based trigger (Broadcast listen)                                    |
-| Outcome     | Visual or auditory effects (like - SFX,VFX),  Change in environment, Creation or elimination game objects, Change in game systems(Win or loose), Trigger another behavior |
+| Start Event | Interaction based triggers(For example: player collides, mouse clicked, other assets collides), Event based trigger (Broadcast listen)                                    |
+| Effect      | Visual or auditory effects (like - SFX,VFX),  Change in environment, Creation or elimination game objects, Change in game systems(Win or loose), Trigger another behavior |
 | Type        | Independent                                                                                                                                                               |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.

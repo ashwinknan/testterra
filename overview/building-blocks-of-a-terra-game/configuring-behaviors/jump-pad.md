@@ -4,8 +4,8 @@ The Jump Pad boosts the player's jump height when attached to an asset. Upon tou
 
 | Parameters  | Type                                                                                                 |
 | ----------- | ---------------------------------------------------------------------------------------------------- |
-| Trigger     | Interaction based triggers-  "Jump"                                                                  |
-| Outcome     | Visual or auditory effects (like - SFX,VFX), Change in player properties ,  Trigger another behavior |
+| Start Event | Interaction based triggers-  "Jump"                                                                  |
+| Effects     | Visual or auditory effects (like - SFX,VFX), Change in player properties ,  Trigger another behavior |
 | Type        | Independent                                                                                          |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.

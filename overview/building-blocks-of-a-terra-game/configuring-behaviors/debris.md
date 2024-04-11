@@ -4,8 +4,8 @@ The Debris behavior plays a crucial role in shaping the post-destruction landsca
 
 | Parameters  | Type       |
 | ----------- | ---------- |
-| Trigger     |            |
-| Outcome     |            |
+| Start Event |            |
+| Effect      |            |
 | Type        | Dependent  |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
