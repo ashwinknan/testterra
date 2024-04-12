@@ -1,15 +1,15 @@
 # ShowUI Prefabs
 
-ShowUI currently has a lot of pre-defined UI layouts that you can use to display a UI in the game. You can select any UI from a dropdown under <mark style="color:purple;">UI To Show</mark>**.**  The name and layout of each UI is listed in the table [`Available UI Prefabs`](showui-prefabs.md#available-ui-prefabs). Each layout has two types of elements :
+ShowUI offers a wide selection of pre-defined UI layouts that can be used to display a UI in your game. You can choose any UI from the dropdown menu under "UI To Show." The name and layout of each UI are provided in the "Available UI Prefabs" table below. Each layout contains two types of elements:
 
-* Editable Text : A maximum of 3 text elements can be used, namely <mark style="color:purple;">Text 1</mark>, <mark style="color:purple;">Text 2</mark> and <mark style="color:purple;">Text 3</mark>. You can directly enter the text you want to be shown here in the field.&#x20;
-* Icons : A maximum of 2 icons namely - <mark style="color:purple;">Icon 1</mark>, <mark style="color:purple;">Icon 2</mark>. To access or change an available icon, you need to enter the name of the icon from the list of all available [`ShowUI Icons`](broken-reference).
+* **Editable Text**: You can include up to three text elements—Text 1, Text 2, and Text 3. You can directly input the desired text in these fields.
+* **Icons**: You can use up to two icons—Icon 1 and Icon 2. To access or modify an icon, simply input the icon's name from the list of available [ShowUI Icons](show-ui-icons.md).
 
-You can see the entire procedure of how to add UI elements by going back to [`ShowUI`](broken-reference)
+For a complete guide on adding UI elements, refer to the [ShowUI](./) documentation.
 
 ### Available UI Prefabs
 
-The table below shows the layout and the positioning of <mark style="color:purple;">Icon 1</mark>, <mark style="color:purple;">Icon 2</mark>, <mark style="color:purple;">Text 1</mark>, <mark style="color:purple;">Text 2</mark> and <mark style="color:purple;">Text 3</mark> for each pre-fab. Select a layout you wish to choose from the dropdown under UI To Show
+The table below displays the layout and positioning of Icon 1, Icon 2, Text 1, Text 2, and Text 3 for each prefab. Choose a layout from the dropdown menu under "UI To Show."
 
 | UI To Show                   | UI Layout                                                                     |
 | ---------------------------- | ----------------------------------------------------------------------------- |

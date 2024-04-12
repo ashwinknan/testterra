@@ -1,35 +1,35 @@
 # ShowUI
 
-The ShowUI Behaviour enables the player to add UI elements to pop up on the screen. Terra Studio has pre-defined UI templates as shown below.
+The ShowUI behavior allows the creator to display UI elements on the screen in response to player interactions with game objects.
 
-| Parameters  | Type                                                                                                                                                                                                                                        |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | game start, player touches, other object touches, mouse clicked, broadcast listened                                                                                                                                                         |
-| Effects     | Change in Player or Asset properties, Change in Game Scene Environment, Change in Game Systems, Change in an Asset's Orientation, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                                                                                                                                                                 |
+| Parameters  | Type                                                                                |
+| ----------- | ----------------------------------------------------------------------------------- |
+| Start Event | game start, player touches, other object touches, mouse clicked, broadcast listened |
+| Effects     | Display UI elements, Generate a Broadcast Signal                                    |
+| Type        | Independent                                                                         |
 
-To add the Update Score behavior to an asset, follow these steps:
+To add the ShowUI behavior to an asset, follow these steps:
 
-1. Select the asset you wish to apply the Update Score behavior to.
+1. Select the asset you wish to apply the ShowUI behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **Update Score.**
+3. From the list of behaviors, choose **ShowUI.**
 
-You can customize the below-mentioned parameters according to your requirements:
+Terra Studio has pre-defined UI as shown below.
 
-<mark style="color:yellow;">**Step 1**</mark>: First you select any asset as a Check-point and add the `ShowUI` Behaviour to it by clicking <mark style="color:purple;">OK</mark>.
+**`Step 1`**`:` First you select any asset as a Check-point and add the `ShowUI` Behaviour to it by clicking OK.
 
 <figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.05.21 AM.png" alt="" width="185"><figcaption></figcaption></figure>
 
-<mark style="color:yellow;">**Step 2**</mark>**:** Scroll down the inspector panel to see the ShowUI template parameters.&#x20;
+**`Step 2:`** Scroll down the inspector panel to see the ShowUI behaviour parameters.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.56.54 AM.png" alt="" width="298"><figcaption><p>All editable parameters in ShowUI</p></figcaption></figure>
 
-<mark style="color:yellow;">**Step 3**</mark>: First click on <mark style="color:purple;">Show On</mark> to select the trigger for the UI. There are four possible triggers available currently.&#x20;
+`Step 3:` First click on Show On to select the trigger for the UI. There are four possible triggers available currently.&#x20;
 
 <figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.06.12 AM.png" alt="" width="153"><figcaption><p>The possible triggers for a ShowUI Behavior</p></figcaption></figure>
 
-<mark style="color:yellow;">**Step 3**</mark>: After selecting the trigger, decide on an animation and position of the UI. Then you need to you need to select <mark style="color:purple;">UI to Show</mark> and then enter the name of the icons & editable text. These names and layouts are available in [`ShowUI Prefabs`](broken-reference).&#x20;
+**Step 3**: After selecting the trigger, decide on an animation and position of the UI. Then you need to select UI to Show and then enter the name of the icons & editable text. These names and layouts are available in [`ShowUI Prefabs`](showui-prefabs.md).&#x20;
 
-<mark style="color:yellow;">**Step 4**</mark>: Finally select the <mark style="color:purple;">Animation Time</mark> , <mark style="color:purple;">Display Time</mark> and any <mark style="color:purple;">Broadcast</mark> you may want to do and save the UI.&#x20;
+**`Step 4`**`:` Finally select the Animation Time , Display Time and any Broadcast you may want to do and save the UI.&#x20;
 
-<mark style="color:yellow;">**Step 5**</mark>: Play test and see if the UI is appearing as per your plan.&#x20;
+**`Step 5`**`:` Play test and see if the UI is appearing as per your plan.&#x20;

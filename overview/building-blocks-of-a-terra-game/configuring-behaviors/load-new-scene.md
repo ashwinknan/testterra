@@ -1,25 +1,21 @@
 # Load New Scene
 
-Load New Scene template allows you to transition from one game environment to another, such as moving from one level to the next or entering a different area.&#x20;
+The Load New Scene behavior enables you to transition from one game environment to another, such as progressing from one level to the next or exploring a new area. This behavior is linked to an object that initiates the transition when triggered.
 
-The template is attached to an <mark style="color:yellow;">object</mark> which will trigger the change.
+It can also be utilized for cinematic sequences, menu screens, or any other significant change in the game's environment or gameplay.
 
-It can also be used for <mark style="color:purple;">cinematic sequences</mark>, <mark style="color:purple;">menu screens</mark>, or any other major change in the game's environment or gameplay.
+| Parameters  | Type                                                                    |
+| ----------- | ----------------------------------------------------------------------- |
+| Start Event | player touches, other object touches, mouse clicked, broadcast listened |
+| Effects     | Change in Game Scene Environment                                        |
+| Type        | Independent                                                             |
 
-| Parameters  | Type                                                                                                                                                                                                                                        |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | game start, player touches, other object touches, mouse clicked, broadcast listened                                                                                                                                                         |
-| Effects     | Change in Player or Asset properties, Change in Game Scene Environment, Change in Game Systems, Change in an Asset's Orientation, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                                                                                                                                                                 |
+To add the Load New Scene behavior to an asset, follow these steps:
 
-To add the Update Score behavior to an asset, follow these steps:
-
-1. Select the asset you wish to apply the Update Score behavior to.
+1. Select the asset you wish to apply the Load New Scene behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **Update Score.**
+3. From the list of behaviors, choose **Load New Scene.**
 
 You can customize the below-mentioned parameters according to your requirements:
 
-You can customize:
-
-<table><thead><tr><th width="264">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Load Scene When</td><td>Choose when to transition to a different scene. You can transition <br>- After a broadcast message has been received by the <mark style="color:yellow;">object</mark><br>- When the player touches the <mark style="color:yellow;">object</mark><br>- When a different object touches the <mark style="color:yellow;">object</mark><br>- When you click on the <mark style="color:yellow;">object</mark></td></tr><tr><td>Scenes to Load</td><td>From the drop-down list, you can choose <mark style="color:yellow;">which scene</mark> should play <mark style="color:yellow;">after the current scene</mark>.</td></tr></tbody></table>
+<table><thead><tr><th width="264">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Load Scene When</td><td>Choose when to transition to a different scene. You can transition <br>- After a broadcast message has been received by the object.<br>- When the player touches the object.<br>- When a different object touches the object.<br>- When you click on the object.</td></tr><tr><td>Scenes to Load</td><td>From the drop-down list, you can choose which scene should play after the current scene.</td></tr></tbody></table>
