@@ -2,6 +2,20 @@
 
 The ShowUI Behaviour enables the player to add UI elements to pop up on the screen. Terra Studio has pre-defined UI templates as shown below.
 
+| Parameters  | Type                                                                                                                                                                                                                                        |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Start Event | game start, player touches, other object touches, mouse clicked, broadcast listened                                                                                                                                                         |
+| Effects     | Change in Player or Asset properties, Change in Game Scene Environment, Change in Game Systems, Change in an Asset's Orientation, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                                                                                                                                                                 |
+
+To add the Update Score behavior to an asset, follow these steps:
+
+1. Select the asset you wish to apply the Update Score behavior to.
+2. In the Inspector panel, click on **Add Behavior**.
+3. From the list of behaviors, choose **Update Score.**
+
+You can customize the below-mentioned parameters according to your requirements:
+
 <mark style="color:yellow;">**Step 1**</mark>: First you select any asset as a Check-point and add the `ShowUI` Behaviour to it by clicking <mark style="color:purple;">OK</mark>.
 
 <figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.05.21 AM.png" alt="" width="185"><figcaption></figcaption></figure>

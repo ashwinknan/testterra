@@ -1,6 +1,20 @@
 # Move to Player
 
-The objects having the MoveToPlayer Template will <mark style="color:purple;">`leave their designated place`</mark> and move <mark style="color:purple;">`towards the player`</mark>. They follow you in the direction of your movement.  Multiple triggers activate the template depending on the need.
+Objects with the MoveToPlayer behavior will leave their designated location and move towards the player. They track the player's movement and follow in the same direction. Multiple triggers can activate this behavior as needed.
+
+| Parameters  | Type                                                                                                                                                                                                                                        |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Start Event | player touches, other object touches, mouse clicked, broadcast listened                                                                                                                                                                     |
+| Effects     | Change in Player or Asset properties, Change in Game Scene Environment, Change in Game Systems, Change in an Asset's Orientation, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                                                                                                                                                                 |
+
+To add the Update Score behavior to an asset, follow these steps:
+
+1. Select the asset you wish to apply the Update Score behavior to.
+2. In the Inspector panel, click on **Add Behavior**.
+3. From the list of behaviors, choose **Update Score.**
+
+You can customize the below-mentioned parameters according to your requirements:
 
 You can customize the feature with the help of these parameters:
 
