@@ -34,7 +34,7 @@
     * [Rotate](overview/building-blocks-of-a-terra-game/configuring-behaviors/rotate.md)
     * [Stop Player movement](overview/building-blocks-of-a-terra-game/configuring-behaviors/stop-player-movement.md)
     * [Move to Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/move-to-player.md)
-    * [Load New Scene](overview/building-blocks-of-a-terra-game/configuring-behaviors/load-new-scene.md)
+    * [Load Scene](overview/building-blocks-of-a-terra-game/configuring-behaviors/load-scene.md)
     * [Collide](overview/building-blocks-of-a-terra-game/configuring-behaviors/collide.md)
     * [Kill Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/kill-player.md)
     * [Checkpoint](overview/building-blocks-of-a-terra-game/configuring-behaviors/checkpoint.md)

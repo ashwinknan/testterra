@@ -1,6 +1,6 @@
-# Load New Scene
+# Load Scene
 
-The Load New Scene behavior enables you to transition from one game environment to another, such as progressing from one level to the next or exploring a new area. This behavior is linked to an object that initiates the transition when triggered.
+The Load Scene behavior enables you to transition from one game environment to another, such as progressing from one level to the next or exploring a new area. This behavior is linked to an object that initiates the transition when triggered.
 
 It can also be utilized for cinematic sequences, menu screens, or any other significant change in the game's environment or gameplay.
 
@@ -10,11 +10,11 @@ It can also be utilized for cinematic sequences, menu screens, or any other sign
 | Effects     | Change in Game Scene Environment                                        |
 | Type        | Independent                                                             |
 
-To add the Load New Scene behavior to an asset, follow these steps:
+To add the Load Scene behavior to an asset, follow these steps:
 
-1. Select the asset you wish to apply the Load New Scene behavior to.
+1. Select the asset you wish to apply the Load Scene behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **Load New Scene.**
+3. From the list of behaviors, choose **Load Scene.**
 
 You can customize the below-mentioned parameters according to your requirements:
 
