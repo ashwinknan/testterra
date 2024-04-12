@@ -4,7 +4,7 @@ A checkpoint is a designated spot where player progress is saved automatically o
 
 | Parameters  | Type                                                                                                                                                                                                                                        |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | Player crosses the checkpoint99                                                                                                                                                                                                             |
+| Start Event | player touches                                                                                                                                                                                                                              |
 | Effects     | Change in Player or Asset properties, Change in Game Scene Environment, Change in Game Systems, Change in an Asset's Orientation, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
 | Type        | Independent                                                                                                                                                                                                                                 |
 
