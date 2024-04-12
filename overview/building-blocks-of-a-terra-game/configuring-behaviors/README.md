@@ -48,7 +48,7 @@ The most common effects of Behavior blocks are :&#x20;
 * Change in Game Scene Environment
 * Change in Game Systems&#x20;
 * Change in an Asset's Orientation&#x20;
-* Create or Elimination existing Game Scene Objects.
+* Create or Eliminates existing Game Scene Objects.
 * Generate a Broadcast Signal
 * Enable an SFX or Particle
 

@@ -2,11 +2,11 @@
 
 A Collectible is a behavior added to an asset in a game that can be collected to increase score or to achieve another goal.
 
-| Parameters  | Type                                                                                                                              |
-| ----------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | player touches, mouse clicked, On Trigger Stay, magnetic range                                                                    |
-| Effects     | Change in Game Systems, Create or Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                                                       |
+| Parameters  | Type                                                                                                                   |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Start Event | player touches, mouse clicked, On Trigger Stay, magnetic range                                                         |
+| Effects     | Change in Game Systems, Eliminates existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                                            |
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 

@@ -2,11 +2,11 @@
 
 When triggered, the Increase Player Health behavior boosts the player's health. The behavior can be activated in response to various events, such as the player collecting coins or other items that improve health.&#x20;
 
-| Parameters  | Type                                                                                          |
-| ----------- | --------------------------------------------------------------------------------------------- |
-| Start Event | player touches, broadcast listened                                                            |
-| Effects     | Change in Player or Asset properties,  Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                   |
+| Parameters  | Type                                                                                 |
+| ----------- | ------------------------------------------------------------------------------------ |
+| Start Event | player touches, broadcast listened                                                   |
+| Effects     | Change in Player properties,  Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                          |
 
 To add the Increase player health behavior to an asset, follow these steps:
 

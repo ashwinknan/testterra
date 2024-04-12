@@ -2,11 +2,11 @@
 
 When the player contacts an object with the Kill Player behavior, the player is killed and respawns at the last checkpoint. This is useful when the player enters a danger zone or interacts with a hazardous object.
 
-| Parameters  | Type                                                                                                                                  |
-| ----------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Start Event | player touches, other object touches, mouse clicked, broadcast listened                                                               |
-| Effects     | Change in Player or Asset properties, Elimination existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                                                           |
+| Parameters  | Type                                                                                           |
+| ----------- | ---------------------------------------------------------------------------------------------- |
+| Start Event | player touches, other object touches, mouse clicked, broadcast listened                        |
+| Effects     | Eliminates existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                                    |
 
 To add the Kill player behavior to an asset, follow these steps:
 
