@@ -48,8 +48,6 @@
     * [Grow / Shrink](overview/building-blocks-of-a-terra-game/configuring-behaviors/grow-shrink.md)
     * [Teleport Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/teleport-player.md)
     * [Level Up](overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up.md)
-    * [Instantiate On Event](overview/building-blocks-of-a-terra-game/configuring-behaviors/instantiate-on-event.md)
-    * [Carriable](overview/building-blocks-of-a-terra-game/configuring-behaviors/carriable.md)
   * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems/README.md)
 
 ## Editor Essentials
