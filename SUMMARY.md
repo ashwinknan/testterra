@@ -43,6 +43,13 @@
       * [Show UI Icons](overview/building-blocks-of-a-terra-game/configuring-behaviors/showui/show-ui-icons.md)
     * [Move](overview/building-blocks-of-a-terra-game/configuring-behaviors/move.md)
     * [Stop Move](overview/building-blocks-of-a-terra-game/configuring-behaviors/stop-move.md)
+    * [Advance Move](overview/building-blocks-of-a-terra-game/configuring-behaviors/advance-move.md)
+    * [Rotate (Oscillate)](overview/building-blocks-of-a-terra-game/configuring-behaviors/rotate-oscillate.md)
+    * [Grow / Shrink](overview/building-blocks-of-a-terra-game/configuring-behaviors/grow-shrink.md)
+    * [Teleport Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/teleport-player.md)
+    * [Level Up](overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up.md)
+    * [Instantiate On Event](overview/building-blocks-of-a-terra-game/configuring-behaviors/instantiate-on-event.md)
+    * [Carriable](overview/building-blocks-of-a-terra-game/configuring-behaviors/carriable.md)
   * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems/README.md)
 
 ## Editor Essentials
@@ -64,6 +71,7 @@
 * [Camera Controls](editor-essentials/camera-controls.md)
 * [Main Toolbar](editor-essentials/main-toolbar.md)
 * [Inspector Panel](editor-essentials/inspector-panel.md)
+* [Advance Rotate](editor-essentials/advance-rotate.md)
 
 ## Frequently Asked Questions
 

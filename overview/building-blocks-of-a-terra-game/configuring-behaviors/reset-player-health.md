@@ -2,11 +2,11 @@
 
 When a player interacts with an object tagged with the Reset Player Health behavior, the player's health is fully restored. This can be useful when a player respawns after dying, enters a safe zone, collects healing items, or faces similar situations.
 
-| Parameters  | Type                                                                                         |
-| ----------- | -------------------------------------------------------------------------------------------- |
-| Start Event | player touches, mouse clicked, broadcast listened                                            |
-| Effects     | Change in Player or Asset properties, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                  |
+| Parameters  | Type                                                                                |
+| ----------- | ----------------------------------------------------------------------------------- |
+| Start Event | player touches, mouse clicked, broadcast listened                                   |
+| Effects     | Change in Player properties, Generate a Broadcast Signal, Enable an SFX or Particle |
+| Type        | Independent                                                                         |
 
 To add the Reset Player Health behavior to an asset, follow these steps:
 

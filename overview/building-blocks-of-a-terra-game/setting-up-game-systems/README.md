@@ -79,3 +79,48 @@ To configure the Health System, click on Essentials in the Quick Access Menu and
 
 * **Auto Heal Rate**: Turn on Auto Heal and choose how fast the Health should go up every second.
 * **Generate a Signal when Player Health becomes zero**: You can create a signal for winning a game, losing a game, or a custom message.
+
+### Game Progress
+
+The Game Progress System tracks the player's advancement in the game according to predefined progress points. It provides players with a sense of achievement and progression as they play. Multiple progress points can be added through the inspector panel, allowing for greater customization and flexibility in the game's structure.
+
+#### How to add game progress system?
+
+1. From the main toolbar at the top of the editor screen, select "GameProgress" to add the game system to the Essentials tab.
+2. In the builder menu on the left side of the screen, navigate to the "Essential" tab.
+3. Find the "GameProgress" system in the builder panel.
+4. Click on "GameProgress" to open the inspector panel.
+5. In the inspector panel, you can customize the parameters according to your needs and preferences.
+
+<table><thead><tr><th width="318">Parameters</th><th>Description</th></tr></thead><tbody><tr><td>Progress start</td><td>This parameter helps you define the point the game progress will be tracked.<br>Game starts - At the start of the game<br>Broadcast Listened -Starts tracking the progress when it listens to a broadcast from another object </td></tr><tr><td>Progress points </td><td>List of diffrent milestones in the game</td></tr><tr><td>Persistent</td><td>Game progress came be made persistent by checking the checkbox </td></tr><tr><td>BroadCast at points </td><td>Broadcast can be trigger when player reaches a paticular milestone </td></tr><tr><td>BroadCast On Completion </td><td>Broadcast can be triggered when player reaches the fine milestone.</td></tr></tbody></table>
+
+### Level Mapper
+
+In game development, leveling up is a core feature that not only marks progression but also enriches the player's experience by offering tangible rewards and new challenges. The Level Mapper game system is designed for customizing the upgrade paths of objects within a game. This can include example use-cases like:
+
+* **Weapon evolution**: Weapons can evolve or be upgraded as players collect certain materials or reach particular benchmarks&#x20;
+* **Building upgrades**:  to unlock new features or improve their efficiency (upgrading a farm may increase food production rates or a barracks might allow for the training of more advanced units.)
+* **Character Progression:** Accumulating enough XP results in the character gaining a level, which might increase the character's stats (like health, strength, agility) and unlock new abilities or skills.
+
+By utilizing the Level Mapper, developers can set clear, trackable goals for players, encouraging engagement and offering rewarding gameplay experiences as they watch their in-game assets grow and evolve.\
+The [level-up](https://app.gitbook.com/o/qrOp5exMLmnPZxfhxQgu/s/Gd8RR9TPbiGza2LHqkh7/\~/changes/87/overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up) behavior can be utilized to adjust the progression paths of objects based on the Level Mapper system.
+
+#### How to add Level mapper?
+
+1. From the main toolbar at the top of the editor screen, select "LevelUpgrader" to add the game system to the Essentials tab.
+2. In the builder menu on the left side of the screen, navigate to the "Essential" tab.
+3. Find the "LevelMapper" system in the builder panel.
+4. Click on "LevelMapper" to open the inspector panel.
+5. In the inspector panel, you can customize the parameters according to your needs and preferences.
+
+<table><thead><tr><th width="257">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Group</td><td>custom name allows the game to keep track of the variables that helps level up the game.<br>steps:<br>1. Click on custom option<br>2. Name the variable in the field added below.</td></tr><tr><td>Cost Type</td><td>The parameter that helps achieve the next level <br>There are two options available:<br>1. Resource (Game Score)<br>2. Carryable <br>select any one based on the game requirement.</td></tr><tr><td>Resource Tag</td><td>This is the parameter whose value will be affected once we achieve level up.</td></tr><tr><td>Value</td><td>Update in the property of the group name after you achieve level upgrade</td></tr><tr><td>Currency</td><td>Cost of upgrading to a new level</td></tr></tbody></table>
+
+6. By following these steps, you will have successfully designed upgrade paths for objects within the game.
+7. To use this system to upgrade different in-game objects, utilize the Level Up behavior. Refer to the provided link to learn how to add the "[Level Up](https://app.gitbook.com/o/qrOp5exMLmnPZxfhxQgu/s/Gd8RR9TPbiGza2LHqkh7/\~/changes/87/overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up)" behavior.
+
+
+
+
+
+
+
