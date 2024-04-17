@@ -50,6 +50,7 @@
     * [Teleport Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/teleport-player.md)
     * [Level Up](overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up.md)
     * [Advance Rotate](overview/building-blocks-of-a-terra-game/configuring-behaviors/advance-rotate.md)
+    * [Tick](overview/building-blocks-of-a-terra-game/configuring-behaviors/tick.md)
   * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems/README.md)
 
 ## Editor Essentials
