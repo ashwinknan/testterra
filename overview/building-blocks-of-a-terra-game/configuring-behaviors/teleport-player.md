@@ -10,6 +10,10 @@
 
 To add the Teleport Player behavior to an asset, follow these steps:
 
+{% embed url="https://www.loom.com/share/ef35d82e57cc4b218fb7ac9f1e50a084?sid=4346d208-40a5-4909-a0ff-cd6db2aa12f0" %}
+Teleport Player Behaviour
+{% endembed %}
+
 1. Select the asset you wish to apply the Teleport Player behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
 3. From the list of behaviors, choose **Teleport Player.**

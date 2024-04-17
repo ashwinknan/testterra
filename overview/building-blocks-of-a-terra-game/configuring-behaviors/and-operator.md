@@ -12,6 +12,10 @@ For example, the player only wins the game if they complete both of the game's c
 
 To add the And operator  behavior to an asset, follow these steps:
 
+{% embed url="https://www.loom.com/share/cb6ca67ff3ca4c0cbb8c386289411a90?sid=f36b693e-7485-4dff-a49b-c7b51faacc01" %}
+And Operator&#x20;
+{% endembed %}
+
 1. Select the asset you wish to apply the And operator  behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
 3. From the list of behaviors, choose **And operator** **.**
