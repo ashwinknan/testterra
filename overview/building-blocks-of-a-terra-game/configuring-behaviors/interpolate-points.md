@@ -12,6 +12,10 @@ Additionally, objects can dynamically rotate to ensure a particular face of the 
 
 To add the Interpolate Points behavior to an asset, follow these steps:
 
+{% embed url="https://www.loom.com/share/23fb779803cd444d98f47df7d8fbebee?sid=1c587de4-6710-40e9-b0fb-a7fad42e52b4" %}
+Interpolate Points&#x20;
+{% endembed %}
+
 1. Select the asset you wish to apply the Interpolate Points behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
 3. From the list of behaviors, choose **Interpolate Points.**

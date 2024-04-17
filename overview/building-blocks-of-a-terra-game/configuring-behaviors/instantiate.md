@@ -10,8 +10,8 @@ You can determine where objects appear in the game scene by specifying a range o
 | Effect       | Creates Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
 | Type         | Independent                                                                        |
 
-One or multiple triggers can be created, resulting in one or multiple outcomes.
-
+One or multiple triggers can be created, resulting in one or multiple outcomes.\
+\
 To add the Instantiate behavior to an asset, follow these steps:
 
 1. Select the asset you wish to apply the Instantiate behavior to.
