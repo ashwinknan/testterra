@@ -32,7 +32,7 @@ You can customize the below-mentioned parameters according to your requirements:
 
 | Parameter          | Description                                                                                                                                                                                                                             |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Group              |                                                                                                                                                                                                                                         |
+| Group              | You can group the carriables in different categories using this dropdown.                                                                                                                                                               |
 | Carry on           | <p></p><p>Choose when the item is “carried”, using the dropdown:</p><ul><li>when player touches</li><li>when clicked on screen</li><li>when in a magnet range</li><li>When the player has to stay near it for a specific time</li></ul> |
 | Play SFX           | Choose a short chime to play when item is collected                                                                                                                                                                                     |
 | Play VFX           | Choose a small visual effect to play when item is collected                                                                                                                                                                             |
@@ -62,8 +62,26 @@ Configure the player setting for the carriable behaviour:
 
 To add the Deposit behavior to an asset, follow these steps:
 
-1. Select the asset you wish to apply the Carriable behavior to.
+1. Select the asset you wish to apply the Deposit behavior to.
 2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose Carriable.
+3. From the list of behaviors, choose **Deposit**.
 
 You can customize the below-mentioned parameters according to your requirements:
+
+| Parameter          | Description                                                                                                                                                                                                                             |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Take Resource      | select the group which wh                                                                                                                                                                                                               |
+| Carry on           | <p></p><p>Choose when the item is “carried”, using the dropdown:</p><ul><li>when player touches</li><li>when clicked on screen</li><li>when in a magnet range</li><li>When the player has to stay near it for a specific time</li></ul> |
+| Play SFX           | Choose a short chime to play when item is collected                                                                                                                                                                                     |
+| Play VFX           | Choose a small visual effect to play when item is collected                                                                                                                                                                             |
+| Play SFX           |                                                                                                                                                                                                                                         |
+| Play VFX           |                                                                                                                                                                                                                                         |
+| Play SFX           |                                                                                                                                                                                                                                         |
+| Play VFX           |                                                                                                                                                                                                                                         |
+| Size of carriable  |                                                                                                                                                                                                                                         |
+| Score Group        | The point of the Collectable will be contributed to the score group. You can either add it to Main Score group or make your own custom group                                                                                            |
+| Lerp               |                                                                                                                                                                                                                                         |
+| Lerp Time          |                                                                                                                                                                                                                                         |
+| Score              | Enter a numerical score value to update when collected.                                                                                                                                                                                 |
+| IsMultiLevel       | Enabling this parameter can upgrade to a higher value on level up                                                                                                                                                                       |
+| Broadcast          | <p>Choose to enter a broadcast that can be used as a trigger for any other behaviour.<br>The broadcast is sent when the item is collected</p>                                                                                           |

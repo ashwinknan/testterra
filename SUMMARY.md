@@ -49,6 +49,7 @@
     * [Grow / Shrink](overview/building-blocks-of-a-terra-game/configuring-behaviors/grow-shrink.md)
     * [Teleport Player](overview/building-blocks-of-a-terra-game/configuring-behaviors/teleport-player.md)
     * [Level Up](overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up.md)
+    * [Advance Rotate](overview/building-blocks-of-a-terra-game/configuring-behaviors/advance-rotate.md)
   * [Setting up Game Systems](overview/building-blocks-of-a-terra-game/setting-up-game-systems/README.md)
 
 ## Editor Essentials
@@ -70,7 +71,6 @@
 * [Camera Controls](editor-essentials/camera-controls.md)
 * [Main Toolbar](editor-essentials/main-toolbar.md)
 * [Inspector Panel](editor-essentials/inspector-panel.md)
-* [Advance Rotate](editor-essentials/advance-rotate.md)
 
 ## Frequently Asked Questions
 
