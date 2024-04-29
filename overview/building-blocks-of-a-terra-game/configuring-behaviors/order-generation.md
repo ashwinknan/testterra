@@ -2,12 +2,6 @@
 
 Order generation are a unique behavior often found in Tycoon Games. They enable creators to assign behaviors to assets, facilitating financial transactions within the game by invoicing customers according to their orders. For example, in a self-service store scenario, when a customer brings their desired items to the cash counter, it generates a bill based on their order and proceeds to collect payment from the customer.
 
-| Parameters  | Type                                                                               |
-| ----------- | ---------------------------------------------------------------------------------- |
-| Start Event |                                                                                    |
-| Effects     | Creates Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                        |
-
 To add the Order generation behavior to an asset, follow these steps:
 
 1. Select the asset you wish to apply the Order generation behavior to.
