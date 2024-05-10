@@ -118,9 +118,38 @@ The [level-up](https://app.gitbook.com/o/qrOp5exMLmnPZxfhxQgu/s/Gd8RR9TPbiGza2LH
 6. By following these steps, you will have successfully designed upgrade paths for objects within the game.
 7. To use this system to upgrade different in-game objects, utilize the Level Up behavior. Refer to the provided link to learn how to add the "[Level Up](https://app.gitbook.com/o/qrOp5exMLmnPZxfhxQgu/s/Gd8RR9TPbiGza2LHqkh7/\~/changes/87/overview/building-blocks-of-a-terra-game/configuring-behaviors/level-up)" behavior.
 
+### Customer Manger
 
+Customer manager is a game system used to spawn and manage the customer. This is a game system mostly used in the tycoon games.
 
+To add this game system, follow these steps:
 
+1. Navigate to the essentials tab from the builder menu.
+2. Click on "Customer Manager".
+3. In the Inspector panel, you can customize the below-mentioned parameters according to your requirements:
 
+<table><thead><tr><th width="257">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Customer Manager When</td><td>This dropdown list allows to specify when new customers will be spawned. It can be triggered either on game start or on any broadcast.</td></tr><tr><td>Broadcast data</td><td>This dropdown can be used to add any broadcast at every customer being spawned.</td></tr><tr><td>Delay between</td><td>This Field can be used to add a delay between spawning of each customer.</td></tr><tr><td>Level </td><td>This section is used to adjust the rate at which customers are spawned in progressive manner. you can create multiples levels and define the range of customer spawned for each level.</td></tr><tr><td>Defficulty</td><td>You need to deffine "X" and "Y' values. the number of customer spawned will lie between these values. once the number of customer spawned reaches the "Max spawn" value, the level will get upgraded and next level block will get executed</td></tr><tr><td>Max spawn</td><td>You can specify here the max number of customer that can be spawned in each level</td></tr></tbody></table>
 
+### Order Generator
 
+&#x20;Order Generator is a game system responsible for generating order for each customer based on the availabilty of items in the store. This is a game system mostly used in the tycoon games.
+
+To add this game system, follow these steps:
+
+1. Navigate to the essentials tab from the builder menu.
+2. Click on "Customer Manager".
+3. In the Inspector panel, you can customize the below-mentioned parameters according to your requirements:
+
+<table><thead><tr><th width="257">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Type </td><td>This dropdown list is used to specify the type of order. It can either be a storage or a service.</td></tr><tr><td>Maximum number in an order</td><td>This field can be used to specify the maximum number of items that an order can have.</td></tr><tr><td>Items </td><td></td></tr><tr><td>Group</td><td></td></tr><tr><td>Cost </td><td></td></tr><tr><td>Data </td><td>This section is used to adjust the number of item per order at each specific level. you can create multiples levels and define the range of items that each order should contain at any specific level.</td></tr><tr><td>Defficulty</td><td>You need to deffine "X" and "Y' values. the number of items in the order will lie between these values. once the number of items reaches the "Threshold" value, the level will get upgraded and next level block will get executed</td></tr><tr><td>Max spawn</td><td>You can specify here the max number of items that can be added in order at each level.</td></tr></tbody></table>
+
+### Path finder
+
+Path finder is a game system that is used to define the area in which the customer can move. This is a game system mostly used in the tycoon games.
+
+To add this game system, follow these steps:
+
+1. Navigate to the essentials tab from the builder menu.
+2. Click on "Customer Manager".
+3. In the Inspector panel, you can customize the below-mentioned parameters according to your requirements:
+
+<table><thead><tr><th width="257">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Path finder UI initializes when</td><td></td></tr><tr><td>Lowest point </td><td>This coordinate is used to define the one of cordinate of the diganol of the rectangular area in which the customers can move.</td></tr><tr><td>Highest point</td><td>This coordinate is used to define the other coordinate of the diganol of the rectangular area in which the customers can move.</td></tr><tr><td> Navmesh accur </td><td></td></tr><tr><td>Obstacle avoiding distance offset </td><td>This field can be used to define the distance that the player would maintain from the obstacle </td></tr><tr><td>Minimum height</td><td>This field is used to define the minimum height below which any structure in the player's path would be considered as obstacle </td></tr><tr><td>Maximum height</td><td>This field is used to define the maximum height below which any structure in the player's path would be considered as obstacle and player needs to avoid. </td></tr><tr><td>POI distance offset </td><td>This field is used to define the distance that player need to maintain from POI in the game.</td></tr><tr><td>Broadcast </td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. </td></tr></tbody></table>
