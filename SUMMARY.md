@@ -83,3 +83,8 @@
 ## Frequently Asked Questions
 
 * [FAQs](frequently-asked-questions/faqs.md)
+
+## Coding Using T\#
+
+* [About T#](coding-using-t/about-t.md)
+* [Available Wrappers](coding-using-t/available-wrappers.md)
