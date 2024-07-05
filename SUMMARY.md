@@ -86,5 +86,6 @@
 
 ## Coding Using T\#
 
+* [Getting started with Terra 3.0](coding-using-t/getting-started-with-terra-3.0.md)
 * [About T#](coding-using-t/about-t.md)
 * [Available Wrappers](coding-using-t/available-wrappers.md)
