@@ -87,5 +87,5 @@
 ## Coding Using T\#
 
 * [Getting started with Terra 3.0](coding-using-t/getting-started-with-terra-3.0.md)
-* [About T#](coding-using-t/about-t.md)
-* [Available Wrappers](coding-using-t/available-wrappers.md)
+* [T# Basics](coding-using-t/t-basics.md)
+* [Behavior Template Wrappers](coding-using-t/behavior-template-wrappers.md)
