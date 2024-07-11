@@ -6,6 +6,10 @@ description: >-
 
 # Behavior Template Wrappers
 
+{% hint style="info" %}
+Currently, [behavior templates](../overview/building-blocks-of-a-terra-game/configuring-behaviors/) doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
+{% endhint %}
+
 ## AdvanceMoveTemplate
 
 This template manages advanced movement for entities using the `TranslateComponent`, handling speed and event management for ping-pong actions. To integrate the `AdvanceMoveTemplate`, follow the usage instructions below:
