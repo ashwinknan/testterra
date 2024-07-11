@@ -229,5 +229,5 @@ collect.Score = 10; // Score is a property which can now be modified
 A list of accessible variables for each template can be found here are written in the next page
 
 {% hint style="info" %}
-Currently, behavior templating doesn't work with objects instantiated using T#.
+Currently, behavior templates doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
 {% endhint %}
