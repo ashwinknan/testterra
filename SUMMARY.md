@@ -84,9 +84,9 @@
 
 * [Getting started with Terra 3.0](coding-using-t/getting-started-with-terra-3.0.md)
 * [T# Basics](coding-using-t/t-basics.md)
+* [What not to do on T#](coding-using-t/what-not-to-do-on-t.md)
 * [Behavior Template Wrappers](coding-using-t/behavior-template-wrappers.md)
 
 ***
 
 * [Frequently Asked Questions](frequently-asked-questions.md)
-* [What not to do on T#](what-not-to-do-on-t.md)
