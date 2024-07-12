@@ -80,12 +80,13 @@
 * [Main Toolbar](editor-essentials/main-toolbar.md)
 * [Inspector Panel](editor-essentials/inspector-panel.md)
 
-## Frequently Asked Questions
-
-* [FAQs](frequently-asked-questions/faqs.md)
-
 ## Coding Using T\#
 
 * [Getting started with Terra 3.0](coding-using-t/getting-started-with-terra-3.0.md)
 * [T# Basics](coding-using-t/t-basics.md)
 * [Behavior Template Wrappers](coding-using-t/behavior-template-wrappers.md)
+
+***
+
+* [Frequently Asked Questions](frequently-asked-questions.md)
+* [What not to do on T#](what-not-to-do-on-t.md)

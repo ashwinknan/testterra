@@ -94,6 +94,7 @@ private void Update()
 This runs whenever a broadcasted signal is listened to by the object
 
 ```csharp
+// There is an object in the scene that generates the custom broadcast  "signal" is 
 public override void OnBroadcasted(string x)
     {
     // The code below executes doSomething when it listens to the broadcast x
@@ -103,6 +104,8 @@ public override void OnBroadcasted(string x)
         
     }
 ```
+
+
 
 ## Adding Custom Variables to an Asset
 
@@ -118,6 +121,14 @@ Add custom local variables to an asset to use them in your scripts. To add a var
    3. Float
    4. GameObject
 6. Click on the + icon next to the variable you want to add. Each variable needs to have a name and a value.
+
+<details>
+
+<summary></summary>
+
+
+
+</details>
 
 ## Accessing Variables in your script
 
@@ -200,13 +211,7 @@ public class MyFirstScript : StudioBehaviour
 }me code
 ```
 
-## Listening to a Custom Broadcast
 
-You can listen to a created broadcast using the OnBroadcasted() function
-
-```csharp
-// Some code
-```
 
 ## Accessing Behavior Templates
 
@@ -231,3 +236,4 @@ A list of accessible variables for each template can be found here are written i
 {% hint style="info" %}
 Currently, behavior templates doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
 {% endhint %}
+
