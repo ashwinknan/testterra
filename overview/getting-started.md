@@ -22,14 +22,6 @@ For Terra Studio to function properly, your machine should have a minimum of 16 
 
 <figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-## Remix
-
-{% hint style="info" %}
-This section is Work in Progress. Expect more details soon.&#x20;
-{% endhint %}
-
-Elevate existing games with your personal touch using the remix feature. By opting to remix a game, you gain access to its workspace, along with all its gameplay functionalities. From there, infuse your creativity and unique flair to elevate the game to new heights. Let your imagination soar!
-
 
 
 

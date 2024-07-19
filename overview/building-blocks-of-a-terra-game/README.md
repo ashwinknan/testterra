@@ -62,11 +62,20 @@ Creating a Custom Broadcast isn't enough on its own. It becomes valuable only wh
 
 Multiple listeners can all receive and act on the same broadcast signal at the same time. However, a single behavior can only create one broadcast. If an asset has more than one behavior, it can send out multiple broadcasts, one for each behavior.
 
+## Scripts
+
+You can enable behaviors, game systems, or modify the player using custom scripts in Terra's coding language, T#. With T#, you can write your code to achieve your desired interactions.
+
 ## Summary
 
-In summary, games are made with a "Player" block for the character avatar you control, and "Game Scene" blocks to build the world around them. "Behaviour" blocks make everything interactive, letting you play in the world. "Game System" blocks are the rules and setups that make the game fun and challenging, covering everything from keeping score to making things harder as you go.
+Games are built using several types of blocks:
 
-These blocks can be made to communicate with each other by using Game signals.&#x20;
+* **Player Block**: Represents the character avatar you control.
+* **Game Scene Blocks**: Construct the environment of the game.
+* **Behaviour Blocks**: Make elements interactive, allowing you to engage with the world.
+* **Game System Blocks**: Define the rules and dynamics that keep the game enjoyable and challenging, such as scoring and difficulty progression.
+
+You can enable and modify Game Signals, Behaviors, and Game Systems using custom scripts written in T#. These scripts can communicate with each other through Game Signals to create cohesive and dynamic gameplay experiences.
 
 
 

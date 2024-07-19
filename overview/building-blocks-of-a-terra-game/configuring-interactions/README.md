@@ -2,7 +2,12 @@
 description: The basic building blocks of game logic in Terra Studio
 ---
 
-# Configuring Behaviors
+# Configuring Interactions
+
+We can introduce interactions in two ways in Terra Studio:&#x20;
+
+1. Adding Behaviors&#x20;
+2. Adding Custom Scripts Pre-built Modular Logic Blocks&#x20;
 
 To make our game interactive, we introduce Behavior Blocks. After setting up the game area and character, Behavior Blocks bring the game to life. They change a simple, static game into an engaging world that reacts to what the player does.
 

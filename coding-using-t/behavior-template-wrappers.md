@@ -7,7 +7,7 @@ description: >-
 # Behavior Template Wrappers
 
 {% hint style="info" %}
-Currently, [behavior templates](../overview/building-blocks-of-a-terra-game/configuring-behaviors/) doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
+Currently, [behavior templates](../overview/building-blocks-of-a-terra-game/configuring-interactions/) doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
 {% endhint %}
 
 ## AdvanceMoveTemplate
