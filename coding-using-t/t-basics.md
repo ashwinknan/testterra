@@ -196,7 +196,7 @@ public class MyFirstScript : StudioBehaviour
 {
     private void Start()
     {
-         OnBroadcast("signal"); // Generates the broadcast "signal"       
+         Broadcast("signal"); // Generates the broadcast "signal"       
     }
 
     private void Update()

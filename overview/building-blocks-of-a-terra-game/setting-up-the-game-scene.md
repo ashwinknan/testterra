@@ -25,8 +25,6 @@ Terra Studio has a thousands of pre-made assets for creators to use directly in 
 :dart:  Currently you cannot import your own assets in the game. However, in an upcoming release cycle, you'll be able to upload your assets directly into the Terra Studio environment, making it easier than ever to personalise your games and bring your unique visions to life.
 {% endhint %}
 
-The In-Scene view lists all the assets you've selected and placed in your game workspace, allowing for easy tracking and management of your game's 3D objects.
-
 ### Editing Asset Properties
 
 Once an Asset is added to the scene, you can click on it and view a list of its editable properties in the Inspector Panel. You can edit the following properties of the asset:&#x20;
