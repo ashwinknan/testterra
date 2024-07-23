@@ -4,10 +4,10 @@ description: >-
   behavior template
 ---
 
-# Behavior Template Wrappers
+# T# Logic Template Wrappers
 
 {% hint style="info" %}
-Currently, [behavior templates](../overview/building-blocks-of-a-terra-game/configuring-interactions/) doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
+Currently, [behavior templates](../conceptual-guides/configuring-game-logic.md) doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
 {% endhint %}
 
 ## AdvanceMoveTemplate

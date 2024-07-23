@@ -1,4 +1,4 @@
-# Setting up the Game Scene
+# Configuring the Game Scene
 
 Once you have the Player configured, you then proceed to set up your interactive world - game scene. There are four types of Game Scene blocks you need to set up to finish setting up your game scene:&#x20;
 
@@ -58,17 +58,9 @@ For any object in Terra Studio, you select from one of four types of collider sh
 
 <mark style="color:red;">In addition, there is also an IsTrigger Toggle.</mark>
 
-### Adding Behaviors to Assets
+### Adding Logic Templates to Assets
 
-To add a Behavior block to your asset, follow these steps:
-
-1. Select the Asset either directly or through the Layers Panel
-2. Click the "Add Behavior" button located in the Inspector Panel when the asset is selected.
-3. A selection window will pop up, showing you the available Behavior Blocks that can be added to your asset. Choose the one you need.
-4. Click "OK" to add the selected Behavior block to your asset
-5. You will now see the added Behavior block along with its editable options at the bottom of the Inspector Panel, right under the sections for Transform, Material, and Collider Properties.&#x20;
-6. You can customise the default settings of the editable options to make the asset work as you wish.
-7. If you need to, you can add more than one Behavior block to an asset by  and repeating the steps above.
+To add a [Logic Template](configuring-game-logic.md#using-logic-templates) to your asset, follow the instructions on the page below:[Adding Logic Templates to an Asset](configuring-game-logic.md#how-to-add-logic-templates)
 
 ## SFX
 

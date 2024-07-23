@@ -2,7 +2,7 @@
 description: Learn about the keyboard shortcuts that our software has
 ---
 
-# Keyboard Shortcuts
+# Important Keyboard Shortcuts
 
 ## Shortcuts
 
@@ -24,19 +24,19 @@ Below you can find all shortcuts and key commands that make working with Terra S
 
 ### Selecting and Editing
 
-| Action                   | Windows             | Mac                 | Description                                                     |
-| ------------------------ | ------------------- | ------------------- | --------------------------------------------------------------- |
-| `Duplicate`              | Ctrl + D            | ⌘ + D               | Duplicates an object.                                           |
-| `Delete`                 | Backspace or Delete | Backspace or Delete | Deletes an object.                                              |
-| `Enable Multi Selection` | LShift              | ⇧                   | Hold down left shift to add or remove objects from selection.   |
-| `Undo`                   | Ctrl + Z            | ⌘ + Z               | Undoes the last editing step.                                   |
-| `Redo`                   | Ctrl + Y            | ⇧ or ⌘ + Y          | Redoes the last editing step.                                   |
-| `Toggle Snap`            | Ctrl + 5            | ⇧ or ⌘ + 5          | Enable or disable snapping an object to another objects surface |
+| Action                   | Windows    | Mac        | Description                                                     |
+| ------------------------ | ---------- | ---------- | --------------------------------------------------------------- |
+| `Duplicate`              | Ctrl + D   | ⌘ + D      | Duplicates an object.                                           |
+| `Delete`                 | Ctrl + Del | ⌘ + Del    | Deletes an object.                                              |
+| `Enable Multi Selection` | LShift     | ⇧          | Hold down left shift to add or remove objects from selection.   |
+| `Undo`                   | Ctrl + Z   | ⌘ + Z      | Undoes the last editing step.                                   |
+| `Redo`                   | Ctrl + Y   | ⇧ or ⌘ + Y | Redoes the last editing step.                                   |
+| `Toggle Snap`            | Ctrl + 5   | ⇧ or ⌘ + 5 | Enable or disable snapping an object to another objects surface |
 
 ### Steps to locate the player in the editor:
 
-1. Click on "Essentials" in the builder menu.
-2. Select "PlayerControllerDrawer."
+1. Click on "Layers" in the builder menu.
+2. Select "Player"
 3. Press "F".
 
 You will then see the player.

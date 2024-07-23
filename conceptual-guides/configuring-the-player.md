@@ -12,7 +12,7 @@ You can select the player by clicking on the player's avatar that is visible in 
 
 You will notice that the Player has a default child element TopDownPlayer  which in turn has two more children - ModelRoot and CameraRoot
 
-## Editing Player Characteristics&#x20;
+## Editing Player Characteristics through the Editor Interface
 
 Once you find and select the player in the editor,  the Inspector Panel on the right displays a list of customisable Player Properties. A list of these customisation actions are given below:&#x20;
 

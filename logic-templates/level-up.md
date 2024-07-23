@@ -1,6 +1,6 @@
 # Level Up
 
-Level up behaviour is used to upgrade diffrent in-game assets based on the the upgrade paths of objects defined using the [Level Maper](../setting-up-game-systems/) game system.
+Level up behaviour is used to upgrade diffrent in-game assets based on the the upgrade paths of objects defined using the [Level Maper](../conceptual-guides/setting-up-game-systems.md) game system.
 
 | Parameters  | Type                                                                                                                |
 | ----------- | ------------------------------------------------------------------------------------------------------------------- |
