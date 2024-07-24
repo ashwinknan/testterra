@@ -1,27 +1,14 @@
 # Click
 
-The Click behavior enables you to send a broadcast when you click on an asset. Here are a few use cases for this behavior:
+The Click logic template enables you to send a broadcast when you click on an asset.&#x20;
 
-* **Puzzle Mechanics:** Assets can be incorporated into puzzle mechanics where clicking on one asset affects others. For example, clicking on a lever may activate a series of platforms or unlock a hidden passage.
-* **Interactive Assets:** Clicking on assets triggers events or interactions, enhancing player engagement and immersion. For instance, clicking on a door may cause it to open or close.
+To add the Click logic template to an asset, follow these steps:
 
-&#x20;
+1. Go to the Logic Tab.
+2. Select Click under the header "Triggers".
+3. Drag and drop it onto the desired asset.
 
-| Parameters  | Type                                                   |
-| ----------- | ------------------------------------------------------ |
-| Start Event | mouse clicks                                           |
-| Effect      | Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                            |
-
-One or multiple triggers can be created, resulting in one or multiple outcomes.
-
-To add the Click behavior to an asset, follow these steps:
-
-1. Select the asset you wish to apply the Click behavior to.
-2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **Click**.
-
-You can customize the below-mentioned parameters according to your requirements:
+You can edit the following parameters of this template directly through the scene editor interface:
 
 | Parameter      | Description                                                                                                                                     |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
