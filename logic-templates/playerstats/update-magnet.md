@@ -2,21 +2,13 @@
 
 The Update Magnet behavior increases the player's magnetic range, allowing them to collect items from a larger radius compared to the initial specified range.
 
-| Parameters  | Type                                                                                |
-| ----------- | ----------------------------------------------------------------------------------- |
-| Start Event | player touches, other object touches, mouse clicked, broadcast listened             |
-| Effects     | Change in Player properties, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                         |
+To add the Update Magnet logic template to an asset, follow these steps:
 
-You can customize the parameters according to the game's needs:
+1. Go to the Logic Tab.
+2. Select Update Magnet under the header "PlayerStats".
+3. Drag and drop it onto the desired asset.
 
-To add the Update Magnet behavior to an asset, follow these steps:
-
-1. Select the asset you wish to apply the Update Magnet behavior to.
-2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **Update Magnet.**
-
-You can customize the below-mentioned parameters according to your requirements:
+You can edit the following parameters of this template directly through the scene editor:
 
 | Parameter          | Description                                                                                                                                                                                                                                                                              |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,3 +17,7 @@ You can customize the below-mentioned parameters according to your requirements:
 | Play SFX           | Choose a sound effect to play when the magnet range is updated                                                                                                                                                                                                                           |
 | Play VFX           | Choose a visual effect to play when the magnet range is updated                                                                                                                                                                                                                          |
 | Broadcast Data     | <p>Define a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the magnetic range is updated</p>                                                                                                                                             |
+
+### Accessing the Update Magnet Animation Logic Template using T\#
+
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [ChangeMagnetTemplate](../../coding-using-t/t-logic-template-wrappers.md#changemagnettemplate)
