@@ -1,20 +1,14 @@
 # Collectable
 
-A Collectible is a behavior added to an asset in a game that can be collected to increase score or to achieve another goal.
-
-| Parameters  | Type                                                                                                                   |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Start Event | player touches, mouse clicked, On Trigger Stay, magnetic range                                                         |
-| Effects     | Change in Game Systems, Eliminates existing Game Scene Objects, Generate a Broadcast Signal, Enable an SFX or Particle |
-| Type        | Independent                                                                                                            |
+A Collectible is a logic template added to an asset in a game that can be collected to increase score or to achieve another goal.
 
 One or multiple triggers can be created, resulting in one or multiple outcomes.
 
-To add the Collectable behavior to an asset, follow these steps:
+To add the Collectable logic template, follow these steps:
 
-1. Select the asset you wish to apply the Collectable behavior to.
-2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **Collectable**.
+1. Go to the Logic Tab.
+2. Select Collectable under the header "Mechanics".
+3. Drag and drop it onto the desired asset.
 
 You can customize the below-mentioned parameters according to your requirements:
 
@@ -28,3 +22,6 @@ You can customize the below-mentioned parameters according to your requirements:
 | IsMultiLevel            | Enabling this parameter can upgrade to a higher value on level up                                                                                                                                                     |
 | Broadcast On Collection | <p>Choose to enter a broadcast that can be used as a trigger for any other behaviour.<br>The broadcast is sent when the item is collected</p>                                                                         |
 
+### Accessing the Collectible Template using T\#
+
+You can access this using the T# Wrapper - [CollectableTemplate](../../coding-using-t/t-logic-template-wrappers.md#collectabletemplate)
