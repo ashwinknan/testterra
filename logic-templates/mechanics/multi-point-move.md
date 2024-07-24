@@ -22,4 +22,4 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ### Accessing the Multi Point Move Template using T\#
 
-You can use the T# wrapper - [MoveBetweenPointsTemplate ](../../coding-using-t/t-logic-template-wrappers.md#movebetweenpointstemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper- [MoveBetweenPointsTemplate ](../../coding-using-t/t-logic-template-wrappers.md#movebetweenpointstemplate)

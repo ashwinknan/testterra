@@ -14,4 +14,4 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ## Accessing the Load Scene Template using T\#
 
-There is currently no T# wrapper available for the Load Scene Template.&#x20;
+Currently, there's no T# Wrapper available to customize this logic template beyond the scene editor's capabilities. However, you can write your own code in T# to implement this logic from scratch.

@@ -24,4 +24,4 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ### Accessing the Collectible Template using T\#
 
-You can access this using the T# Wrapper - [CollectableTemplate](../../coding-using-t/t-logic-template-wrappers.md#collectabletemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [CollectableTemplate](../../coding-using-t/t-logic-template-wrappers.md#collectabletemplate)

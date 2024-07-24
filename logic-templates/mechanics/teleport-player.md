@@ -18,4 +18,4 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ### Accessing the Teleport Player Template using T\#
 
-You can access this using the T# Wrapper - [TeleportTemplate](../../coding-using-t/t-logic-template-wrappers.md#teleporttemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [TeleportTemplate](../../coding-using-t/t-logic-template-wrappers.md#teleporttemplate)

@@ -8,7 +8,7 @@ To add the Attach Object logic template, follow these steps:
 2. Select Attach Object under the header "Mechanics".
 3. Drag and drop it onto the desired asset.
 
-You can customize the below-mentioned parameters according to your requirements:
+You can edit the following parameters of this template directly through the scene editor interface:
 
 | Parameter                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,5 +20,5 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ### Accessing Attach Object using T\#
 
-There is currently no T# Wrapper to directly access this logic template.&#x20;
+Currently, there's no T# Wrapper available to customize this logic template beyond the scene editor's capabilities. However, you can write your own code in T# to implement this logic from scratch.
 

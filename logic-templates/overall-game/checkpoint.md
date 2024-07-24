@@ -8,7 +8,7 @@ To add the checkpoint logic template, follow these steps:
 2. Select Checkpoint under the header "Game".
 3. Drag and drop it onto the desired asset.
 
-You can customize the below-mentioned parameters according to your requirements:
+You can edit the following parameters of this template directly through the scene editor interface:
 
 | Parameter     | Description                                                                                                                                               |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -18,4 +18,4 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ## Accessing the Checkpoint Template using T\#
 
-You can customize interactions and properties of the Checkpoint template through its T# wrapper.- [CheckpointTemplate](../../coding-using-t/t-logic-template-wrappers.md#checkpointtemplate).&#x20;
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [CheckpointTemplate](../../coding-using-t/t-logic-template-wrappers.md#checkpointtemplate).&#x20;

@@ -18,4 +18,4 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ### Accessing the Kill Player Template using T\#
 
-You can access and modify its behaviour using the T# wrapper - [KillPlayerTemplate](../../coding-using-t/t-logic-template-wrappers.md#killplayertemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [KillPlayerTemplate](../../coding-using-t/t-logic-template-wrappers.md#killplayertemplate)

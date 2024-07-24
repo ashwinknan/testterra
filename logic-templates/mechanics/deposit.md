@@ -38,5 +38,5 @@ You can customize the below-mentioned parameters according to your requirements:
 
 ### Accessing the Deposit Template using T\#
 
-There are currently no available T# wrappers for this template
+Currently, there's no T# Wrapper available to customize this logic template beyond the scene editor's capabilities. However, you can write your own code in T# to implement this logic from scratch.
 

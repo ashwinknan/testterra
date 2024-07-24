@@ -23,4 +23,4 @@ Your Jump Height should ideally be greater than 2 for the Jump Pad to work. Smal
 
 ### Accessing the Jump Pad Template using T\#
 
-You can use the T# Wrapper - [JumpPadTemplate](../../coding-using-t/t-logic-template-wrappers.md#jumppadtemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [JumpPadTemplate](../../coding-using-t/t-logic-template-wrappers.md#jumppadtemplate)
