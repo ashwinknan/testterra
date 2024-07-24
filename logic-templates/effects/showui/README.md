@@ -2,34 +2,16 @@
 
 The ShowUI behavior allows the creator to display UI elements on the screen in response to player interactions with game objects.
 
-| Parameters  | Type                                                                                |
-| ----------- | ----------------------------------------------------------------------------------- |
-| Start Event | game start, player touches, other object touches, mouse clicked, broadcast listened |
-| Effects     | Display UI elements, Generate a Broadcast Signal                                    |
-| Type        | Independent                                                                         |
+To add the Show UI logic template to an asset, follow these steps:
 
-To add the ShowUI behavior to an asset, follow these steps:
+1. Go to the Logic Tab.
+2. Select Show UI Animation under the header "Effects".
+3. Drag and drop it onto the desired asset.
 
-1. Select the asset you wish to apply the ShowUI behavior to.
-2. In the Inspector panel, click on **Add Behavior**.
-3. From the list of behaviors, choose **ShowUI.**
+You can edit the following parameters of this template directly through the scene editor:
 
-Terra Studio has pre-defined UI as shown below.
+<table><thead><tr><th width="236">Parameters</th><th>Description</th></tr></thead><tbody><tr><td>Show On</td><td><p></p><p>Choose from the following options in the dropdown menu for when the UI Needs to be displayed:</p><ol><li>On Game Start</li><li>On Player Touch</li><li>On Other Object Touch</li><li>On Click</li><li>On Broadcast: If selected, specify the broadcast to listen to.</li></ol></td></tr><tr><td>Animation</td><td>CHoose the animation for the UI element</td></tr><tr><td>Screen Position</td><td>Choose from the dropdown  the position of the UI element</td></tr><tr><td>UI Template</td><td>Select from a list of pre-available UI Templates</td></tr><tr><td>Animation Duration</td><td>Specify the duration of Animation in seconds</td></tr><tr><td>Show for</td><td>Specify the duration for which the UI must be displayed</td></tr><tr><td>Broadcast Data</td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the UI is displayed</td></tr></tbody></table>
 
-**`Step 1`**`:` First you select any asset as a Check-point and add the `ShowUI` Behaviour to it by clicking OK.
 
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.05.21 AM.png" alt="" width="185"><figcaption></figcaption></figure>
 
-**`Step 2:`** Scroll down the inspector panel to see the ShowUI behaviour parameters.&#x20;
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.56.54 AM.png" alt="" width="298"><figcaption><p>All editable parameters in ShowUI</p></figcaption></figure>
-
-`Step 3:` First click on Show On to select the trigger for the UI. There are four possible triggers available currently.&#x20;
-
-<figure><img src="../../../../.gitbook/assets/Screenshot 2024-03-01 at 10.06.12 AM.png" alt="" width="153"><figcaption><p>The possible triggers for a ShowUI Behavior</p></figcaption></figure>
-
-**Step 3**: After selecting the trigger, decide on an animation and position of the UI. Then you need to select UI to Show and then enter the name of the icons & editable text. These names and layouts are available in [`ShowUI Prefabs`](showui-prefabs.md).&#x20;
-
-**`Step 4`**`:` Finally select the Animation Time , Display Time and any Broadcast you may want to do and save the UI.&#x20;
-
-**`Step 5`**`:` Play test and see if the UI is appearing as per your plan.&#x20;
+Terra Studio has pre-defined UI Templates as shown in [`ShowUI Prefabs`](showui-prefabs.md).&#x20;

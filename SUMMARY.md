@@ -82,6 +82,8 @@
   * [Delay](logic-templates/triggers/delay.md)
 * [Effects](logic-templates/effects/README.md)
   * [Stop Rotate](logic-templates/effects/stop-rotate.md)
+  * [Stop Animation](logic-templates/effects/stop-animation.md)
+  * [Play Player's Animation](logic-templates/effects/play-players-animation.md)
   * [ShowUI](logic-templates/effects/showui/README.md)
     * [ShowUI Prefabs](logic-templates/effects/showui/showui-prefabs.md)
     * [Show UI Icons](logic-templates/effects/showui/show-ui-icons.md)
