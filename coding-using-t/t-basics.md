@@ -2,9 +2,13 @@
 
 ## About T\#
 
-T# is a scripting language developed by Terra - which has a syntax similar to C#. This was developed to provide developers who are used to writing code the flexibility to do almost anything on Terra's platforms. In Terra Studio 3.0, creators ability to make a variety of games was limited by the number of behavior blocks that were available in its library
+Earlier, creators ability to make a variety of games was limited by the number of logic templates that were available in its logic template library.&#x20;
 
-T# removes this constraint. Now even if you don't have a behavior block in Terra Studio, you can go ahead and write your own script to make that happen.
+To remove this limitation , we introduce a new scripting language -  - which has a syntax almost similar to C#. This was developed to provide developers who are used to writing code the flexibility to do almost anything on Terra's platforms.&#x20;
+
+A knowledge of Unity C# makes it super easy for you learn T#, but you need to take care of certain things that are different in T#. Read the [T# Don'ts](t-donts.md) to be aware of these.
+
+T# removes this constraint. Now even if you don't have a logic template in Terra Studio, you can go ahead and write your own script to make that happen.
 
 ## Creating your own Script
 
@@ -34,8 +38,7 @@ Scripts define how assets behave during gameplay. To enable this, attach a scrip
 
 When you open a script in Visual Studio Code, a default script like this appears:
 
-```csharp
-
+<pre class="language-csharp"><code class="lang-csharp">
 using System;
 using System.Collections;
 using Terra.Studio;
@@ -61,7 +64,32 @@ public class MyFirstScript : StudioBehaviour
     }
 }
 
+<strong>
+</strong></code></pre>
+
+Note an important difference:&#x20;
+
+Terra Studio uses `StudioBehavior` and not `MonoBehavior`&#x20;
+
+```csharp
+public class MyFirstScript : StudioBehaviour
+{
+ // Enter functions here
+ }
 ```
+
+instead of&#x20;
+
+```csharp
+/*MonoBehavior is not used in Terra Studio but instead used only in Unity*/
+public class MyFirstScript : MonoBehaviour
+{
+ // Enter functions here
+ }
+
+```
+
+###
 
 ### `Start()`
 
@@ -70,20 +98,19 @@ This function gets called at the start of the game object's lifecycle and can be
 ```csharp
 private void Start()
     {
+      // Enter code to dictate what happens at the start of the game
        
     }
 ```
 
-
-
 ### `Update()`
 
-This runs on every frame and can be used to&#x20;
+This runs on every frame and can be used to dynamically update interactions
 
 ```csharp
 private void Update()
     {
-       
+       // Enter code to tell what should happen on each frame
     }
 ```
 
@@ -121,14 +148,6 @@ Add custom local variables to an asset to use them in your scripts. To add a var
    3. Float
    4. GameObject
 6. Click on the + icon next to the variable you want to add. Each variable needs to have a name and a value.
-
-<details>
-
-<summary></summary>
-
-
-
-</details>
 
 ## Accessing Variables in your script
 
@@ -208,14 +227,14 @@ public class MyFirstScript : StudioBehaviour
     {
        // Add code        
     }
-}me code
+}
 ```
 
 
 
 ## Accessing Behavior Templates
 
-Terra has a list of behavior templates which you can use to modify. You can write your own behaviors from scratch through Behavior Template Wrappers. &#x20;
+Terra has a list of logic templates which you can use readily. However, you can also modify these templates through T# wrappers for each template. To do so:&#x20;
 
 First, access all the wrappers of a specific behavior template by declaring a variable like this:
 
@@ -231,9 +250,5 @@ CollectableTemplate collect = (GetTemplate(typeof(CollectableTemplate) as Collec
 collect.Score = 10; // Score is a property which can now be modified 
 ```
 
-A list of accessible variables for each template can be found here are written in the next page
-
-{% hint style="info" %}
-Currently, behavior templates doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
-{% endhint %}
+A list of T# wrappers that help you access the  variables for each template can be found in [T# Logic Template Wrappers](t-logic-template-wrappers.md).
 

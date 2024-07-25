@@ -1,14 +1,10 @@
 ---
 description: >-
-  List of the properties, events and methods wrappers available for each
-  behavior template
+  List of the properties, events and methods wrappers available for each logic
+  template
 ---
 
 # T# Logic Template Wrappers
-
-{% hint style="info" %}
-Currently, [behavior templates](../conceptual-guides/configuring-game-logic.md) doesn't work with objects instantiated using T#. However, behaviors can be directly coded.
-{% endhint %}
 
 ## AdvanceMoveTemplate
 
