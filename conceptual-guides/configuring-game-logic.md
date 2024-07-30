@@ -14,7 +14,7 @@ There are three ways to add game logic in Terra Studio&#x20;
 
 [Basics of T-Sharp](../coding-using-t/t-basics.md)
 
-[Differences between T# and C#](../coding-using-t/t-donts.md)
+[Differences between T# and C#](../coding-using-t/t-donts.md)&#x20;
 
 ## Using Logic Templates
 
@@ -27,6 +27,10 @@ A "Logic Template" is always added to an Asset.  It contains pre-built instructi
 1. A Logic Template is always added to an Asset.
 2. Execution of a Logic Template is always triggered by a Start Event
 3. A Logic Template can affect not only the Asset to which it is attached, but also other Assets, Game Scene Objects and Game Systems&#x20;
+
+{% hint style="info" %}
+Logic template should not be added directed to an animated object.
+{% endhint %}
 
 ### Start Events for Logic Templates
 
