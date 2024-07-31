@@ -29,6 +29,7 @@
 * [T# Don'ts](coding-using-t/t-donts.md)
 * [T# Logic Template Wrappers](coding-using-t/t-logic-template-wrappers.md)
 * [T# StudioController Wrappers](coding-using-t/t-studiocontroller-wrappers.md)
+* [T# Haptics & Extensions](coding-using-t/t-haptics-and-extensions.md)
 
 ## CONCEPTUAL GUIDES
 
