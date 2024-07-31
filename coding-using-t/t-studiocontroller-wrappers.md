@@ -23,7 +23,7 @@ StudioController controller = StudioController.CheckIfController(gameObject);
 Checks if the player is moving.
 
 ```csharp
-bbool isMoving = StudioController.GetMyController().IsMoving();
+bool isMoving = StudioController.GetMyController().IsMoving();
 ```
 
 #### Property: **GetPlayerPosition**
@@ -105,7 +105,7 @@ Gets the transform of a location based on the PlayerLocEnum.
 Transform locatorEnumBased = StudioController.GetMyController().GetLocatorEnumBased(PlayerLocEnum.LeftLegWingLoc);
 ```
 
-The avaliable locators are as follows:&#x20;
+The avaliable locators for `PlayerLocEnum` are as follows:&#x20;
 
 ```
 {
