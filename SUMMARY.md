@@ -28,6 +28,7 @@
 * [T# Basics](coding-using-t/t-basics.md)
 * [T# Don'ts](coding-using-t/t-donts.md)
 * [T# Logic Template Wrappers](coding-using-t/t-logic-template-wrappers.md)
+* [T# StudioController Wrappers](coding-using-t/t-studiocontroller-wrappers.md)
 
 ## CONCEPTUAL GUIDES
 
