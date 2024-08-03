@@ -28,10 +28,6 @@ A "Logic Template" is always added to an Asset.  It contains pre-built instructi
 2. Execution of a Logic Template is always triggered by a Start Event
 3. A Logic Template can affect not only the Asset to which it is attached, but also other Assets, Game Scene Objects and Game Systems&#x20;
 
-{% hint style="info" %}
-Logic template should not be added directed to an animated object.
-{% endhint %}
-
 ### Start Events for Logic Templates
 
 Logic Templates in Terra Studio start executing any of the five events listed below occur:
