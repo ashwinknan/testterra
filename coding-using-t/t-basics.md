@@ -30,8 +30,8 @@ Scripts define how assets behave during gameplay. To enable this, attach a scrip
 1. Select the asset to add the script.
 2. Drag and drop the Script onto the asset.
 3. Enable Advanced Mode. The Inspector Panel appears on the right.
-4. Go to the Studio Machine Tab in the Inspector Panel and open the dropdown to see all scripts in the project.&#x20;
-5. Choose the script you want to add.
+4. Go to the Studio Machine tab in the Inspector panel. The added script will be selected by default.
+5. You can change the script using the dropdown list containing all scripts in the project.
 
 ## Basic Structure of a default T# Script
 
