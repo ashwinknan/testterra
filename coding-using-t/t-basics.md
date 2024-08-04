@@ -27,12 +27,11 @@ You can create your own T# scripts to customize game behavior. Here's how:
 
 Scripts define how assets behave during gameplay. To enable this, attach a script to an asset. Here's how you can do it:
 
-1. Select the asset to add the script
-2. Go to the Logic Tab on the left
-3. Drag and drop the Studio Machine Behavior onto the asset.
-4. Enable Advanced Mode. The Inspector Panel appears on the right.
-5. Go to the Studio Machine Tab in the Inspector Panel and open the dropdown to see all scripts in the project.&#x20;
-6. Choose the script you want to add.
+1. Select the asset to add the script.
+2. Drag and drop the Script onto the asset.
+3. Enable Advanced Mode. The Inspector Panel appears on the right.
+4. Go to the Studio Machine Tab in the Inspector Panel and open the dropdown to see all scripts in the project.&#x20;
+5. Choose the script you want to add.
 
 ## Basic Structure of a default T# Script
 
