@@ -17,3 +17,20 @@ You can edit the following parameters of this template directly through the scen
 ### Resetting the Player Score through T\#
 
 You can choose not to use any logic template and directly use the T# wrapper for resetting score - the  [ResetScoreTemplate](../../coding-using-t/t-logic-template-wrappers.md#resetscoretemplate)
+
+This template manages the resetting of scores within the game, utilizing specified parameters to handle score groups. Access this wrapper using the following code snippet.&#x20;
+
+```
+ResetScoreTemplate template = (GetTemplate(typeof(ResetScoreTemplate)) as ResetScoreTemplate);
+```
+
+#### ScoreGroup Property <a href="#scoregroup-property" id="scoregroup-property"></a>
+
+Managing Score Group
+
+Once you have accessed the wrapper, you can get or set the score group that needs to be reset to zero.&#x20;
+
+```
+string scoreGroup = template.ScoreGroup;
+template.ScoreGroup = "NewScoreGroup"; // Example of updating the score group
+```
