@@ -15,6 +15,6 @@ Once you add Studio Machine to an Asset, you will notice that the Advanced Mode 
 
 You can know more about how exactly to add custom scripts here:&#x20;
 
-[T# Basics](../../coding-using-t/t-basics.md)
+[T# Basics](../../coding-using-t/creating-and-using-t-scripts.md)
 
 [T# Logic Template Wrappers](../../coding-using-t/t-logic-template-wrappers.md)

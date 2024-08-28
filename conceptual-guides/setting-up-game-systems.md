@@ -1,6 +1,6 @@
 # Setting up Game Systems
 
-Game System blocks are systems which affect the overall game and not just individual Assets. Unlike Assets , SFX, Behaviors and Particles which are clearly visible or perceivable, Game systems run in the background but significantly influence the entire gameplay experience. All Game Systems are accessible by clicking on the Essentials button in the Quick Access Menu. The Builder Panel then shows a list of all Game systems.&#x20;
+Game Systems  are also components, but they affect the overall game and not just individual GameObjects. These components run in the background but significantly influence the entire gameplay experience. All Game Systems are accessible by clicking on the Essentials button in the Quick Access Menu. The Builder Panel then shows a list of all Game systems.&#x20;
 
 Some game systems that are present in Terra Studio are listed below:&#x20;
 

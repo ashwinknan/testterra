@@ -25,8 +25,8 @@
 
 ## Coding Using T\#
 
-* [T# Basics](coding-using-t/t-basics.md)
-* [T# Don'ts](coding-using-t/t-donts.md)
+* [Creating & Using T# Scripts](coding-using-t/creating-and-using-t-scripts.md)
+* [Unsupported Functionalities in T#](coding-using-t/unsupported-functionalities-in-t.md)
 * [T# Logic Template Wrappers](coding-using-t/t-logic-template-wrappers.md)
 * [T# StudioController Wrappers](coding-using-t/t-studiocontroller-wrappers.md)
 * [T# Haptics & Extensions](coding-using-t/t-haptics-and-extensions.md)
@@ -35,8 +35,8 @@
 
 * [Building Blocks of a Terra Game](conceptual-guides/building-blocks-of-a-terra-game.md)
 * [Configuring the Player](conceptual-guides/configuring-the-player.md)
-* [Configuring the Game Scene](conceptual-guides/configuring-the-game-scene.md)
-* [Configuring Game Logic](conceptual-guides/configuring-game-logic.md)
+* [Configuring GameObjects](conceptual-guides/configuring-gameobjects.md)
+* [Configuring Components](conceptual-guides/configuring-components.md)
 * [Setting up Game Systems](conceptual-guides/setting-up-game-systems.md)
 
 ## LOGIC TEMPLATES

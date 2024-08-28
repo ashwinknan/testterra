@@ -32,11 +32,6 @@ When you select Player, you will see a dropdown on the inspector panel named Con
 
 **The TopDownController** Offers a third-person perspective without panning, this controller enables movement in all directions, allowing players to navigate their character in a figure-eight pattern. This type of controller is designed to enhance spatial awareness and maneuvering within the game environment, providing a comprehensive view of the surrounding area to facilitate exploration and strategy.
 
-There are also other controlles which are currently hidden.&#x20;
-
-* **RunForwardControllerNonAuto:** This controller requires the player to actively engage with the game by touching the screen to move the character forward. The character stops as soon as the touch is removed. Lateral movements to the left or right are controlled by swiping in the respective direction. This mode does not allow for backward movement, focusing entirely on forward progression and sidestepping.
-* **RunForwardControllerAuto:** Similar in concept to the RunForwardControllerNonAuto but with a continuous forward movement mechanic. The player's character automatically moves forward, eliminating the need to constantly touch the screen for movement. Swipes to the left or right enable gradual lateral movement, diverging from instantaneous lane switches to a more fluid transition. This ensures a gameplay experience that requires strategic planning for movement while on the go.
-
 ### Editing Player Motion Properties
 
 You can alter how players move through the game space. To edit these properties, you need to select the TopDown Player element (child of the Player element). Once you select it, you can by tweak these properties:

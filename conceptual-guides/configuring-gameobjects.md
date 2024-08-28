@@ -1,11 +1,10 @@
-# Configuring the Game Scene
+# Configuring GameObjects
 
-Once you have the Player configured, you then proceed to set up your interactive world - game scene. There are four types of Game Scene blocks you need to set up to finish setting up your game scene:&#x20;
+Once you have the Player configured, you then proceed to set up your interactive world - using GameObjects. There are three types of GameObjects we typically use to set up the game scene:
 
-* **Assets:** 3D elements, items, and structures, that players can see and interact with in the game world.
-* **SFX :** Auditory elements and sound effects
-* **Particles:** Visual effects like smoke, fire, and magical effects, adding depth and realism to the game's visual presentation.
-* **Environment:** This includes the broader setting or backdrop of the game scene, encompassing weather conditions, lighting, and landscape features, which sets the mood and context for the player's adventure.
+* **Asset GameObjects:** 3D elements, items, and structures, that players can see and interact with in the game world.
+* **SFX GameObjects:** Auditory elements and sound effects
+* **Particle GameObjects:** Visual effects like smoke, fire, and magical effects, adding depth and realism to the game's visual presentation.
 
 Here is how you can set up each of the above blocks in your scene:
 
@@ -55,12 +54,6 @@ For any object in Terra Studio, you select from one of four types of collider sh
 * **Sphere:** Surrounds the object with a spherical barrier. Touching the sphere means you've touched the object.
 * **Box:** Encases the object in a box shape. Any contact with the box is like touching the object itself.
 * **Mesh:** Follows the exact shape of the object. You have to touch the actual surface of the object to register a touch.
-
-<mark style="color:red;">In addition, there is also an IsTrigger Toggle.</mark>
-
-### Adding Logic Templates to Assets
-
-To add a [Logic Template](configuring-game-logic.md#using-logic-templates) to your asset, follow the instructions on the page below:[Adding Logic Templates to an Asset](configuring-game-logic.md#how-to-add-logic-templates)
 
 ## SFX
 
