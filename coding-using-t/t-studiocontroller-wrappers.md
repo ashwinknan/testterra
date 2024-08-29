@@ -1,119 +1,87 @@
 # T# StudioController Wrappers
 
-The StudioController class represents a controller for the player in the game. It provides various functionalities to interact with and manipulate the player character's properties and behaviors.
+### **StudioController**
 
-#### Method: **GetMyController**
+The `StudioController` class represents a controller for the player in the game. It provides various functionalities to interact with and manipulate the player character's properties and behaviors.
 
-Retrieves the current player's StudioController.
+#### Properties and Methods
 
-```csharp
-StudioController myController = StudioController.GetMyController();
-```
+| **Type** | **Name**                     | **Description**                                                                 |
+| -------- | ---------------------------- | ------------------------------------------------------------------------------- |
+| Method   | `GetMyController`            | Retrieves the current player's `StudioController`.                              |
+| Method   | `CheckIfController`          | Checks if a given GameObject has an associated `StudioController`.              |
+| Property | `IsMoving`                   | Checks if the player is moving.                                                 |
+| Property | `GetPlayerPosition`          | Gets the player's current position.                                             |
+| Property | `SetPlayerPosition`          | Sets the player's position with optional smooth movement and camera transition. |
+| Property | `GetPlayerForward`           | Gets the forward direction of the player.                                       |
+| Property | `SetPlayerRotation`          | Sets the player's rotation.                                                     |
+| Property | `GetOverHeadLocator`         | Gets the transform of the overhead locator.                                     |
+| Property | `GetControllerCamera`        | Gets the camera associated with the player controller.                          |
+| Property | `ResetCameraCurrentPosition` | Resets the camera to its current position.                                      |
+| Property | `GetLocator`                 | Finds and returns a transform based on a given locator name.                    |
+| Property | `GetPlayerData`              | Returns the underlying player data associated with this controller.             |
+| Property | `GetLocatorEnumBased`        | Gets the transform of a location based on the `PlayerLocEnum`.                  |
 
-#### Method: **CheckIfController**
-
-Checks if a given GameObject has an associated StudioController.
-
-```csharp
-StudioController controller = StudioController.CheckIfController(gameObject);
-```
-
-#### Property: **IsMoving**
-
-Checks if the player is moving.
-
-```csharp
-bool isMoving = StudioController.GetMyController().IsMoving();
-```
-
-#### Property: **GetPlayerPosition**
-
-Gets the player's current position.
+#### Usage Example
 
 ```csharp
-Vector3 playerPosition = StudioController.GetMyController().GetPlayerPosition();
+
+public class PlayerControllerExample : StudioBehavior
+{
+    void ManagePlayerController()
+    {
+        // Retrieve the current player's controller
+        StudioController myController = StudioController.GetMyController();
+
+        // Check if a GameObject has an associated StudioController
+        StudioController controller = StudioController.CheckIfController(gameObject);
+
+        // Check if the player is moving
+        bool isMoving = myController.IsMoving();
+
+        // Get the player's current position
+        Vector3 playerPosition = myController.GetPlayerPosition();
+
+        // Set the player's position with smooth movement and camera transition
+        myController.SetPlayerPosition(new Vector3(0, 0, 0), smoothMove: true, smoothCamera: true);
+
+        // Get the forward direction of the player
+        Vector3 forwardDirection = myController.GetPlayerForward();
+
+        // Set the player's rotation
+        myController.SetPlayerRotation(Quaternion.identity);
+
+        // Get the transform of the overhead locator
+        Transform overHeadLocator = myController.GetOverHeadLocator();
+
+        // Get the camera associated with the player controller
+        Camera controllerCamera = myController.GetControllerCamera();
+
+        // Reset the camera to its current position
+        myController.ResetCameraCurrentPosition();
+
+        // Find and return a transform based on a given locator name
+        Transform locator = myController.GetLocator("locatorName");
+
+        // Return the underlying player data associated with this controller
+        IPlayerData playerData = myController.GetPlayerData();
+
+        // Get the transform of a location based on the PlayerLocEnum
+        Transform locatorEnumBased = myController.GetLocatorEnumBased(PlayerLocEnum.LeftLegWingLoc);
+    }
+}
 ```
 
-#### Property: **SetPlayerPosition**
-
-Sets the player's position with optional smooth movement and camera transition.
+#### Available Locators for `PlayerLocEnum`
 
 ```csharp
-StudioController.GetMyController().SetPlayerPosition(new Vector3(0, 0, 0), smoothMove: true, smoothCamera: true);
-```
-
-#### Property: **GetPlayerForward**
-
-Gets the forward direction of the player.
-
-```csharp
-Vector3 forwardDirection = StudioController.GetMyController().GetPlayerForward();
-```
-
-#### Property: **SetPlayerRotation**
-
-Sets the player's rotation.
-
-<pre class="language-csharp"><code class="lang-csharp"><strong>StudioController.GetMyController().SetPlayerRotation(Quaternion.identity);
-</strong></code></pre>
-
-#### Property: **GetOverHeadLocator**
-
-Gets the transform of the overhead locator.
-
-```csharp
-Transform overHeadLocator = StudioController.GetMyController().GetOverHeadLocator();
-```
-
-#### Property: **GetControllerCamera**
-
-Gets the camera associated with the player controller.
-
-```csharp
-Camera controllerCamera = StudioController.GetMyController().GetControllerCamera();
-```
-
-#### Property: **ResetCameraCurrentPosition**
-
-Resets the camera to its current position.
-
-```csharp
-controller.ResetCameraCurrentPosition();
-```
-
-#### Property: **GetLocator**
-
-Finds and returns a transform based on a given locator name.
-
-```csharp
-Transform locator = StudioController.GetMyController().GetLocator("locatorName");
-```
-
-#### Property: **GetPlayerData**
-
-Returns the underlying player data associated with this controller.
-
-```csharp
-IPlayerData playerData = StudioController.GetMyController().GetPlayerData();
-```
-
-#### Property: **GetLocatorEnumBased**
-
-Gets the transform of a location based on the PlayerLocEnum.
-
-```csharp
-Transform locatorEnumBased = StudioController.GetMyController().GetLocatorEnumBased(PlayerLocEnum.LeftLegWingLoc);
-```
-
-The avaliable locators for `PlayerLocEnum` are as follows:&#x20;
-
-```
+PlayerLocEnum
 {
     LeftLegWingLoc,
     LeftLegGreavesLoc,
     RightLegWingLoc,
     RightLegGreavesLoc,
-    LeftLGlovesLoc,
+    LeftGlovesLoc,
     LeftLowerArmLoc,
     LeftShoulderLoc,
     LeftShoulderArmourLoc,
