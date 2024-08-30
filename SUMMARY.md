@@ -10,18 +10,8 @@
 ## Editor Essentials
 
 * [Dashboard](editor-essentials/dashboard.md)
-* [Scene Editor View](editor-essentials/scene-editor-view.md)
-* [Builder Menu & Builder Panel](editor-essentials/builder-menu-and-builder-panel/README.md)
-  * [Layers](editor-essentials/builder-menu-and-builder-panel/layers.md)
-  * [Essentials](editor-essentials/builder-menu-and-builder-panel/essentials/README.md)
-    * [Global Render Setting](editor-essentials/builder-menu-and-builder-panel/essentials/global-render-setting.md)
-    * [Level Mapper](editor-essentials/builder-menu-and-builder-panel/essentials/level-mapper.md)
-    * [In Game Timer](editor-essentials/builder-menu-and-builder-panel/essentials/in-game-timer.md)
-  * [Scenes](editor-essentials/builder-menu-and-builder-panel/scenes.md)
-* [Camera Controls](editor-essentials/camera-controls.md)
-* [Main Toolbar](editor-essentials/main-toolbar.md)
-* [Inspector Panel](editor-essentials/inspector-panel.md)
-* [Important Keyboard Shortcuts](editor-essentials/important-keyboard-shortcuts.md)
+* [Editor UI](editor-essentials/editor-ui.md)
+* [Editor UI Workflows](editor-essentials/editor-ui-workflows.md)
 
 ## Coding Using T\#
 
