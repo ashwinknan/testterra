@@ -26,7 +26,7 @@ You can edit the following parameters of this template directly through the scen
 | <mark style="color:blue;">`Play VFX`</mark>      | Choose a visual effect to play when you arrive at the checkpoint                                                                                          |
 | <mark style="color:blue;">`BroadcastData`</mark> | <p>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the you arrive at the checkpoint.</p> |
 
-You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [CheckpointTemplate](../coding-using-t/t-logic-template-wrappers.md#checkpointtemplate).&#x20;
+You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [CheckpointTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#checkpointtemplate).&#x20;
 
 ### Update Timer
 
@@ -42,7 +42,7 @@ You can edit the following parameters of this template directly through the scen
 
 <table><thead><tr><th width="282">Parameters</th><th>Description</th></tr></thead><tbody><tr><td><mark style="color:blue;"><code>Update When</code></mark></td><td><p></p><p>Select a trigger from the dropdown to activate the logic template:</p><ul><li><strong>Player Touches</strong>: Resets the timer when the player touches the selected object.</li><li><strong>Other Object Touches</strong>: Resets the timer when another object touches the selected object.</li><li><strong>Clicked</strong>: Resets the timer when you click the selected object.</li><li><strong>Broadcast Listened</strong>: Resets the timer when it receives a broadcast</li></ul></td></tr><tr><td><mark style="color:blue;"><code>Operation</code></mark></td><td>Define the operator that will modify the timer. Four operators are allowed - Add, Subtract, Multiply and Divide</td></tr><tr><td><mark style="color:blue;"><code>Update By</code></mark></td><td>The quantity specified in this context will determine the extent to which the timer is modified.</td></tr><tr><td><mark style="color:blue;"><code>Sound Effect on Start</code></mark></td><td>Choose a sound effect to play when the timer value is updated.</td></tr><tr><td><mark style="color:blue;"><code>Visual Effect on Start</code></mark></td><td>Choose a visual effect to play when the timer value is updated.</td></tr><tr><td><mark style="color:blue;"><code>Broadcast on Update</code></mark></td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the timer is updated.</td></tr><tr><td><mark style="color:blue;"><code>Execute always</code></mark></td><td>This toggle, when activated, will always execute this. When off, it will execute it only once.</td></tr></tbody></table>
 
-You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [UpdateTimerTemplate](../coding-using-t/t-logic-template-wrappers.md#updatetimertemplate). &#x20;
+You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [UpdateTimerTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#updatetimertemplate). &#x20;
 
 ### Reset Timer
 

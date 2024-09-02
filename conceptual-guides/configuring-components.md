@@ -11,9 +11,9 @@ There are two ways to use Components in Terra Studio&#x20;
 
 **Terra Creator Studio** enables experienced game developers to implement custom logic using a scripting language called **T# (T-Sharp)**. T# is very similar to Unity's C#, making it easy for Unity developers to learn. The links below provide detailed guidance on writing T-Sharp code:
 
-[Basics of T-Sharp](../coding-using-t/creating-and-using-t-scripts.md)
+[Basics of T-Sharp](../scripting-custom-logic-components/creating-and-using-t-scripts.md)
 
-[Differences between T# and C#](../coding-using-t/unsupported-functionalities-in-t.md)&#x20;
+[Differences between T# and C#](../scripting-custom-logic-components/unsupported-functionalities-in-t.md)&#x20;
 
 ## Using Logic Template Component
 
@@ -102,7 +102,7 @@ Terra Studio has a wide selection of logic template components for you to choose
 
 #### PlayerStats
 
-<table><thead><tr><th width="262">Logic Template Component</th><th>Description</th></tr></thead><tbody><tr><td><a href="../logic-templates/playerstats/update-score.md">Update Score</a></td><td>Updates a specific score group to a new specified value</td></tr><tr><td><a href="../logic-templates/playerstats/reset-score.md">Reset Score</a></td><td>Resets the specified score group to zero</td></tr><tr><td><a href="../logic-templates/playerstats/increase-player-hp.md">Increase HP</a></td><td>Increases the player Health value by the specific amount</td></tr><tr><td><a href="../logic-templates/playerstats/decrease-player-hp.md">Damage HP</a></td><td>Decreases the player Health value by a specific amount</td></tr><tr><td><a href="../logic-templates/playerstats/reset-player-health.md">Reset Health</a></td><td>Resets the player Health value to zero</td></tr><tr><td><a href="../logic-templates/playerstats/level-up.md">Level Up</a></td><td>Guides the Level Mapper on how to increase a property's level to the next tier.</td></tr><tr><td><a href="../logic-templates/playerstats/update-magnet.md">Change Magnet Range</a></td><td>Changes the magnet range for the player's collection</td></tr><tr><td><a href="../logic-templates/playerstats/stop-player-movement.md">Toggle Player Movement</a></td><td>Stops or starts the player movements</td></tr><tr><td>Change Player Speed</td><td>Changes the speed of movement of the player</td></tr></tbody></table>
+<table><thead><tr><th width="262">Logic Template Component</th><th>Description</th></tr></thead><tbody><tr><td><a href="broken-reference">Update Score</a></td><td>Updates a specific score group to a new specified value</td></tr><tr><td><a href="broken-reference">Reset Score</a></td><td>Resets the specified score group to zero</td></tr><tr><td><a href="broken-reference">Increase HP</a></td><td>Increases the player Health value by the specific amount</td></tr><tr><td><a href="broken-reference">Damage HP</a></td><td>Decreases the player Health value by a specific amount</td></tr><tr><td><a href="broken-reference">Reset Health</a></td><td>Resets the player Health value to zero</td></tr><tr><td><a href="broken-reference">Level Up</a></td><td>Guides the Level Mapper on how to increase a property's level to the next tier.</td></tr><tr><td><a href="broken-reference">Change Magnet Range</a></td><td>Changes the magnet range for the player's collection</td></tr><tr><td><a href="broken-reference">Toggle Player Movement</a></td><td>Stops or starts the player movements</td></tr><tr><td>Change Player Speed</td><td>Changes the speed of movement of the player</td></tr></tbody></table>
 
 
 
@@ -112,5 +112,5 @@ Logic Template Components are useful for both beginners and experienced develope
 
 The limitation of Logic Template Components is the inflexibility in customizing interactions, as only exposed properties are editable from the editor. We address this by providing wrappers for Logic Templates, customizable via T-Sharp code. These wrappers expose all editable properties to the developer, allowing for more complex interactions than the editor interface permits.
 
-You can read more about how to access the Logic Templates through T-Sharp code in the documentation for [Logic Template Wrappers](../coding-using-t/t-logic-template-wrappers.md).&#x20;
+You can read more about how to access the Logic Templates through T-Sharp code in the documentation for [Logic Template Wrappers](../scripting-custom-logic-components/t-logic-template-wrappers.md).&#x20;
 

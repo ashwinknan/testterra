@@ -32,7 +32,7 @@ You can customize the below-mentioned parameters according to your requirements:
 | IsMultiLevel            | Enabling this parameter can upgrade to a higher value on level up                                                                                                                                                     |
 | Broadcast On Collection | <p>Choose to enter a broadcast that can be used as a trigger for any other behaviour.<br>The broadcast is sent when the item is collected</p>                                                                         |
 
-If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [CollectableTemplate](../coding-using-t/t-logic-template-wrappers.md#collectabletemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [CollectableTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#collectabletemplate)
 
 ### Teleport Player
 
@@ -48,7 +48,7 @@ You can customize the below-mentioned parameters according to your requirements:
 
 <table><thead><tr><th width="367">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Teleport When</td><td><p>You can choose the trigger to activate the behaviour </p><p>- When the game starts<br>- After a broadcast message has been received by the object<br>- When the player touches the object<br>- When a different object touches the object<br>- When you click on the object</p></td></tr><tr><td>Teleport </td><td>You can choose the coordinates where you want the player to be teleported.</td></tr><tr><td>Loop-able</td><td>This allows you to loop the movement of the object. It appears as if it is oscillating between 2 different points.</td></tr><tr><td>Interval</td><td>Intervals add a delay between the back-and-forth movement of the object during the loop.</td></tr><tr><td>Move By</td><td>You can define how many units and in what axis the object will move</td></tr><tr><td>Sound Effect on Start</td><td>Choose a sound effect to play when the object starts to move</td></tr><tr><td>Visual Effect on Start</td><td>Choose a visual effect to play when the object starts to move</td></tr><tr><td>Broadcast </td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the object stops moving..</td></tr></tbody></table>
 
-If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [TeleportTemplate](../coding-using-t/t-logic-template-wrappers.md#teleporttemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [TeleportTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#teleporttemplate)
 
 ### Jump Pad
 
@@ -73,7 +73,7 @@ You can customize the below-mentioned parameters according to your requirements:
 Your Jump Height should ideally be greater than 2 for the Jump Pad to work. Small jump height values will not lead to an increased jump height. You can find Jump Height in the Player Controller Drawer. Eg: A jump Height of 0.1 with a Jump Force of 10 will change the total jump height to 0.01 which is lower than the initial height.
 {% endhint %}
 
-If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [JumpPadTemplate](../coding-using-t/t-logic-template-wrappers.md#jumppadtemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [JumpPadTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#jumppadtemplate)
 
 ### Carryable
 
@@ -175,7 +175,7 @@ You can customize the below-mentioned parameters according to your requirements:
 | <mark style="color:blue;">`Play VFX`</mark>             | Choose a small visual effect to play on the object when the player is killed                                                                  |
 | <mark style="color:blue;">`Broadcast On Respawn`</mark> | <p>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the player is killed.</p> |
 
-If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [KillPlayerTemplate](../coding-using-t/t-logic-template-wrappers.md#killplayertemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper - [KillPlayerTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#killplayertemplate)
 
 ### Multi-Point Move
 
@@ -193,7 +193,7 @@ You can customize the below-mentioned parameters according to your requirements:
 
 <table><thead><tr><th width="204">Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Move On</td><td>This is a dropdown from where you need select any one of the following Start Events for Interpolate Points to begin executing: <br> <br>1. When the behavior  when the game starts: Select "Game Start"<br>2. When any other Asset touches the currently selected Asset: Select "Other Object Touch"<br>3. When a particular broadcast is generated in the game: Select "Broadcast Listened" and specify the name of the signal to listen to<br>4. When the player touches the currently selected Asset: Select "Player Touchers"<br>5. When the Asset is clicked: Select "On Click" </td></tr><tr><td>Points</td><td>This helps you specify the coordinates of the multiple points through which the Asset will move in a path. Click the + button to add points and - button to remove an existing point</td></tr><tr><td>Speed</td><td>This is an input field where you can enter a number that represents the speed of Asset movement</td></tr><tr><td>Turn To Points</td><td>This toggle button ensures that only one side of the Asset always faces forward. When activated, it adjusts the Asset's orientation to maintain this specific direction during movement.</td></tr><tr><td>Delay at Point</td><td>This field lets you set a delay in seconds. During this delay, the Asset will not move. After the time passes, it will start moving again.</td></tr><tr><td>Loop</td><td>This toggle button, when activated, enables the movement to repeat continuously</td></tr><tr><td>Is Curve</td><td>This toggle button alters the Asset's trajectory between points to follow a curved path instead of a linear one.</td></tr><tr><td>Interpolate Types</td><td><p></p><p>This dropdown lets you pick how the object moves:</p><ul><li>For forward movement only, select <strong>One Direction</strong></li><li>For back-and-forth movement, select <strong>Ping Pong</strong></li></ul></td></tr><tr><td>Broadcast Type &#x26; Broadcast Signal</td><td><p>The Broadcast Signal option allows you to create a game signal that other can act as the Start Event for other behavior blocks to execute. You can choose "Game Win", "Game Lose", or create your own custom signal. For a custom signal, you must select "Custom" from the dropdown and enter a name in the input field.<br><br>The Broadcast Type dropdown lets you specify when the broadcast signal will be sent. There are three options to choose from:</p><ul><li>If you want no broadcast to be sent, Select Never</li><li>If you want to send a broadcast after finishing one whole movement from start to end, select End </li><li>If you want to send the broadcast signal every time the object pauses , select At Every Pause</li></ul></td></tr></tbody></table>
 
-If you want to further customize this logic template, you can do so by accessing its T# Wrapper- [MoveBetweenPointsTemplate ](../coding-using-t/t-logic-template-wrappers.md#movebetweenpointstemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper- [MoveBetweenPointsTemplate ](../scripting-custom-logic-components/t-logic-template-wrappers.md#movebetweenpointstemplate)
 
 ### Modify Carryable
 

@@ -6,7 +6,7 @@ The behavior of objects in the game is controlled by the Logic Templates that ar
 
 Terra Studio uses a programming language called T# (pronounced T-Sharp) - it has a syntax similar to C#. This was developed to provide developers who are used to writing code the flexibility to do almost anything on Terra's platforms.&#x20;
 
-A knowledge of Unity C# makes it super easy for you learn T#, but you need to take care of certain things that are different in T#. Read the [T# Don'ts](unsupported-functionalities-in-t.md) to be aware of these.
+A knowledge of Unity C# makes it super easy for you learn T#, but you need to take care of certain things that are different in T#. Read the section on [Unsupported Functionalities in T#](unsupported-functionalities-in-t.md) to know more.
 
 ## Creating your own Script
 
@@ -412,6 +412,62 @@ IEnumerator DoCheck()
 ```
 
 This reduces the number of checks that Terra Studio carries out without any noticeable effect on gameplay.
+
+## Handling MouseClick
+
+The code below sends a debug message when a user clicks on the object to which this script is attached.
+
+```csharp
+
+public class ClickHandler : StudioBehaviour
+{
+    // This method is called when the user clicks on the GameObject
+    private void OnMouseDown()
+    {
+        // Initiate an action, e.g., print a message to the console
+        Debug.Log("GameObject clicked!");
+        // You can add a function to do something on click as well - like the dummy function below
+        // Feel free to replace it with something functional
+        doSomething();
+       
+    }
+}
+```
+
+## Handling Collision
+
+The code below sends a debug message when the gameObject to which the script is attached collides with another game object - a cube (whose name is declared in the object variable for the current game object as "`cube`")
+
+```csharp
+public class CollisionHandler : StudioBehaviour
+{
+    // Reference to the specific GameObject you want to check for collision
+    private GameObject targetObject;
+    
+    // Accessing the game object variable on Game start
+    private void Start()
+    {
+    // Assuning that the variable name for the target object was set as 'cube' on the editor    
+       targetObject = GetGameObjectVariable("cube");     
+   }
+
+
+    // This method is called when the collider attached to this GameObject
+    // collides with another collider.
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Check if the collision was with the specific GameObject
+        if (collision.gameObject == targetObject)
+        {
+            // Initiate an action, e.g., print a message to the console
+            Debug.Log("Collided with the specific GameObject!");
+
+            // Enter code below to complete some other action on collision as well
+        }
+    }
+}
+
+```
 
 
 
