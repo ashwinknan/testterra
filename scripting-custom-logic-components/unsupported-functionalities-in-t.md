@@ -6,7 +6,7 @@ description: This page lists everything that is currently not supported in T#
 
 ## **Default Variable Assigning**
 
-The following way of assigning default values is not supported:
+The following way of assigning default values is not supported in T#:
 
 ```csharp
 private string var1 = "hello world"; // Not allowed in T#
@@ -26,7 +26,7 @@ void Start() {
 
 Generic methods such as `GetComponent<T>`, `AddComponent<T>`, `FindObjectOfType<T>`, and similar methods involving generics are not supported in T#.
 
-None of these generic methods are supported**:**
+None of the following generic methods are supported**:**
 
 ```csharp
 Rigidbody rb = gameObject.GetComponent<Rigidbody>();            // Not allowed

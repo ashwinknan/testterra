@@ -35,7 +35,7 @@ Scripts define how assets behave during gameplay. To enable this, attach a scrip
 
 When you double-click a script in Terra Studio, it will be opened in a text editor. By default, Terra Studio will use VS Code Editor:
 
-The initial contents of the file will look something like this:
+The initial contents of the script file will look something like this:
 
 <pre class="language-csharp"><code class="lang-csharp">
 using System;

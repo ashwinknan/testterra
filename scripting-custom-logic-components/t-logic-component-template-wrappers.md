@@ -4,17 +4,17 @@ description: >-
   template
 ---
 
-# T# Logic Template Wrappers
+# T# Logic Component Template Wrappers
 
-## Accessing Logic Template Components
+## How to customize pre-built logic components
 
-Terra provides a range of logic templates that can be utilized and customized in your project.&#x20;
+Terra Studio provides wrappers to access and customize pre-built logic components.&#x20;
 
-We first declare a variable to access the specific template you want to modify:
+To access the wrapper, we first declare a variable that helps retrieve the logic template component using the GetTemplate method. &#x20;
 
 ```csharp
-//TemplateType template = (GetTemplate(typeof(TemplateType)) as TemplateType);
-TemplateType template = (GetTemplate(typeof(TemplateType)) as TemplateType);
+//This line retrieves a template of type CollectableTemplate using the GetTemplate method and then casts it to the CollectableTemplate type.
+TemplateName template = (GetTemplate(typeof(TemplateName)) as TemplateName);
 ```
 
 This variable allows you to access and modify the template's properties. We then use the variable to update the properties of the template:
@@ -26,12 +26,13 @@ template.PropertyName = newValue;
 
 #### Specific Example
 
-The code below illustrates how to do this using the CollectableTemplate Wrapper, where we the `Score` property of the `collectable` is set to `10`.
+The code below illustrates how to do this using the CollectableTemplate Wrapper, where we set the `Score` property of the `collectable` is set to `10`.
 
-* ```csharp
-  CollectableTemplate collect = (GetTemplate(typeof(CollectableTemplate)) as CollectableTemplate);
-  collect.Score = 10; // Set the score property to 10
-  ```
+```csharp
+// Example to access the Collectable template wrapper and then set the values of one of its exposed properties
+CollectableTemplate collect = (GetTemplate(typeof(CollectableTemplate)) as CollectableTemplate);
+collect.Score = 10; // Set the score property to 10
+```
 
 ## List of Template Wrappers
 
@@ -39,14 +40,11 @@ The code below illustrates how to do this using the CollectableTemplate Wrapper,
 
 This template manages advanced movement for GameObjects, handling speed and event management for ping-pong actions. It is designed to be integrated within a GameObject's movement logic. Below is how you can utilize the `AdvanceMoveTemplate` within a `StudioBehavior` class.&#x20;
 
-#### Properties and Methods
+#### Properties and Methods in AdvanceMoveTemplate
 
-| **Type**     | **Name** | **Description**                                                     |
-| ------------ | -------- | ------------------------------------------------------------------- |
-| **Property** | Speed    | Used for getting and setting the movement speed.                    |
-| **Method**   | Bla      | Manages the Ping-Pong event. Allows subscription or unsubscription. |
+<table data-header-hidden><thead><tr><th width="131"></th><th width="129"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Speed</td><td>Used for getting and setting the movement speed.</td></tr><tr><td><strong>Method</strong></td><td>Bla</td><td>Manages the Ping-Pong event. Allows subscription or unsubscription.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for AdvanceMoveTemplate
 
 ```csharp
 public class MovementManager : StudioBehavior
@@ -72,13 +70,11 @@ public class MovementManager : StudioBehavior
 
 This template manages the magnet range for GameObjects using the `ChangeMagnetComponent`, allowing customization of magnet range behavior within your game.&#x20;
 
-#### Properties and Methods
+#### Properties and Methods in ChangeMagnetTemplate
 
-| **Type**     | **Name**    | **Description**                                |
-| ------------ | ----------- | ---------------------------------------------- |
-| **Property** | MagnetRange | Used for getting and setting the magnet range. |
+<table data-header-hidden><thead><tr><th width="118"></th><th width="144"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>MagnetRange</td><td>Used for getting and setting the magnet range.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for ChangeMagnetTemplate
 
 ```csharp
 
@@ -100,18 +96,11 @@ public class MagnetManager : StudioBehavior
 
 This template provides functionality to change material properties on a GameObject. It can be accessed and utilized as follows:
 
-#### Properties and Methods
+#### Properties and Methods in ChangeMaterialPropertyTemplate
 
-| **Type**     | **Name**          | **Description**                                         |
-| ------------ | ----------------- | ------------------------------------------------------- |
-| **Property** | Channels          | Access the changed material channels array.             |
-| **Property** | Length            | Get the number of channels.                             |
-| **Property** | Indexer           | Get or set a channel by index.                          |
-| **Event**    | OnMaterialChanged | Event triggered when material properties change.        |
-| **Method**   | CheckIndex        | Ensure the index is within the valid range of channels. |
-| **Method**   | GetEnumerator     | Get an enumerator for iterating through the channels.   |
+<table data-header-hidden><thead><tr><th width="158"></th><th width="191"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Channels</td><td>Access the changed material channels array.</td></tr><tr><td><strong>Property</strong></td><td>Length</td><td>Get the number of channels.</td></tr><tr><td><strong>Property</strong></td><td>Indexer</td><td>Get or set a channel by index.</td></tr><tr><td><strong>Event</strong></td><td>OnMaterialChanged</td><td>Event triggered when material properties change.</td></tr><tr><td><strong>Method</strong></td><td>CheckIndex</td><td>Ensure the index is within the valid range of channels.</td></tr><tr><td><strong>Method</strong></td><td>GetEnumerator</td><td>Get an enumerator for iterating through the channels.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for ChangeMaterialPropertyTemplate
 
 ```csharp
 public class MaterialManager : StudioBehavior
@@ -154,15 +143,11 @@ public class MaterialManager : StudioBehavior
 
 This template provides functionality to change the player speed on a GameObject. It can be accessed and utilized as follows:
 
-#### Properties and Methods
+#### Properties and Methods in ChangePlayerSpeedTemplate
 
-| **Type**     | **Name**             | **Description**                                       |
-| ------------ | -------------------- | ----------------------------------------------------- |
-| **Property** | Modifier             | Get or set the speed modifier (increase or decrease). |
-| **Property** | PlayerSpeed          | Get or set the player speed.                          |
-| **Event**    | OnPlayerSpeedChanged | Event triggered when the player speed changes.        |
+<table data-header-hidden><thead><tr><th width="142"></th><th width="218"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Modifier</td><td>Get or set the speed modifier (increase or decrease).</td></tr><tr><td><strong>Property</strong></td><td>PlayerSpeed</td><td>Get or set the player speed.</td></tr><tr><td><strong>Event</strong></td><td>OnPlayerSpeedChanged</td><td>Event triggered when the player speed changes.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for ChangePlayerSpeedTemplate
 
 ```csharp
 public class SpeedManager : StudioBehavior
@@ -198,13 +183,11 @@ public class SpeedManager : StudioBehavior
 
 This template provides functionality to manage checkpoint events in the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in CheckpointTemplate&#x20;
 
-| **Type**  | **Name**            | **Description**                               |
-| --------- | ------------------- | --------------------------------------------- |
-| **Event** | OnCheckpointTouched | Event triggered when a checkpoint is touched. |
+<table data-header-hidden><thead><tr><th width="119"></th><th width="211"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Event</strong></td><td>OnCheckpointTouched</td><td>Event triggered when a checkpoint is touched.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for CheckpointTemplate
 
 ```csharp
 public class CheckpointManager : StudioBehavior
@@ -232,15 +215,11 @@ public class CheckpointManager : StudioBehavior
 
 This template provides functionality to manage collectable items in the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in CollectableTemplate
 
-| **Type**     | **Name**    | **Description**                                                  |
-| ------------ | ----------- | ---------------------------------------------------------------- |
-| **Property** | ScoreGroup  | Get or set the score group associated with the collectable item. |
-| **Property** | Score       | Get or set the score value of the collectable item.              |
-| **Event**    | OnCollected | Event triggered when the collectable item is collected.          |
+<table data-header-hidden><thead><tr><th width="138"></th><th width="147"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>ScoreGroup</td><td>Get or set the score group associated with the collectable item.</td></tr><tr><td><strong>Property</strong></td><td>Score</td><td>Get or set the score value of the collectable item.</td></tr><tr><td><strong>Event</strong></td><td>OnCollected</td><td>Event triggered when the collectable item is collected.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for CollectableTemplate
 
 ```csharp
 public class CollectableManager : StudioBehavior
@@ -276,13 +255,11 @@ public class CollectableManager : StudioBehavior
 
 This template manages delayed broadcast functionality in the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in DelayBroadcastTemplate
 
-| **Type**     | **Name** | **Description**                              |
-| ------------ | -------- | -------------------------------------------- |
-| **Property** | Delay    | Get or set the delay time for the broadcast. |
+<table data-header-hidden><thead><tr><th width="136"></th><th width="99"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Delay</td><td>Get or set the delay time for the broadcast.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for DelayBroadcastTemplate
 
 ```csharp
 public class BroadcastManager : StudioBehavior
@@ -303,13 +280,11 @@ public class BroadcastManager : StudioBehavior
 
 This template manages the behavior of objects that are destroyed after a specified delay. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in DestroyOnTemplate
 
-| **Type**     | **Name**     | **Description**                                           |
-| ------------ | ------------ | --------------------------------------------------------- |
-| **Property** | DestroyAfter | Get or set the delay after which the object is destroyed. |
+<table data-header-hidden><thead><tr><th width="129"></th><th width="141"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>DestroyAfter</td><td>Get or set the delay after which the object is destroyed.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for DestroyOnTemplate
 
 ```csharp
 public class DestructionManager : StudioBehavior
@@ -330,13 +305,11 @@ public class DestructionManager : StudioBehavior
 
 This template manages the behavior of objects that are destroyed after a specified delay. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in DestroyTemplate
 
-| **Type**     | **Name**     | **Description**                                           |
-| ------------ | ------------ | --------------------------------------------------------- |
-| **Property** | DestroyAfter | Get or set the delay after which the object is destroyed. |
+<table data-header-hidden><thead><tr><th width="130"></th><th width="139"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>DestroyAfter</td><td>Get or set the delay after which the object is destroyed.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for DestroyTemplate
 
 ```csharp
 public class DestructionManager : StudioBehavior
@@ -357,16 +330,11 @@ public class DestructionManager : StudioBehavior
 
 This template manages game progress functionality in the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in GameProgressTemplate
 
-| **Type**     | **Name**                 | **Description**                                            |
-| ------------ | ------------------------ | ---------------------------------------------------------- |
-| **Property** | CurrentProgress          | Get or set the current progress value.                     |
-| **Property** | LerpSpeed                | Get or set the lerp speed configured for the progress bar. |
-| **Property** | BroadcastOnEveryProgress | Get or set the broadcast trigger for each progress point.  |
-| **Property** | BroadcastOnComplete      | Get or set the broadcast trigger for completion.           |
+<table data-header-hidden><thead><tr><th width="150"></th><th width="242"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>CurrentProgress</td><td>Get or set the current progress value.</td></tr><tr><td><strong>Property</strong></td><td>LerpSpeed</td><td>Get or set the lerp speed configured for the progress bar.</td></tr><tr><td><strong>Property</strong></td><td>BroadcastOnEveryProgress</td><td>Get or set the broadcast trigger for each progress point.</td></tr><tr><td><strong>Property</strong></td><td>BroadcastOnComplete</td><td>Get or set the broadcast trigger for completion.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for GameProgressTemplate
 
 ```csharp
 csharpCopy codeusing UnityEngine;
@@ -400,17 +368,11 @@ public class ProgressManager : StudioBehavior
 
 This template manages in-game scoring functionality. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in GameScoreTemplate&#x20;
 
-| **Type**     | **Name**              | **Description**                                 |
-| ------------ | --------------------- | ----------------------------------------------- |
-| **Property** | CurrentScore          | Get or set the current score.                   |
-| **Property** | BestScore             | Get or set the best score achieved.             |
-| **Property** | IsScoreUIShown        | Check if the score UI is currently displayed.   |
-| **Property** | IsBestScoreCalculated | Check if the best score calculation is enabled. |
-| **Event**    | OnScoreModified       | Event triggered when the score is modified.     |
+<table data-header-hidden><thead><tr><th width="137"></th><th width="207"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>CurrentScore</td><td>Get or set the current score.</td></tr><tr><td><strong>Property</strong></td><td>BestScore</td><td>Get or set the best score achieved.</td></tr><tr><td><strong>Property</strong></td><td>IsScoreUIShown</td><td>Check if the score UI is currently displayed.</td></tr><tr><td><strong>Property</strong></td><td>IsBestScoreCalculated</td><td>Check if the best score calculation is enabled.</td></tr><tr><td><strong>Event</strong></td><td>OnScoreModified</td><td>Event triggered when the score is modified.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example in GameScoreTemplate
 
 ```csharp
 public class ScoreManager : StudioBehavior
@@ -450,19 +412,11 @@ public class ScoreManager : StudioBehavior
 
 This template manages the growth and scale behavior of GameObjects.
 
-#### Properties and Methods
+#### Properties and Methods in GrowTemplate
 
-| **Type**     | **Name**         | **Description**                                                               |
-| ------------ | ---------------- | ----------------------------------------------------------------------------- |
-| **Property** | ScaleTo          | Get or set the scale to which the object grows.                               |
-| **Property** | Speed            | Get or set the speed at which the object grows.                               |
-| **Property** | ShouldPingPong   | Check or set whether the growth should alternate between scaling up and down. |
-| **Property** | RepeatForever    | Check or set whether the growth should repeat indefinitely.                   |
-| **Property** | RepeatFor        | Get or set the duration for which the growth should repeat.                   |
-| **Event**    | OnRepetationOver | Event triggered when the repetition is over.                                  |
-| **Event**    | OnGrowFinished   | Event triggered when the growth is finished.                                  |
+<table data-header-hidden><thead><tr><th width="149"></th><th width="165"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>ScaleTo</td><td>Get or set the scale to which the object grows.</td></tr><tr><td><strong>Property</strong></td><td>Speed</td><td>Get or set the speed at which the object grows.</td></tr><tr><td><strong>Property</strong></td><td>ShouldPingPong</td><td>Check or set whether the growth should alternate between scaling up and down.</td></tr><tr><td><strong>Property</strong></td><td>RepeatForever</td><td>Check or set whether the growth should repeat indefinitely.</td></tr><tr><td><strong>Property</strong></td><td>RepeatFor</td><td>Get or set the duration for which the growth should repeat.</td></tr><tr><td><strong>Event</strong></td><td>OnRepetationOver</td><td>Event triggered when the repetition is over.</td></tr><tr><td><strong>Event</strong></td><td>OnGrowFinished</td><td>Event triggered when the growth is finished.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for GrowTemplate
 
 ```csharp
 public class GrowthManager : StudioBehavior
@@ -521,16 +475,11 @@ public class GrowthManager : StudioBehavior
 
 This template manages in-game timer functionality. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in InGameTimerTemplate
 
-| **Type**     | **Name**       | **Description**                                               |
-| ------------ | -------------- | ------------------------------------------------------------- |
-| **Property** | TimerType      | Get the type of timer.                                        |
-| **Property** | CurrentTime    | Get the current time from the in-game timer handler.          |
-| **Property** | IsUIShown      | Check if the UI associated with the timer is currently shown. |
-| **Event**    | OnTimerUpdated | Event triggered when the timer is updated.                    |
+<table data-header-hidden><thead><tr><th width="148"></th><th width="166"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>TimerType</td><td>Get the type of timer.</td></tr><tr><td><strong>Property</strong></td><td>CurrentTime</td><td>Get the current time from the in-game timer handler.</td></tr><tr><td><strong>Property</strong></td><td>IsUIShown</td><td>Check if the UI associated with the timer is currently shown.</td></tr><tr><td><strong>Event</strong></td><td>OnTimerUpdated</td><td>Event triggered when the timer is updated.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for InGameTimerTemplate
 
 ```csharp
 public class TimerManager : StudioBehavior
@@ -567,13 +516,11 @@ public class TimerManager : StudioBehavior
 
 This template manages jump pad functionality within the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in JumpPadTemplate&#x20;
 
-| **Type**     | **Name**  | **Description**                            |
-| ------------ | --------- | ------------------------------------------ |
-| **Property** | JumpForce | Get or set the jump force of the jump pad. |
+<table data-header-hidden><thead><tr><th width="142"></th><th width="120"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>JumpForce</td><td>Get or set the jump force of the jump pad.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for JumpPadTemplate
 
 ```csharp
 public class JumpPadManager : StudioBehavior
@@ -594,20 +541,13 @@ public class JumpPadManager : StudioBehavior
 
 ### **KillPlayerTemplate**
 
-This template manages the behavior related to killing the player in the game. Access it as follows:
+This template manages the behavior related to killing the player in the game.&#x20;
 
-#### Properties and Methods
+#### Properties and Methods in KillPlayerTemplate
 
-| **Type**     | **Name**               | **Description**                                        |
-| ------------ | ---------------------- | ------------------------------------------------------ |
-| **Property** | AnimationToPlayOnDeath | Get or set the animation to play when the player dies. |
-| **Property** | Delay                  | Get or set the delay before respawning the player.     |
-| **Property** | RespawnType            | Get or set the respawn type (snap or lerp).            |
-| **Property** | LerpTime               | Get or set the lerp time for respawn.                  |
-| **Event**    | OnAnimationEnded       | Event triggered when the animation ends.               |
-| **Event**    | OnRespawned            | Event triggered when the player respawns.              |
+<table data-header-hidden><thead><tr><th width="155"></th><th width="227"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>AnimationToPlayOnDeath</td><td>Get or set the animation to play when the player dies.</td></tr><tr><td><strong>Property</strong></td><td>Delay</td><td>Get or set the delay before respawning the player.</td></tr><tr><td><strong>Property</strong></td><td>RespawnType</td><td>Get or set the respawn type (snap or lerp).</td></tr><tr><td><strong>Property</strong></td><td>LerpTime</td><td>Get or set the lerp time for respawn.</td></tr><tr><td><strong>Event</strong></td><td>OnAnimationEnded</td><td>Event triggered when the animation ends.</td></tr><tr><td><strong>Event</strong></td><td>OnRespawned</td><td>Event triggered when the player respawns.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for KillPlayerTemplate
 
 ```csharp
 public class PlayerManager : StudioBehavior
@@ -662,15 +602,11 @@ public class PlayerManager : StudioBehavior
 
 This template manages the behavior related to controlling a light component in the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in LightTemplate&#x20;
 
-| **Type**     | **Name**                  | **Description**                                         |
-| ------------ | ------------------------- | ------------------------------------------------------- |
-| **Property** | Color                     | Get or set the color of the light.                      |
-| **Property** | Intensity                 | Get or set the intensity of the light.                  |
-| **Event**    | OnLightPropertiesModified | Event triggered when the light properties are modified. |
+<table data-header-hidden><thead><tr><th width="148"></th><th width="240"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Color</td><td>Get or set the color of the light.</td></tr><tr><td><strong>Property</strong></td><td>Intensity</td><td>Get or set the intensity of the light.</td></tr><tr><td><strong>Event</strong></td><td>OnLightPropertiesModified</td><td>Event triggered when the light properties are modified.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for LightTemplate
 
 ```csharp
 public class LightController : StudioBehavior
@@ -708,22 +644,11 @@ public class LightController : StudioBehavior
 
 This template facilitates movement between specified points in the game, utilizing interpolation techniques for smooth transitions. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in MoveBetweenPointsTemplate
 
-| **Type**     | **Name**          | **Description**                                           |
-| ------------ | ----------------- | --------------------------------------------------------- |
-| **Property** | Points            | Access or modify the points defining the movement path.   |
-| **Property** | Speed             | Get or set the speed of movement between points.          |
-| **Property** | TurnToPoints      | Enable or disable rotation towards movement points.       |
-| **Property** | DelayAtPoint      | Specify a delay upon reaching each movement point.        |
-| **Property** | Loop              | Enable or disable looping of the movement path.           |
-| **Property** | DoCurve           | Activate or deactivate curve interpolation for movement.  |
-| **Property** | LoopType          | Specify the interpolation type used for movement looping. |
-| **Event**    | OnIntervalReached | Event triggered when an interval is reached.              |
-| **Event**    | OnReachedEnd      | Event triggered when the movement ends.                   |
-| **Event**    | OnLoopFinished    | Event triggered when the movement loop is finished.       |
+<table data-header-hidden><thead><tr><th width="142"></th><th width="177"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Points</td><td>Access or modify the points defining the movement path.</td></tr><tr><td><strong>Property</strong></td><td>Speed</td><td>Get or set the speed of movement between points.</td></tr><tr><td><strong>Property</strong></td><td>TurnToPoints</td><td>Enable or disable rotation towards movement points.</td></tr><tr><td><strong>Property</strong></td><td>DelayAtPoint</td><td>Specify a delay upon reaching each movement point.</td></tr><tr><td><strong>Property</strong></td><td>Loop</td><td>Enable or disable looping of the movement path.</td></tr><tr><td><strong>Property</strong></td><td>DoCurve</td><td>Activate or deactivate curve interpolation for movement.</td></tr><tr><td><strong>Property</strong></td><td>LoopType</td><td>Specify the interpolation type used for movement looping.</td></tr><tr><td><strong>Event</strong></td><td>OnIntervalReached</td><td>Event triggered when an interval is reached.</td></tr><tr><td><strong>Event</strong></td><td>OnReachedEnd</td><td>Event triggered when the movement ends.</td></tr><tr><td><strong>Event</strong></td><td>OnLoopFinished</td><td>Event triggered when the movement loop is finished.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for MoveBetweenPointsTemplate
 
 ```csharp
 public class MovementController : StudioBehavior
@@ -795,18 +720,11 @@ public class MovementController : StudioBehavior
 
 This template facilitates movement functionality within the game, focusing on translating entities using specified parameters. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in MoveTemplate
 
-| **Type**     | **Name**  | **Description**                                |
-| ------------ | --------- | ---------------------------------------------- |
-| **Property** | Speed     | Get or set the speed of movement.              |
-| **Property** | Loop      | Get or set whether the movement should loop.   |
-| **Property** | Interval  | Get or set the pause interval during movement. |
-| **Property** | Point     | Get or set the target position for movement.   |
-| **Event**    | OnStopped | Event triggered when the movement is stopped.  |
-| **Event**    | OnResumed | Event triggered when the movement is resumed.  |
+<table data-header-hidden><thead><tr><th width="143"></th><th width="139"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Speed</td><td>Get or set the speed of movement.</td></tr><tr><td><strong>Property</strong></td><td>Loop</td><td>Get or set whether the movement should loop.</td></tr><tr><td><strong>Property</strong></td><td>Interval</td><td>Get or set the pause interval during movement.</td></tr><tr><td><strong>Property</strong></td><td>Point</td><td>Get or set the target position for movement.</td></tr><tr><td><strong>Event</strong></td><td>OnStopped</td><td>Event triggered when the movement is stopped.</td></tr><tr><td><strong>Event</strong></td><td>OnResumed</td><td>Event triggered when the movement is resumed.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for MoveTemplate
 
 ```csharp
 public class MovementController : StudioBehavior
@@ -859,18 +777,11 @@ public class MovementController : StudioBehavior
 
 This template facilitates movement towards a player entity within the game, utilizing specified parameters. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in MoveToPlayerTemplate
 
-| **Type**     | **Name**                 | **Description**                                        |
-| ------------ | ------------------------ | ------------------------------------------------------ |
-| **Property** | Speed                    | Get or set the speed of movement towards the player.   |
-| **Property** | Offset                   | Get or set the offset relative to the player position. |
-| **Property** | CancelType               | Get or set the type of cancellation for movement.      |
-| **Event**    | OnCancelled              | Event triggered when the movement is canceled.         |
-| **Event**    | OnReachedDestination     | Event triggered when the destination is reached.       |
-| **Event**    | OnReachedInitialPosition | Event triggered when the initial position is reached.  |
+<table data-header-hidden><thead><tr><th width="140"></th><th width="157"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Speed</td><td>Get or set the speed of movement towards the player.</td></tr><tr><td><strong>Property</strong></td><td>Offset</td><td>Get or set the offset relative to the player position.</td></tr><tr><td><strong>Property</strong></td><td>CancelType</td><td>Get or set the type of cancellation for movement.</td></tr><tr><td><strong>Event</strong></td><td>OnCancelled</td><td>Event triggered when the movement is canceled.</td></tr><tr><td><strong>Event</strong></td><td>OnReachedDestination</td><td>Event triggered when the destination is reached.</td></tr><tr><td><strong>Event</strong></td><td>OnReachedInitialPosition</td><td>Event triggered when the initial position is reached.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for MoveToPlayerTemplate
 
 ```csharp
 public class PlayerMovementController : StudioBehavior
@@ -926,17 +837,11 @@ public class PlayerMovementController : StudioBehavior
 
 This template manages particle effects within the game, offering flexibility in configuration and event handling. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in ParticleEffectTemplate
 
-| **Type**     | **Name**                   | **Description**                                              |
-| ------------ | -------------------------- | ------------------------------------------------------------ |
-| **Property** | RepeatCount                | Get or set the number of times the particle effect repeats.  |
-| **Property** | PlayForever                | Get or set whether continuous playback is enabled.           |
-| **Property** | Duration                   | Get or set the duration of the particle effect.              |
-| **Property** | Delay                      | Get or set the delay between repetitions of the effect.      |
-| **Event**    | OnParticlePlayingCompleted | Event triggered when the particle effect playback completes. |
+<table data-header-hidden><thead><tr><th width="141"></th><th width="249"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>RepeatCount</td><td>Get or set the number of times the particle effect repeats.</td></tr><tr><td><strong>Property</strong></td><td>PlayForever</td><td>Get or set whether continuous playback is enabled.</td></tr><tr><td><strong>Property</strong></td><td>Duration</td><td>Get or set the duration of the particle effect.</td></tr><tr><td><strong>Property</strong></td><td>Delay</td><td>Get or set the delay between repetitions of the effect.</td></tr><tr><td><strong>Event</strong></td><td>OnParticlePlayingCompleted</td><td>Event triggered when the particle effect playback completes.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for ParticleEffectTemplate
 
 ```csharp
 public class ParticleEffectController : StudioBehavior
@@ -980,18 +885,11 @@ public class ParticleEffectController : StudioBehavior
 
 This template facilitates the management and execution of animations within the game environment, offering seamless integration and customization options. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in PlayAnimationTemplate
 
-| **Type**     | **Name**              | **Description**                                   |
-| ------------ | --------------------- | ------------------------------------------------- |
-| **Property** | CurrentAnimation      | Retrieve the currently playing animation.         |
-| **Property** | DefaultAnimation      | Set the default animation for the component.      |
-| **Property** | AvailableAnimations   | Access the list of available animations.          |
-| **Method**   | PlayAnimationOverride | Play a specified animation with optional looping. |
-| **Method**   | StopAnimationOverride | Stop the currently playing animation.             |
-| **Event**    | OnAnimationCompleted  | Event triggered when an animation completes.      |
+<table data-header-hidden><thead><tr><th width="150"></th><th width="227"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>CurrentAnimation</td><td>Retrieve the currently playing animation.</td></tr><tr><td><strong>Property</strong></td><td>DefaultAnimation</td><td>Set the default animation for the component.</td></tr><tr><td><strong>Property</strong></td><td>AvailableAnimations</td><td>Access the list of available animations.</td></tr><tr><td><strong>Method</strong></td><td>PlayAnimationOverride</td><td>Play a specified animation with optional looping.</td></tr><tr><td><strong>Method</strong></td><td>StopAnimationOverride</td><td>Stop the currently playing animation.</td></tr><tr><td><strong>Event</strong></td><td>OnAnimationCompleted</td><td>Event triggered when an animation completes.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for PlayAnimationTemplate
 
 ```csharp
 public class AnimationController : StudioBehavior
@@ -1032,15 +930,11 @@ public class AnimationController : StudioBehavior
 
 The PlayerAnimationControlTemplate class facilitates the control and management of player animations within the game environment. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in PlayerAnimationControlTemplate
 
-| **Type**     | **Name**                    | **Description**                              |
-| ------------ | --------------------------- | -------------------------------------------- |
-| **Property** | AnimationName               | Get or set the current animation name.       |
-| **Property** | ResetAnimationAutomatically | Enable or disable automatic animation reset. |
-| **Event**    | OnAnimationCompleted        | Event triggered when an animation completes. |
+<table data-header-hidden><thead><tr><th width="136"></th><th width="267"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>AnimationName</td><td>Get or set the current animation name.</td></tr><tr><td><strong>Property</strong></td><td>ResetAnimationAutomatically</td><td>Enable or disable automatic animation reset.</td></tr><tr><td><strong>Event</strong></td><td>OnAnimationCompleted</td><td>Event triggered when an animation completes.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for PlayerAnimationControlTemplate
 
 ```csharp
 public class PlayerAnimationController : StudioBehavior
@@ -1078,14 +972,11 @@ public class PlayerAnimationController : StudioBehavior
 
 The PlayPlayersAnimationTemplate class is designed to manage and control player animations within your game environment. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in PlayPlayersAnimationTemplate
 
-| **Type**     | **Name**                    | **Description**                              |
-| ------------ | --------------------------- | -------------------------------------------- |
-| **Property** | AnimationName               | Get or set the current animation name.       |
-| **Property** | ResetAnimationAutomatically | Enable or disable automatic animation reset. |
+<table data-header-hidden><thead><tr><th width="130"></th><th width="263"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>AnimationName</td><td>Get or set the current animation name.</td></tr><tr><td><strong>Property</strong></td><td>ResetAnimationAutomatically</td><td>Enable or disable automatic animation reset.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for PlayPlayersAnimationTemplate
 
 ```csharp
 public class PlayerAnimationController : StudioBehavior
@@ -1112,13 +1003,11 @@ public class PlayerAnimationController : StudioBehavior
 
 The PushTemplate class facilitates control over push components within your game, offering methods to manage resistance properties effectively. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in PushTemplate
 
-| **Type**     | **Name**   | **Description**                                  |
-| ------------ | ---------- | ------------------------------------------------ |
-| **Property** | Resistance | Get or set the resistance of the push component. |
+<table data-header-hidden><thead><tr><th width="132"></th><th width="120"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Resistance</td><td>Get or set the resistance of the push component.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for PushTemplate
 
 ```csharp
 public class PushController : StudioBehavior
@@ -1141,17 +1030,11 @@ public class PushController : StudioBehavior
 
 This template manages random broadcasting functionality within the game, utilizing specified parameters to handle broadcast strings. Access it as follows:
 
-#### Properties, Methods, and Indexer
+#### Properties, Methods, and Indexer in RandomBroadcastTemplate
 
-| **Type**     | **Name**                  | **Description**                                                       |
-| ------------ | ------------------------- | --------------------------------------------------------------------- |
-| **Property** | GetAllBroadcastingStrings | Retrieve all broadcasting strings.                                    |
-| **Indexer**  | \[index]                  | Access or modify a specific broadcasting string by index.             |
-| **Method**   | GetEnumerator             | Iterate through all broadcasting strings.                             |
-| **Method**   | CheckIndex                | Validate an index before accessing or modifying broadcasting strings. |
-| **Method**   | UpdateConditionBroadcasts | Update a specific broadcasting string.                                |
+<table data-header-hidden><thead><tr><th width="137"></th><th width="253"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>GetAllBroadcastingStrings</td><td>Retrieve all broadcasting strings.</td></tr><tr><td><strong>Indexer</strong></td><td>[index]</td><td>Access or modify a specific broadcasting string by index.</td></tr><tr><td><strong>Method</strong></td><td>GetEnumerator</td><td>Iterate through all broadcasting strings.</td></tr><tr><td><strong>Method</strong></td><td>CheckIndex</td><td>Validate an index before accessing or modifying broadcasting strings.</td></tr><tr><td><strong>Method</strong></td><td>UpdateConditionBroadcasts</td><td>Update a specific broadcasting string.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for RandomBroadcastTemplate
 
 ```csharp
 public class BroadcastController : StudioBehavior
@@ -1197,13 +1080,11 @@ public class BroadcastController : StudioBehavior
 
 This template manages the resetting of scores within the game, utilizing specified parameters to handle score groups. Access it as follows:
 
-#### Properties
+#### Properties in ResetScoreTemplate
 
-| **Type**     | **Name**   | **Description**             |
-| ------------ | ---------- | --------------------------- |
-| **Property** | ScoreGroup | Get or set the score group. |
+<table data-header-hidden><thead><tr><th width="129"></th><th width="138"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>ScoreGroup</td><td>Get or set the score group.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for ResetScoreTemplate
 
 ```csharp
 public class ScoreManager : StudioBehavior
@@ -1226,23 +1107,11 @@ public class ScoreManager : StudioBehavior
 
 This template manages the rotation oscillation behavior within the game. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in RotateOscillateTemplate
 
-| **Type**     | **Name**              | **Description**                                  |
-| ------------ | --------------------- | ------------------------------------------------ |
-| **Property** | RotationAxis          | Get or set the rotation axis.                    |
-| **Property** | Degrees               | Get or set the degrees of rotation.              |
-| **Property** | Direction             | Get or set the rotation direction.               |
-| **Property** | RepeatCount           | Get or set the repeat count for the rotation.    |
-| **Property** | Loop                  | Check if the rotation is looping.                |
-| **Property** | StopOn                | Get or set the condition to stop the rotation.   |
-| **Property** | ResumeOn              | Get or set the condition to resume the rotation. |
-| **Event**    | OnRepetitionCompleted | Event triggered when a repetition completes.     |
-| **Event**    | OnRotationCompleted   | Event triggered when rotation completes.         |
-| **Event**    | OnRotationPaused      | Event triggered when rotation is paused.         |
-| **Event**    | OnRotationResumed     | Event triggered when rotation resumes.           |
+<table data-header-hidden><thead><tr><th width="138"></th><th width="218"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>RotationAxis</td><td>Get or set the rotation axis.</td></tr><tr><td><strong>Property</strong></td><td>Degrees</td><td>Get or set the degrees of rotation.</td></tr><tr><td><strong>Property</strong></td><td>Direction</td><td>Get or set the rotation direction.</td></tr><tr><td><strong>Property</strong></td><td>RepeatCount</td><td>Get or set the repeat count for the rotation.</td></tr><tr><td><strong>Property</strong></td><td>Loop</td><td>Check if the rotation is looping.</td></tr><tr><td><strong>Property</strong></td><td>StopOn</td><td>Get or set the condition to stop the rotation.</td></tr><tr><td><strong>Property</strong></td><td>ResumeOn</td><td>Get or set the condition to resume the rotation.</td></tr><tr><td><strong>Event</strong></td><td>OnRepetitionCompleted</td><td>Event triggered when a repetition completes.</td></tr><tr><td><strong>Event</strong></td><td>OnRotationCompleted</td><td>Event triggered when rotation completes.</td></tr><tr><td><strong>Event</strong></td><td>OnRotationPaused</td><td>Event triggered when rotation is paused.</td></tr><tr><td><strong>Event</strong></td><td>OnRotationResumed</td><td>Event triggered when rotation resumes.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for RotateOscillateTemplate
 
 ```csharp
 public class RotationController : StudioBehavior
@@ -1310,15 +1179,11 @@ public class RotationController : StudioBehavior
 
 This template manages rotation behavior within the game. Access it as follows:
 
-#### Properties
+#### Properties in RotateTemplate
 
-| **Type**     | **Name**     | **Description**                    |
-| ------------ | ------------ | ---------------------------------- |
-| **Property** | RotationAxis | Get or set the rotation axis.      |
-| **Property** | Speed        | Get or set the speed of rotation.  |
-| **Property** | Direction    | Get or set the rotation direction. |
+<table data-header-hidden><thead><tr><th width="143"></th><th width="141"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>RotationAxis</td><td>Get or set the rotation axis.</td></tr><tr><td><strong>Property</strong></td><td>Speed</td><td>Get or set the speed of rotation.</td></tr><tr><td><strong>Property</strong></td><td>Direction</td><td>Get or set the rotation direction.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for RotateTemplate
 
 ```csharp
 public class RotationController : StudioBehavior
@@ -1347,14 +1212,11 @@ public class RotationController : StudioBehavior
 
 This template is used to set the position of an object within the game engine. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in SetPositionTemplate
 
-| **Type**     | **Name**          | **Description**                               |
-| ------------ | ----------------- | --------------------------------------------- |
-| **Property** | TargetPosition    | Get or set the target position of the object. |
-| **Event**    | OnPositionUpdated | Event triggered when the position is updated. |
+<table data-header-hidden><thead><tr><th width="128"></th><th width="183"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>TargetPosition</td><td>Get or set the target position of the object.</td></tr><tr><td><strong>Event</strong></td><td>OnPositionUpdated</td><td>Event triggered when the position is updated.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for SetPositionTemplate
 
 ```csharp
 public class PositionController : StudioBehavior
@@ -1391,18 +1253,7 @@ This template manages the display of UI elements within the game. Access it as f
 
 #### Properties
 
-| **Type**     | **Name**          | **Description**                         |
-| ------------ | ----------------- | --------------------------------------- |
-| **Property** | AnimationType     | Get or set the UI animation type.       |
-| **Property** | ScreenPosition    | Get or set the screen position.         |
-| **Property** | UIToShow          | Get or set the UI element to show.      |
-| **Property** | Icon1Name         | Get or set the name of the first icon.  |
-| **Property** | Icon2Name         | Get or set the name of the second icon. |
-| **Property** | Text1             | Get or set the first text.              |
-| **Property** | Text2             | Get or set the second text.             |
-| **Property** | Text3             | Get or set the third text.              |
-| **Property** | AnimationDuration | Get or set the animation duration.      |
-| **Property** | UIDuration        | Get or set the UI display duration.     |
+<table data-header-hidden><thead><tr><th width="148"></th><th width="173"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>AnimationType</td><td>Get or set the UI animation type.</td></tr><tr><td><strong>Property</strong></td><td>ScreenPosition</td><td>Get or set the screen position.</td></tr><tr><td><strong>Property</strong></td><td>UIToShow</td><td>Get or set the UI element to show.</td></tr><tr><td><strong>Property</strong></td><td>Icon1Name</td><td>Get or set the name of the first icon.</td></tr><tr><td><strong>Property</strong></td><td>Icon2Name</td><td>Get or set the name of the second icon.</td></tr><tr><td><strong>Property</strong></td><td>Text1</td><td>Get or set the first text.</td></tr><tr><td><strong>Property</strong></td><td>Text2</td><td>Get or set the second text.</td></tr><tr><td><strong>Property</strong></td><td>Text3</td><td>Get or set the third text.</td></tr><tr><td><strong>Property</strong></td><td>AnimationDuration</td><td>Get or set the animation duration.</td></tr><tr><td><strong>Property</strong></td><td>UIDuration</td><td>Get or set the UI display duration.</td></tr></tbody></table>
 
 #### Usage Example
 
@@ -1454,22 +1305,11 @@ public class UIController : StudioBehavior
 
 This template manages sound effects within the game, allowing customization of volume, pitch, 3D audio settings, distance ranges, looping capabilities, and pause/resume events. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in SoundFxTemplate
 
-| **Type**     | **Name**    | **Description**                                  |
-| ------------ | ----------- | ------------------------------------------------ |
-| **Property** | Volume      | Get or set the volume.                           |
-| **Property** | Pitch       | Get or set the pitch.                            |
-| **Property** | Is3DAudio   | Get or set whether the sound is 3D audio.        |
-| **Property** | MinDistance | Get or set the minimum distance for 3D audio.    |
-| **Property** | MaxDistance | Get or set the maximum distance for 3D audio.    |
-| **Property** | CanLoop     | Get or set whether the sound can loop.           |
-| **Property** | PauseOn     | Get or set the event on which the sound pauses.  |
-| **Property** | ResumeOn    | Get or set the event on which the sound resumes. |
-| **Event**    | OnPaused    | Event triggered when the sound is paused.        |
-| **Event**    | OnResumed   | Event triggered when the sound is resumed.       |
+<table data-header-hidden><thead><tr><th width="151"></th><th width="170"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Volume</td><td>Get or set the volume.</td></tr><tr><td><strong>Property</strong></td><td>Pitch</td><td>Get or set the pitch.</td></tr><tr><td><strong>Property</strong></td><td>Is3DAudio</td><td>Get or set whether the sound is 3D audio.</td></tr><tr><td><strong>Property</strong></td><td>MinDistance</td><td>Get or set the minimum distance for 3D audio.</td></tr><tr><td><strong>Property</strong></td><td>MaxDistance</td><td>Get or set the maximum distance for 3D audio.</td></tr><tr><td><strong>Property</strong></td><td>CanLoop</td><td>Get or set whether the sound can loop.</td></tr><tr><td><strong>Property</strong></td><td>PauseOn</td><td>Get or set the event on which the sound pauses.</td></tr><tr><td><strong>Property</strong></td><td>ResumeOn</td><td>Get or set the event on which the sound resumes.</td></tr><tr><td><strong>Event</strong></td><td>OnPaused</td><td>Event triggered when the sound is paused.</td></tr><tr><td><strong>Event</strong></td><td>OnResumed</td><td>Event triggered when the sound is resumed.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for SoundFxTemplate
 
 ```csharp
 public class SoundManager : StudioBehavior
@@ -1531,14 +1371,11 @@ public class SoundManager : StudioBehavior
 
 This template manages the switch component within the game, allowing custom actions when toggled on or off. Access it as follows:
 
-#### Events
+#### Events in SwitchTemplate
 
-| **Type**  | **Name**     | **Description**                                 |
-| --------- | ------------ | ----------------------------------------------- |
-| **Event** | OnToggledOn  | Event triggered when the switch is toggled on.  |
-| **Event** | OnToggledOff | Event triggered when the switch is toggled off. |
+<table data-header-hidden><thead><tr><th width="122"></th><th width="156"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Event</strong></td><td>OnToggledOn</td><td>Event triggered when the switch is toggled on.</td></tr><tr><td><strong>Event</strong></td><td>OnToggledOff</td><td>Event triggered when the switch is toggled off.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for SwitchTemplate
 
 ```csharp
 public class SwitchController : StudioBehavior
@@ -1575,14 +1412,11 @@ public class SwitchController : StudioBehavior
 
 This template manages the teleport component within the game, allowing custom actions when teleportation occurs. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in TeleportTemplate
 
-| **Type**     | **Name**      | **Description**                            |
-| ------------ | ------------- | ------------------------------------------ |
-| **Property** | TeleportPoint | Get or set the teleport destination point. |
-| **Event**    | OnTeleported  | Event triggered when teleportation occurs. |
+<table data-header-hidden><thead><tr><th width="126"></th><th width="148"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>TeleportPoint</td><td>Get or set the teleport destination point.</td></tr><tr><td><strong>Event</strong></td><td>OnTeleported</td><td>Event triggered when teleportation occurs.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for TeleportTemplate
 
 ```csharp
 public class TeleportController : StudioBehavior
@@ -1616,21 +1450,11 @@ public class TeleportController : StudioBehavior
 
 This template manages the tick component within the game, providing access to conditions and events related to tick operations. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in TickTemplate
 
-| **Type**     | **Name**  | **Description**                           |
-| ------------ | --------- | ----------------------------------------- |
-| **Indexer**  | \[index]  | Get or set values by index.               |
-| **Property** | Length    | Get the number of condition broadcasts.   |
-| **Property** | StartOn   | Get or set the start condition.           |
-| **Property** | StopOn    | Get or set the stop condition.            |
-| **Property** | ResumeOn  | Get or set the resume condition.          |
-| **Event**    | OnStarted | Event triggered when the tick starts.     |
-| **Event**    | OnPaused  | Event triggered when the tick is paused.  |
-| **Event**    | OnResumed | Event triggered when the tick is resumed. |
-| **Event**    | OnTick    | Event triggered for each tick.            |
+<table data-header-hidden><thead><tr><th width="135"></th><th width="142"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Indexer</strong></td><td>[index]</td><td>Get or set values by index.</td></tr><tr><td><strong>Property</strong></td><td>Length</td><td>Get the number of condition broadcasts.</td></tr><tr><td><strong>Property</strong></td><td>StartOn</td><td>Get or set the start condition.</td></tr><tr><td><strong>Property</strong></td><td>StopOn</td><td>Get or set the stop condition.</td></tr><tr><td><strong>Property</strong></td><td>ResumeOn</td><td>Get or set the resume condition.</td></tr><tr><td><strong>Event</strong></td><td>OnStarted</td><td>Event triggered when the tick starts.</td></tr><tr><td><strong>Event</strong></td><td>OnPaused</td><td>Event triggered when the tick is paused.</td></tr><tr><td><strong>Event</strong></td><td>OnResumed</td><td>Event triggered when the tick is resumed.</td></tr><tr><td><strong>Event</strong></td><td>OnTick</td><td>Event triggered for each tick.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for TickTemplate
 
 ```csharp
 public class TickController : StudioBehavior
@@ -1691,17 +1515,11 @@ public class TickController : StudioBehavior
 
 This template manages the player movement component, specifically handling stun animation and shader effects, and provides events for pause and resume actions. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in TogglePlayerMovementTemplate
 
-| **Type**     | **Name**           | **Description**                                      |
-| ------------ | ------------------ | ---------------------------------------------------- |
-| **Property** | PlayStunAnimation  | Get or set the stun animation state.                 |
-| **Property** | ChangeToStunShader | Get or set the stun shader state.                    |
-| **Property** | ResumeOn           | Get or set the resume condition.                     |
-| **Event**    | OnPaused           | Event triggered when the player movement is paused.  |
-| **Event**    | OnResumed          | Event triggered when the player movement is resumed. |
+<table data-header-hidden><thead><tr><th width="129"></th><th width="191"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>PlayStunAnimation</td><td>Get or set the stun animation state.</td></tr><tr><td><strong>Property</strong></td><td>ChangeToStunShader</td><td>Get or set the stun shader state.</td></tr><tr><td><strong>Property</strong></td><td>ResumeOn</td><td>Get or set the resume condition.</td></tr><tr><td><strong>Event</strong></td><td>OnPaused</td><td>Event triggered when the player movement is paused.</td></tr><tr><td><strong>Event</strong></td><td>OnResumed</td><td>Event triggered when the player movement is resumed.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for TogglePlayerMovementTemplate
 
 ```csharp
 public class PlayerMovementController : StudioBehavior
@@ -1748,17 +1566,11 @@ public class PlayerMovementController : StudioBehavior
 
 This template manages the score component, handling score groups, modifiers, and score values. It integrates with the `ScoreHandler` to get and set scores. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in UpdateScoreTemplate
 
-| **Type**     | **Name**   | **Description**                                     |
-| ------------ | ---------- | --------------------------------------------------- |
-| **Property** | ScoreGroup | Get or set the score group.                         |
-| **Property** | Modifier   | Get or set the modifier for score updates.          |
-| **Property** | Score      | Get or set the score value.                         |
-| **Method**   | GetScore   | Retrieve the current score from the `ScoreHandler`. |
-| **Method**   | SetScore   | Set a new score using the `ScoreHandler`.           |
+<table data-header-hidden><thead><tr><th width="138"></th><th width="138"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>ScoreGroup</td><td>Get or set the score group.</td></tr><tr><td><strong>Property</strong></td><td>Modifier</td><td>Get or set the modifier for score updates.</td></tr><tr><td><strong>Property</strong></td><td>Score</td><td>Get or set the score value.</td></tr><tr><td><strong>Method</strong></td><td>GetScore</td><td>Retrieve the current score from the <code>ScoreHandler</code>.</td></tr><tr><td><strong>Method</strong></td><td>SetScore</td><td>Set a new score using the <code>ScoreHandler</code>.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for UpdateScoreTemplate
 
 ```csharp
 public class ScoreManager : StudioBehavior
@@ -1791,17 +1603,11 @@ public class ScoreManager : StudioBehavior
 
 This template manages the timer component, handling modifiers, update intervals, and current time. It integrates with the `InGameTimeHandler` to get and set in-game time. Access it as follows:
 
-#### Properties and Methods
+#### Properties and Methods in UpdateTimerTemplate
 
-| **Type**     | **Name**    | **Description**                                         |
-| ------------ | ----------- | ------------------------------------------------------- |
-| **Property** | Modifier    | Get or set the modifier for timer updates.              |
-| **Property** | UpdateBy    | Get or set the update interval.                         |
-| **Property** | CurrentTime | Get or set the current time.                            |
-| **Method**   | GetTime     | Retrieve the current time from the `InGameTimeHandler`. |
-| **Method**   | SetTime     | Set a new time using the `InGameTimeHandler`.           |
+<table data-header-hidden><thead><tr><th width="136"></th><th width="137"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Modifier</td><td>Get or set the modifier for timer updates.</td></tr><tr><td><strong>Property</strong></td><td>UpdateBy</td><td>Get or set the update interval.</td></tr><tr><td><strong>Property</strong></td><td>CurrentTime</td><td>Get or set the current time.</td></tr><tr><td><strong>Method</strong></td><td>GetTime</td><td>Retrieve the current time from the <code>InGameTimeHandler</code>.</td></tr><tr><td><strong>Method</strong></td><td>SetTime</td><td>Set a new time using the <code>InGameTimeHandler</code>.</td></tr></tbody></table>
 
-#### Usage Example
+#### Usage Example for UpdateTimerTemplate
 
 ```csharp
 public class TimerManager : StudioBehavior

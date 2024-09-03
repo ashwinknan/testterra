@@ -6,7 +6,7 @@ Some game systems that are present in Terra Studio are listed below:&#x20;
 
 ## Game Timer
 
-The Game Timer component is a critical system that manages the time-related aspects within the game - particular useful in games involving countdowns or time-limited challenges.&#x20;
+The Game Timer component is a critical system that manages time-related aspects within the game. It functions as a timer that integrates with game logic.This component is particularly useful in games involving countdowns or time-limited challenges, ensuring precise control over gameplay duration.
 
 ### Adding a Game Timer
 
@@ -21,38 +21,74 @@ You can now see the Game Timer's properties in the Inspector Panel on the right.
 
 You can configure the following properties of the game timer in the Inspector Panel:&#x20;
 
-* **Duration Input:** Enter the time in seconds for how long the timer should run.
-* **Timer Type Dropdown:** Choose between counting up towards a target time (Count Up) or counting down from a set time (Count Down)
-* **Generate Broadcast on Completion:** Generate either a Game Win signal, a Game Lose signal or a Custom Broadcast Signal once the timer is complete.&#x20;
-* **Generate Broadcast at a pre-set time:** You need to do the following :
-  1. Choose the "Broadcast Type" under Advanced Options and select "At."
-  2. To generate the Game Signal, please input the time in seconds. For example, input "35" for the signal to occur at the 35th second.
-  3. Choose your broadcast signal: "Game Win," "Game Lose," or a Custom signal.
-* **Generate Broadcast at a pre-set frequency:** You need to do the following :
-  1. Choose the "Broadcast Type" under Advanced Options and select "Every."
-  2. Enter the number of seconds for the repeat interval of the broadcast in the Value Field. For example, for a repeat every 5 seconds, enter 5
-  3. Choose your broadcast signal: "Game Win," "Game Lose," or a Custom signal.
-* **Show UI Toggle:** Choose to display the timer on-screen or keep it running silently in the background.
+| Parameter                          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Duration Input`                   | Enter the time in seconds for how long the timer should run.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| `Timer Type`                       | Choose between counting up towards a target time (Count Up) or counting down from a set time (Count Down).                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `Generate Broadcast on Completion` | Generate either a Game Win signal, a Game Lose signal, or a Custom Broadcast Signal once the timer is complete.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `Advanced`                         | <p>Configure a broadcast signal based on either a specific time or a repeat interval:</p><ul><li>Under Advanced Options, choose "Broadcast Type" and select either "At" for a specific time or "Every" for a repeat interval. </li><li>If you select "At," input the time in seconds for when the signal should occur (e.g., "35" for the 35th second). </li><li>If you select "Every," enter the interval in seconds for the repeat (e.g., "5" for a signal every 5 seconds). </li><li>Choose your broadcast "Game Win," "Game Lose," or a Custom signal.</li></ul> |
+| `Show UI Toggle`                   | Choose to display the timer on-screen or keep it running silently in the background.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
+### Customizing Game Timer Behavior using T\#
+
+You can also customize the game timer by accessing it's T# wrapper - InGameTimerTemplate This template manages in-game timer functionality.&#x20;
+
+#### Properties and Methods in InGameTimerTemplate
+
+<table data-header-hidden><thead><tr><th width="148"></th><th width="166"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>TimerType</td><td>Get the type of timer.</td></tr><tr><td><strong>Property</strong></td><td>CurrentTime</td><td>Get the current time from the in-game timer handler.</td></tr><tr><td><strong>Property</strong></td><td>IsUIShown</td><td>Check if the UI associated with the timer is currently shown.</td></tr><tr><td><strong>Event</strong></td><td>OnTimerUpdated</td><td>Event triggered when the timer is updated.</td></tr></tbody></table>
+
+#### Usage Example for InGameTimerTemplate
+
+```csharp
+public class TimerManager : StudioBehavior
+{
+    void ManageTimer()
+    {
+        // Accessing the wrapper
+        InGameTimerTemplate template = (GetTemplate(typeof(InGameTimerTemplate)) as InGameTimerTemplate);
+
+        // Accessing the TimerType property
+        TimerType timerType = template.TimerType; // Getting the type of timer
+
+        // Accessing the CurrentTime property
+        float currentTime = template.CurrentTime; // Getting the current time
+
+        // Checking if the UI is shown
+        bool isUIShown = template.IsUIShown; // Checking if the UI associated with the timer is currently shown
+
+        // Subscribing to the OnTimerUpdated event
+        template.OnTimerUpdated += OnTimerUpdatedHandler; // Subscribe to the event
+
+        // Unsubscribing from the OnTimerUpdated event
+        template.OnTimerUpdated -= OnTimerUpdatedHandler; // Unsubscribe from the event
+    }
+
+    void OnTimerUpdatedHandler(float updatedTime)
+    {
+        // Handle timer updated event
+    }
+}
+```
 
 ## Score
 
 The Score system tracks how players perform in a game, showing their competition level and progress. Every game automatically includes a primary score group called the Main Score\_GameScore. This group becomes active when you use certain game logic templates to change scores.
 
-The value of scores in score groups can be altered only by using these these behaviors:
+### **Score Groups**
 
-* **Collectable Logic Components**: Changing score on picking up items.
-* **Update Score Logic Components**: To change the score.
+A score group is a system used to track various scores within a game, allowing you to monitor multiple achievements or performance metrics independently. For example, a game might have separate score groups for different objectives, such as collecting different types of items or completing various tasks. Score Groups helps in tracking specific areas of a player's performance and progress. Each metric you want to track will have a separate score group associated with it.&#x20;
+
+Every game automatically includes a primary score group called **Main Score\_GameScore**. This group becomes active when certain game logic templates are used to modify scores. The value within a score group can only be altered by specific logic components:
+
+* **Collectable Logic Components**: Changes the score when items are picked up.
+* **Update Score Logic Components**: Directly modifies the score.
 * **Reset Score Logic Component**: Resets the score to zero.
-* **Carriable Logic Component**: Using score as a currency for carrying a certain object
-* **Deposit Logic Component**: Using score to place items in a specified location.
+* **Carriable Logic Component**: Uses the score as currency for carrying certain objects.
+* **Deposit Logic Component**: Uses the score to place items in a designated location.
 
-### Creating New Score Groups
+### Creating & Updating Score Groups
 
-You can create extra score groups to track different achievements. For example, if your game includes two types of items to collect, you can set up a separate score group for each type for independent tracking.
-
-### Updating Score Groups
-
-Once you have added one of the five mentioned logic components, you'll find a "Group" option in the editable properties of the behavior. Here, you can either select Main to update the "Main Score\_GameScore" or create a new custom score group by selecting Custom.
+You can create a new score group only when you add one of the five mentioned logic components. In the editable properties of the behavior, you'll find a "Score Group" option. Here, you can choose to update the existing "Main Score\_GameScore" or create a new custom score group by selecting Custom. If you select Custom Score Group, a new score group will be created, and it will appear under Essentials alongside the "Main Score\_GameScore."
 
 After this you must also decide how much to change the score when the event starts. You can pick any integer for the change.&#x20;
 

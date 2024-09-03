@@ -4,7 +4,7 @@ description: The high level design of any game
 
 # Building Blocks of a Terra Game
 
-Any game in Terra consists of four basic blocks -  Player, GameObject, Components and Broadcasts
+Any game in Terra consists of four basic blocks -  Player, GameObjects, Components and Broadcasts
 
 ## Player
 

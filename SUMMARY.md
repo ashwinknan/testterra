@@ -23,7 +23,7 @@
 
 ## USING PRE-BUILT LOGIC COMPONENTS
 
-* [Overall Game](using-pre-built-logic-components/overall-game.md)
+* [Scene Management](using-pre-built-logic-components/scene-management.md)
 * [Mechanics](using-pre-built-logic-components/mechanics.md)
 * [Actions](using-pre-built-logic-components/actions.md)
 * [Conditionals](using-pre-built-logic-components/conditionals.md)
@@ -35,7 +35,7 @@
 
 * [Creating & Using T# Scripts](scripting-custom-logic-components/creating-and-using-t-scripts.md)
 * [Unsupported Functionalities in T#](scripting-custom-logic-components/unsupported-functionalities-in-t.md)
-* [T# Logic Template Wrappers](scripting-custom-logic-components/t-logic-template-wrappers.md)
+* [T# Logic Component Template Wrappers](scripting-custom-logic-components/t-logic-component-template-wrappers.md)
 * [T# StudioController Wrappers](scripting-custom-logic-components/t-studiocontroller-wrappers.md)
 * [T# Haptics & Extensions](scripting-custom-logic-components/t-haptics-and-extensions.md)
 * [Adding UI using T#](scripting-custom-logic-components/adding-ui-using-t.md)

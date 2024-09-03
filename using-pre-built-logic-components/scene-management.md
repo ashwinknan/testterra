@@ -1,10 +1,10 @@
-# Overall Game
+# Scene Management
 
 ## Overview
 
-Overall Game Logic Template components are pre-built components aimed to help game developers readily build logic that affect the entire game. The following five components are part of this category of logic template components:&#x20;
+Scene Management Logic Template components are pre-built components aimed to help game developers readily build logic that affect the entire scene.&#x20;
 
-<table><thead><tr><th width="259">Logic Template</th><th>Description</th></tr></thead><tbody><tr><td><a href="overall-game.md#checkpoint">Checkpoint</a></td><td>Restarts the game from a specific point if you fail a challenge or lose a life</td></tr><tr><td><a href="overall-game.md#update-timer">Update Timer</a></td><td>Updates the timer  to a new specified value</td></tr><tr><td><a href="overall-game.md#reset-timer">Reset Timer</a></td><td>Resets the timer to zero</td></tr><tr><td><a href="overall-game.md#load-scene">Load Scene</a></td><td>Loads a New Scene</td></tr><tr><td><a href="overall-game.md#random-level-selector">Random Level Selector</a></td><td>Loads a random new scene on game start instead of the default scene</td></tr></tbody></table>
+<table><thead><tr><th width="259">Logic Template</th><th>Description</th></tr></thead><tbody><tr><td><a href="scene-management.md#checkpoint">Checkpoint</a></td><td>Restarts the game from a specific point if you fail a challenge or lose a life</td></tr><tr><td><a href="scene-management.md#update-timer">Update Timer</a></td><td>Updates the timer  to a new specified value</td></tr><tr><td><a href="scene-management.md#reset-timer">Reset Timer</a></td><td>Resets the timer to zero</td></tr><tr><td><a href="scene-management.md#load-scene">Load Scene</a></td><td>Loads a New Scene</td></tr><tr><td><a href="scene-management.md#random-level-selector">Random Level Selector</a></td><td>Loads a random new scene on game start instead of the default scene</td></tr></tbody></table>
 
 ## All Overall Game Logic Template Components
 
@@ -26,7 +26,7 @@ You can edit the following parameters of this template directly through the scen
 | <mark style="color:blue;">`Play VFX`</mark>      | Choose a visual effect to play when you arrive at the checkpoint                                                                                          |
 | <mark style="color:blue;">`BroadcastData`</mark> | <p>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the you arrive at the checkpoint.</p> |
 
-You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [CheckpointTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#checkpointtemplate).&#x20;
+You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [CheckpointTemplate](../scripting-custom-logic-components/t-logic-component-template-wrappers.md#checkpointtemplate).&#x20;
 
 ### Update Timer
 
@@ -42,7 +42,7 @@ You can edit the following parameters of this template directly through the scen
 
 <table><thead><tr><th width="282">Parameters</th><th>Description</th></tr></thead><tbody><tr><td><mark style="color:blue;"><code>Update When</code></mark></td><td><p></p><p>Select a trigger from the dropdown to activate the logic template:</p><ul><li><strong>Player Touches</strong>: Resets the timer when the player touches the selected object.</li><li><strong>Other Object Touches</strong>: Resets the timer when another object touches the selected object.</li><li><strong>Clicked</strong>: Resets the timer when you click the selected object.</li><li><strong>Broadcast Listened</strong>: Resets the timer when it receives a broadcast</li></ul></td></tr><tr><td><mark style="color:blue;"><code>Operation</code></mark></td><td>Define the operator that will modify the timer. Four operators are allowed - Add, Subtract, Multiply and Divide</td></tr><tr><td><mark style="color:blue;"><code>Update By</code></mark></td><td>The quantity specified in this context will determine the extent to which the timer is modified.</td></tr><tr><td><mark style="color:blue;"><code>Sound Effect on Start</code></mark></td><td>Choose a sound effect to play when the timer value is updated.</td></tr><tr><td><mark style="color:blue;"><code>Visual Effect on Start</code></mark></td><td>Choose a visual effect to play when the timer value is updated.</td></tr><tr><td><mark style="color:blue;"><code>Broadcast on Update</code></mark></td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent when the timer is updated.</td></tr><tr><td><mark style="color:blue;"><code>Execute always</code></mark></td><td>This toggle, when activated, will always execute this. When off, it will execute it only once.</td></tr></tbody></table>
 
-You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [UpdateTimerTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#updatetimertemplate). &#x20;
+You can further  customize the  Checkpoint logic template in T# by accessing its T# Wrapper - [UpdateTimerTemplate](../scripting-custom-logic-components/t-logic-component-template-wrappers.md#updatetimertemplate). &#x20;
 
 ### Reset Timer
 
@@ -92,7 +92,7 @@ To add the Random Level Selector logic template, follow these steps:
 
 You can then tailor the following parameters in Advanced Mode to match your needs:
 
-<table><thead><tr><th width="264">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><mark style="color:blue;"><code>When</code></mark></td><td><p></p><p>Select When to Load a Random Level from a dropdown<strong>:</strong></p><ul><li>On Game Start</li><li>On Broadcast Listened</li></ul></td></tr><tr><td><mark style="color:blue;">Scenes</mark></td><td>Add a selection of scenes to randomly choose from for loading.</td></tr></tbody></table>
+<table><thead><tr><th width="264">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><mark style="color:blue;"><code>When</code></mark></td><td><p></p><p>Select When to Load a Random Level from a dropdown<strong>:</strong></p><ul><li>On Game Start</li><li>On Broadcast Listened</li></ul></td></tr><tr><td><mark style="color:blue;"><code>Scenes</code></mark></td><td>Add a selection of scenes to randomly choose from for loading.</td></tr></tbody></table>
 
 While there is no pre-built  T# Wrapper available to customize the Load Scene Logic Template you can write your own code in T# to implement this logic from scratch.
 

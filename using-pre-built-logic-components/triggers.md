@@ -54,4 +54,4 @@ You can edit the following parameters of this template directly through the scen
 
 <table><thead><tr><th width="279">Parameters</th><th>Description</th></tr></thead><tbody><tr><td>Listen To</td><td>Choose a broadcast from the drop drop menu. Once the object receives this broadcast, there will be a delay created for the next event.</td></tr><tr><td>Delay Time</td><td>Define the seconds by how long there will be a delay</td></tr><tr><td>Broadcast</td><td>Choose to enter a broadcast that can be used as a trigger for any other behavior. <br>The broadcast is sent after the defined delay time has completed.</td></tr></tbody></table>
 
-If you want to further customize this logic template, you can do so by accessing its T# Wrapper -  [DelayBroadcastTemplate](../scripting-custom-logic-components/t-logic-template-wrappers.md#delaybroadcasttemplate)
+If you want to further customize this logic template, you can do so by accessing its T# Wrapper -  [DelayBroadcastTemplate](../scripting-custom-logic-components/t-logic-component-template-wrappers.md#delaybroadcasttemplate)
