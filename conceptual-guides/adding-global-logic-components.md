@@ -1,8 +1,8 @@
-# Setting up Game Systems
+# Adding Global Logic Components
 
-Game Systems  are also components, but they affect the overall game and not just individual GameObjects. These components run in the background but significantly influence the entire gameplay experience. All Game Systems are accessible by clicking on the Essentials button in the Quick Access Menu. The Builder Panel then shows a list of all Game systems.&#x20;
+Global Logic Components affect the overall game and not just individual GameObjects. These components run in the background but significantly influence the entire gameplay experience. All these components are accessible by clicking on the Essentials button in the Quick Access Menu. The Builder Panel then shows a list of all Game systems.&#x20;
 
-Some game systems that are present in Terra Studio are listed below:&#x20;
+Some global logic components that are present in Terra Studio are listed below:&#x20;
 
 ## Game Timer
 
@@ -70,6 +70,39 @@ public class TimerManager : StudioBehavior
 }
 ```
 
+You can also use the UpdateTimer which  manages the timer component, handling modifiers, update intervals, and current time. It integrates with the `InGameTimeHandler` to get and set in-game time.&#x20;
+
+#### Properties and Methods in UpdateTimerTemplate
+
+<table data-header-hidden><thead><tr><th width="136"></th><th width="137"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Modifier</td><td>Get or set the modifier for timer updates.</td></tr><tr><td><strong>Property</strong></td><td>UpdateBy</td><td>Get or set the update interval.</td></tr><tr><td><strong>Property</strong></td><td>CurrentTime</td><td>Get or set the current time.</td></tr><tr><td><strong>Method</strong></td><td>GetTime</td><td>Retrieve the current time from the <code>InGameTimeHandler</code>.</td></tr><tr><td><strong>Method</strong></td><td>SetTime</td><td>Set a new time using the <code>InGameTimeHandler</code>.</td></tr></tbody></table>
+
+#### Usage Example for UpdateTimerTemplate
+
+```csharp
+public class TimerManager : StudioBehavior
+{
+    void ConfigureTimer()
+    {
+        // Accessing the wrapper
+        UpdateTimerTemplate template = (GetTemplate(typeof(UpdateTimerTemplate)) as UpdateTimerTemplate);
+
+        // Accessing and setting properties
+        Modifier modifier = template.Modifier; // Getting modifier
+        template.Modifier = Modifier.Add; // Setting modifier
+
+        int updateBy = template.UpdateBy; // Getting update interval
+        template.UpdateBy = 5; // Setting update interval
+
+        float currentTime = template.CurrentTime; // Getting current time
+        template.CurrentTime = 10.5f; // Setting current time
+
+        // Using methods
+        float time = template.GetTime(); // Getting current time
+        template.SetTime(12.0f); // Setting a new time
+    }
+}
+```
+
 ## Score
 
 The Score system tracks how players perform in a game, showing their competition level and progress. Every game automatically includes a primary score group called the Main Score\_GameScore. This group becomes active when you use certain game logic templates to change scores.
@@ -102,6 +135,106 @@ You can further configure Score Groups by selecting Essentials from the Quick Ac
 * **Save Best Score Toggle**: When selected, this saves the player's highest score.
 * **Show Best ScoreUI Toggle**: When you turn on the "Save Best Score" option, it displays your highest score on the game screen.
 * **BestScore UI PreFab Dropdown**: This lets you choose the UI templates that should display the highest score in ShowUI.
+
+Scores can also be configured using T# wrappers - , GetScoreTemplate, UpdateScoreTemplate and ResetScore Template.&#x20;
+
+The GetScore template manages in-game scoring functionality.&#x20;
+
+Properties and Methods in GameScoreTemplate&#x20;
+
+<table data-header-hidden><thead><tr><th width="137"></th><th width="207"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>CurrentScore</td><td>Get or set the current score.</td></tr><tr><td><strong>Property</strong></td><td>BestScore</td><td>Get or set the best score achieved.</td></tr><tr><td><strong>Property</strong></td><td>IsScoreUIShown</td><td>Check if the score UI is currently displayed.</td></tr><tr><td><strong>Property</strong></td><td>IsBestScoreCalculated</td><td>Check if the best score calculation is enabled.</td></tr><tr><td><strong>Event</strong></td><td>OnScoreModified</td><td>Event triggered when the score is modified.</td></tr></tbody></table>
+
+Usage Example in GameScoreTemplate
+
+```csharp
+public class ScoreManager : StudioBehavior
+{
+    void ManageScore()
+    {
+        // Accessing the wrapper
+        GameScoreTemplate template = (GetTemplate(typeof(GameScoreTemplate)) as GameScoreTemplate);
+
+        // Accessing and setting the CurrentScore property
+        int currentScore = template.CurrentScore; // Getting the current score
+
+        // Accessing and setting the BestScore property
+        int bestScore = template.BestScore; // Getting the best score
+
+        // Checking if the score UI is shown
+        bool isScoreUIShown = template.IsScoreUIShown; // Checking if the score UI is currently displayed
+
+        // Checking if the best score calculation is enabled
+        bool isBestScoreCalculated = template.IsBestScoreCalculated; // Checking if best score calculation is enabled
+
+        // Subscribing to the OnScoreModified event
+        template.OnScoreModified += OnScoreModifiedHandler; // Subscribe to the score modification event
+
+        // Unsubscribing from the OnScoreModified event
+        template.OnScoreModified -= OnScoreModifiedHandler; // Unsubscribe from the score modification event
+    }
+
+    void OnScoreModifiedHandler(int modifiedScore)
+    {
+        // Handle score modification
+    }
+}
+```
+
+The UpdateScore template manages the score component, handling score groups, modifiers, and score values. It integrates with the `ScoreHandler` to get and set scores. Access it as follows:
+
+#### Properties and Methods in UpdateScoreTemplate
+
+<table data-header-hidden><thead><tr><th width="138"></th><th width="138"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>ScoreGroup</td><td>Get or set the score group.</td></tr><tr><td><strong>Property</strong></td><td>Modifier</td><td>Get or set the modifier for score updates.</td></tr><tr><td><strong>Property</strong></td><td>Score</td><td>Get or set the score value.</td></tr><tr><td><strong>Method</strong></td><td>GetScore</td><td>Retrieve the current score from the <code>ScoreHandler</code>.</td></tr><tr><td><strong>Method</strong></td><td>SetScore</td><td>Set a new score using the <code>ScoreHandler</code>.</td></tr></tbody></table>
+
+#### Usage Example for UpdateScoreTemplate
+
+```csharp
+public class ScoreManager : StudioBehavior
+{
+    void ConfigureScore()
+    {
+        // Accessing the wrapper
+        UpdateScoreTemplate template = (GetTemplate(typeof(UpdateScoreTemplate)) as UpdateScoreTemplate);
+
+        // Accessing and setting properties
+        string scoreGroup = template.ScoreGroup; // Getting score group
+        template.ScoreGroup = "newScoreGroup"; // Setting score group
+
+        Modifier modifier = template.Modifier; // Getting modifier
+        template.Modifier = Modifier.Add; // Setting modifier
+
+        int score = template.Score; // Getting score
+        template.Score = 100; // Setting score
+
+        // Using methods
+        int currentScore = template.GetScore(); // Getting current score
+        template.SetScore(150); // Setting a new score
+    }
+}
+```
+
+The ResetScoreTemplate manages the resetting of scores within the game, utilizing specified parameters to handle score groups and reset them. Access it as follows:
+
+#### Properties in ResetScoreTemplate
+
+<table data-header-hidden><thead><tr><th width="129"></th><th width="138"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>ScoreGroup</td><td>Get or set the score group.</td></tr></tbody></table>
+
+#### Usage Example for ResetScoreTemplate
+
+```csharp
+public class ScoreManager : StudioBehavior
+{
+    void ConfigureScore()
+    {
+        // Accessing the wrapper
+        ResetScoreTemplate template = (GetTemplate(typeof(ResetScoreTemplate)) as ResetScoreTemplate);
+
+        // Accessing and setting the ScoreGroup property
+        string scoreGroup = template.ScoreGroup; // Getting score group
+        template.ScoreGroup = "NewScoreGroup"; // Updating score group
+    }
+}
+```
 
 ## Health
 

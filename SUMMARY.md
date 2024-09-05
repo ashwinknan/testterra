@@ -15,11 +15,11 @@
 
 ## CONCEPTUAL GUIDES
 
-* [Building Blocks of a Terra Game](conceptual-guides/building-blocks-of-a-terra-game.md)
-* [Configuring GameObjects](conceptual-guides/configuring-gameobjects.md)
+* [Building Blocks of a Game](conceptual-guides/building-blocks-of-a-game.md)
 * [Configuring the Player](conceptual-guides/configuring-the-player.md)
-* [Configuring Components](conceptual-guides/configuring-components.md)
-* [Setting up Game Systems](conceptual-guides/setting-up-game-systems.md)
+* [Configuring GameObjects](conceptual-guides/configuring-gameobjects.md)
+* [Adding Logic Components to Asset Game Objects](conceptual-guides/adding-logic-components-to-asset-game-objects.md)
+* [Adding Global Logic Components](conceptual-guides/adding-global-logic-components.md)
 
 ## USING PRE-BUILT LOGIC COMPONENTS
 

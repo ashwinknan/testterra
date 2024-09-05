@@ -2,7 +2,7 @@
 description: The high level design of any game
 ---
 
-# Building Blocks of a Terra Game
+# Building Blocks of a Game
 
 Any game in Terra consists of four basic blocks -  Player, GameObjects, Components and Broadcasts
 
@@ -33,6 +33,19 @@ Broadcasts are messages that are used by Components and GameObjects to communica
 * **Game Win**: It is the broadcast message automatically generated when the player meets the win condition for a game
 * **Game Lose**: It is the broadcast message automatically generated when the player meets the lose condition for a game
 * **Custom Broadcast**: This lets you send a unique alert whenever a specific game condition happens. You can name each custom signal differently - and this is usually a string field.
+
+## Putting it all together
+
+In a game, the player’s journey is shaped by the seamless interaction of these four core components: Player, GameObjects, Components, and Broadcasts. Here's how these elements work together to create an immersive experience:
+
+1. **Starting as the Player**
+   * The journey begins with the **Player**, the avatar representing the user within the game world. As the player steps into the game, they control this avatar, navigating through the environment and interacting with the world around them.
+2. **Interacting with GameObjects**
+   * As the Player moves through the game, they encounter various **GameObjects**. These are the elements that fill the game world—3D assets, sound effects, and particle effects—that make the environment rich and engaging. GameObjects provide the physical and visual context within which the player’s journey unfolds.
+3. **Engaging with Components**
+   * However, simply moving through a world of GameObjects would be a passive experience without the **Components** that bring it to life. Components are attached to GameObjects, turning them from static objects into interactive elements. For example, when the Player approaches a door (a GameObject), a Component might trigger the door to open. Similarly, picking up an item might increase the Player's score or trigger a sound. Components are the rules and logic that govern how GameObjects respond to the Player, making the game interactive and engaging.
+4. **Triggering Events with Broadcasts**
+   * Throughout the journey, certain actions or events need to be communicated across different parts of the game. This is where **Broadcasts** come into play. For instance, when the Player reaches the end of a level, a "Game Win" Broadcast might be sent out, triggering the display of a victory screen. Or if the Player loses all their health, a "Game Lose" Broadcast could initiate the game-over sequence. **Custom Broadcasts** allow for more specific interactions, such as triggering an alarm when the Player steps into a restricted area. Broadcasts ensure that all game elements work together, responding to the Player’s actions in real-time.
 
 ## Summary
 

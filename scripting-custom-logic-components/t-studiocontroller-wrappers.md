@@ -4,7 +4,7 @@
 
 The `StudioController` class represents a controller for the player in the game. It provides various functionalities to interact with and manipulate the player character's properties and behaviors.
 
-#### Properties and Methods
+#### Properties and Methods in StudioController
 
 | **Type** | **Name**                     | **Description**                                                                 |
 | -------- | ---------------------------- | ------------------------------------------------------------------------------- |

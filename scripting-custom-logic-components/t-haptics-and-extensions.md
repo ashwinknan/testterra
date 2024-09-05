@@ -4,7 +4,7 @@
 
 This class provides static methods to play different haptic feedback patterns. It uses the Lofelt Nice Vibrations library to trigger haptic feedback on supported devices.
 
-#### Properties and Methods
+#### Properties and Methods in StudioHaptics
 
 <table data-header-hidden><thead><tr><th width="209"></th><th></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td>Method</td><td><code>PlayHapticSelection</code></td><td>Plays the haptic feedback for selection.</td></tr><tr><td>Method</td><td><code>PlayHapticSuccess</code></td><td>Plays the haptic feedback for success.</td></tr><tr><td>Method</td><td><code>PlayHapticWarning</code></td><td>Plays the haptic feedback for warning.</td></tr><tr><td>Method</td><td><code>PlayHapticFailure</code></td><td>Plays the haptic feedback for failure.</td></tr><tr><td>Method</td><td><code>PlayHapticLightImpact</code></td><td>Plays the haptic feedback for light impact.</td></tr><tr><td>Method</td><td><code>PlayHapticMediumImpact</code></td><td>Plays the haptic feedback for medium impact.</td></tr><tr><td>Method</td><td><code>PlayHapticHeavyImpact</code></td><td>Plays the haptic feedback for heavy impact.</td></tr><tr><td>Method</td><td><code>PlayHapticRigidImpact</code></td><td>Plays the haptic feedback for rigid impact.</td></tr><tr><td>Method</td><td><code>PlayHapticSoftImpact</code></td><td>Plays the haptic feedback for soft impact.</td></tr></tbody></table>
 
@@ -51,7 +51,7 @@ public class HapticFeedbackExample : StudioBehavior
 
 This class provides static methods for various utility functions within the Terra Studio environment.
 
-#### Properties and Methods
+#### Properties and Methods in StudioExtensions
 
 | **Type** | **Name**          | **Description**                                                                           |
 | -------- | ----------------- | ----------------------------------------------------------------------------------------- |
@@ -84,7 +84,7 @@ public class UtilityFunctionsExample : StudioBehavior
         // Load a scene by name
         StudioExtensions.LoadScene("SceneName");
 
-        // Get all scenes
+        // Get all scenes. Remember to use TerraList and not List, since List is not supported
         TerraList allScenes = StudioExtensions.GetAllScenes();
 
         // Get the current scene name

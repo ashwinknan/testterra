@@ -78,6 +78,68 @@ Once an SFX is added, it appears in the Layers panel. Here, you can select it to
   * **Max Distance:** This helps you set the furthest distance at which the sound can be heard from its source.
   * **Minimum Distance:** Establishes the closest distance to the source needed to hear the sound, applicable when 3D audio is enabled.
 
+You can also choose to customize sound effects through the SoundFxTemplate T# wrapper which manages sound effects within the game, allowing customization of volume, pitch, 3D audio settings, distance ranges, looping capabilities, and pause/resume events.&#x20;
+
+#### Properties and Methods in SoundFxTemplate
+
+<table data-header-hidden><thead><tr><th width="151"></th><th width="170"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>Volume</td><td>Get or set the volume.</td></tr><tr><td><strong>Property</strong></td><td>Pitch</td><td>Get or set the pitch.</td></tr><tr><td><strong>Property</strong></td><td>Is3DAudio</td><td>Get or set whether the sound is 3D audio.</td></tr><tr><td><strong>Property</strong></td><td>MinDistance</td><td>Get or set the minimum distance for 3D audio.</td></tr><tr><td><strong>Property</strong></td><td>MaxDistance</td><td>Get or set the maximum distance for 3D audio.</td></tr><tr><td><strong>Property</strong></td><td>CanLoop</td><td>Get or set whether the sound can loop.</td></tr><tr><td><strong>Property</strong></td><td>PauseOn</td><td>Get or set the event on which the sound pauses.</td></tr><tr><td><strong>Property</strong></td><td>ResumeOn</td><td>Get or set the event on which the sound resumes.</td></tr><tr><td><strong>Event</strong></td><td>OnPaused</td><td>Event triggered when the sound is paused.</td></tr><tr><td><strong>Event</strong></td><td>OnResumed</td><td>Event triggered when the sound is resumed.</td></tr></tbody></table>
+
+#### Usage Example for SoundFxTemplate
+
+```csharp
+public class SoundManager : StudioBehavior
+{
+    void ConfigureSound()
+    {
+        // Accessing the wrapper
+        SoundFxTemplate template = (GetTemplate(typeof(SoundFxTemplate)) as SoundFxTemplate);
+
+        // Accessing and setting properties
+        float volume = template.Volume; // Getting volume
+        template.Volume = 0.5f; // Setting volume
+
+        float pitch = template.Pitch; // Getting pitch
+        template.Pitch = 1.0f; // Setting pitch
+
+        bool is3DAudio = template.Is3DAudio; // Checking if 3D audio
+        template.Is3DAudio = true; // Enabling 3D audio
+
+        float minDistance = template.MinDistance; // Getting minimum distance
+        template.MinDistance = 1.0f; // Setting minimum distance
+
+        float maxDistance = template.MaxDistance; // Getting maximum distance
+        template.MaxDistance = 50.0f; // Setting maximum distance
+
+        bool canLoop = template.CanLoop; // Checking if looping
+        template.CanLoop = true; // Enabling looping
+
+        string pauseOn = template.PauseOn; // Getting pause event
+        template.PauseOn = "PlayerDeath"; // Setting pause event
+
+        string resumeOn = template.ResumeOn; // Getting resume event
+        template.ResumeOn = "PlayerRespawn"; // Setting resume event
+
+        // Subscribing to events
+        template.OnPaused += OnSoundPaused;
+        template.OnResumed += OnSoundResumed;
+
+        // Unsubscribing from events
+        template.OnPaused -= OnSoundPaused;
+        template.OnResumed -= OnSoundResumed;
+    }
+
+    void OnSoundPaused()
+    {
+        // Your code here
+    }
+
+    void OnSoundResumed()
+    {
+        // Your code here
+    }
+}
+```
+
 ## **Particles**
 
 Particles allow you to add moving elements such as fire, beams, aurora lights etc within the game environment.&#x20;
@@ -97,6 +159,52 @@ Once you have added a particle effect to the game, select it from the Layers Pan
 * **Delay Between:** Defines the delay interval between consecutive appearances of the particle effect.
 * **Repeat Forever:** This Toggle, If enabled, the particle Visual Effects (VFX) will repeat continuously throughout the game.
 * **Repeat Count:** Specifies the number of times the particle VFX will repeat.
+
+You can also choose to customize particle effects through **ParticleEffectTemplate** which manages particle effects within the game, offering flexibility in configuration and event handling.&#x20;
+
+#### Properties and Methods in ParticleEffectTemplate
+
+<table data-header-hidden><thead><tr><th width="141"></th><th width="249"></th><th></th></tr></thead><tbody><tr><td><strong>Type</strong></td><td><strong>Name</strong></td><td><strong>Description</strong></td></tr><tr><td><strong>Property</strong></td><td>RepeatCount</td><td>Get or set the number of times the particle effect repeats.</td></tr><tr><td><strong>Property</strong></td><td>PlayForever</td><td>Get or set whether continuous playback is enabled.</td></tr><tr><td><strong>Property</strong></td><td>Duration</td><td>Get or set the duration of the particle effect.</td></tr><tr><td><strong>Property</strong></td><td>Delay</td><td>Get or set the delay between repetitions of the effect.</td></tr><tr><td><strong>Event</strong></td><td>OnParticlePlayingCompleted</td><td>Event triggered when the particle effect playback completes.</td></tr></tbody></table>
+
+#### Usage Example for ParticleEffectTemplate
+
+```csharp
+public class ParticleEffectController : StudioBehavior
+{
+    void ConfigureParticleEffect()
+    {
+        // Accessing the wrapper
+        ParticleEffectTemplate template = (GetTemplate(typeof(ParticleEffectTemplate)) as ParticleEffectTemplate);
+
+        // Accessing and setting the RepeatCount property
+        int repeatCount = template.RepeatCount; // Getting repeat count
+        template.RepeatCount = 3; // Setting repeat count
+
+        // Accessing and setting the PlayForever property
+        bool playForever = template.PlayForever; // Getting continuous playback status
+        template.PlayForever = true; // Enabling continuous playback
+
+        // Accessing and setting the Duration property
+        float duration = template.Duration; // Getting effect duration
+        template.Duration = 5.0f; // Setting effect duration
+
+        // Accessing and setting the Delay property
+        int delay = template.Delay; // Getting delay value
+        template.Delay = 2; // Setting delay between repetitions
+
+        // Subscribing to events
+        template.OnParticlePlayingCompleted += HandleParticlePlayingCompleted;
+
+        // Unsubscribing from events
+        template.OnParticlePlayingCompleted -= HandleParticlePlayingCompleted;
+    }
+
+    void HandleParticlePlayingCompleted()
+    {
+        // Handle logic when particle effect playback completes here
+    }
+}
+```
 
 ## Game Environment
 

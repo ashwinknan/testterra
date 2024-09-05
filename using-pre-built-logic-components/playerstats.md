@@ -8,7 +8,7 @@
 
 ### Update Score
 
-You may want to enhance the gameplay experience by adjusting the game [score ](../conceptual-guides/setting-up-game-systems.md#score)when specific conditions are met. For instance:
+You may want to enhance the gameplay experience by adjusting the game [score ](../conceptual-guides/adding-global-logic-components.md#score)when specific conditions are met. For instance:
 
 * Update the score when the player collects items such as coins, gems, or power-ups. This promotes exploration and rewards the player's curiosity.
 * Increase the score upon completing a level or reaching a milestone, such as finishing a race track or solving a puzzle.
@@ -130,7 +130,7 @@ If you want to further customize this logic template, you can do so by accessing
 
 ### Level Up
 
-Level up behaviour is used to upgrade different in-game assets based on the the upgrade paths of objects defined using the [Level Mapper](../conceptual-guides/setting-up-game-systems.md) game system.
+Level up behaviour is used to upgrade different in-game assets based on the the upgrade paths of objects defined using the [Level Mapper](../conceptual-guides/adding-global-logic-components.md) game system.
 
 To add the Level Mapper logic template to an asset, follow these steps:
 
