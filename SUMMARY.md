@@ -39,3 +39,7 @@
 * [T# StudioController Wrappers](scripting-custom-logic-components/t-studiocontroller-wrappers.md)
 * [T# Haptics & Extensions](scripting-custom-logic-components/t-haptics-and-extensions.md)
 * [Adding UI using T#](scripting-custom-logic-components/adding-ui-using-t.md)
+
+## IMPLEMENTATION IN ACTION
+
+* [T# Code Examples](implementation-in-action/t-code-examples.md)
