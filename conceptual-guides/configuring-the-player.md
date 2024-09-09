@@ -12,19 +12,17 @@ You can select the player by clicking on the player's avatar that is visible in 
 * Locate and Click on "Player".&#x20;
 * Press the F button&#x20;
 
-You will notice that the Player has a default child element TopDownPlayer  which in turn has two more children - ModelRoot and CameraRoot
+You will notice that the Player has a default child element TopDownPlayer  which in turn has two more children - ModelRoot and CameraRoot.
 
-## Editing Player Characteristics through the Editor Interface
+Once you find and select the player in the editor,  the Inspector Panel on the right displays a list of customisable Player Properties.&#x20;
 
-Once you find and select the player in the editor,  the Inspector Panel on the right displays a list of customisable Player Properties. A list of these customisation actions are given below:&#x20;
-
-### Transforming Initial Player Configurations
+## Transforming Initial Player Configurations
 
 To do this, you need to select the topmost parent  element in the Layers , named Player.&#x20;
 
 You will notice that can do three basic transformations of the player's initial configuration- <mark style="color:red;">`Move`</mark> , <mark style="color:red;">`Rotate`</mark> and <mark style="color:red;">`Scale`</mark>. When an object is selected, the Gizmo containing 3 handles will appear around it, each representing an axis along which you can manipulate the object. Alternatively, you can also manually change the values in the Inspector panel to get the exact initial configuration of the player you want.&#x20;
 
-### Selecting a Gameplay Controller
+## Selecting a Gameplay Controller
 
 Gameplay Controller in the context of mobile or tablet gaming is a system that interprets the player's input on the touchscreen into actions and movements within the game.&#x20;
 
@@ -104,7 +102,7 @@ public class PlayerControllerExample : StudioBehavior
 }
 ```
 
-### Editing Player Motion Properties
+## Editing Player Motion Properties
 
 You can alter how players move through the game space. To edit these properties, you need to select the TopDown Player element (child of the Player element). Once you select it, you can by tweak these properties:
 
@@ -115,7 +113,7 @@ You can alter how players move through the game space. To edit these properties,
 * **Jump Lock**: Toggle to disable jumping via a controller. Useful for creating specific challenges or controlling movement in certain areas.
 * **Max Speed**: Define the player's maximum achievable speed.
 
-### Editing Player Animation
+## Editing Player Animation
 
 The Player's animation can be edited by selecting the `ModelRoot` element under the `TopDownPlayer` element in Layers. The following animations can be edited by choosing from a list of pre-existing animations:
 
@@ -133,7 +131,7 @@ The Player's animation can be edited by selecting the `ModelRoot` element under 
 * Bump from left
 * Bump from right
 
-### Editing Player Camera Controls&#x20;
+## Editing Player Camera Controls&#x20;
 
 Terra Studio allows creators to edit the following camera control parameters during game play and define how users experience their game visually. You can change this by  selecting the Camera`Root` element under the `TopDownPlayer` element in Layers.
 
