@@ -151,7 +151,7 @@ Use `TerraDictionary` as a substitute for dictionaries in T#. It provides simila
 
 ```csharp
 // This is compatible with T#
-TerraDictionary<string, int> myDict = new TerraDictionary<string, int>();
+TerraDictionary myDict = new TerraDictionary();
 myDict.Add("key1", 1);
 int value = myDict["key1"];
 ```
@@ -183,7 +183,7 @@ float firstItem = myList[0];
 For unsupported list types such as the above, use `TerraList` instead of `List<T>`.
 
 ```csharp
-TerraList<float> myList = new TerraList<float>();
+TerraList myList = new TerraList();
 myList.Add(1.5f);
 float firstItem = myList[0];
 ```
