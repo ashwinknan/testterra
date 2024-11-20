@@ -12,6 +12,7 @@
 * [Dashboard](using-the-terra-studio-editor/dashboard.md)
 * [Editor UI](using-the-terra-studio-editor/editor-ui.md)
 * [Editor UI Workflows](using-the-terra-studio-editor/editor-ui-workflows.md)
+* [Collaboration](using-the-terra-studio-editor/collaboration.md)
 
 ## CONCEPTUAL GUIDES
 
