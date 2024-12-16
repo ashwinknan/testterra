@@ -26,7 +26,7 @@ void Start() {
 
 Generic methods such as `GetComponent<T>`, `AddComponent<T>`, `FindObjectOfType<T>`, and similar methods involving generics are not supported in T#.
 
-None of the following generic methods are supported**:**
+None of the following generic methods are supporte&#x64;**:**
 
 ```csharp
 Rigidbody rb = gameObject.GetComponent<Rigidbody>();            // Not allowed
@@ -95,25 +95,6 @@ Rigidbody rb = obj.GetComponent(typeof(Rigidbody)); // This might not work immed
 
 Due to the current structure of T#, calling `GetComponent` right after `Instantiate` may not work as expected because the mono behavior might not be fully initialized yet.
 
-## **SerializedFields**
-
-The following code is not supported because it uses&#x20;
-
-```csharp
-[SerializeField] private GameObject obj; // Not allowed
-```
-
-Instead, use this alternative:
-
-```csharp
-// Use ObjectVariables component instead
-ObjectVariables objVars = gameObject.GetComponent<ObjectVariables>();
-objVars.SetObjectVariable("obj", someGameObject);
-
-// Access it later
-GameObject obj = objVars.GetObjectVariable("obj");
-```
-
 ## **Coroutines in Start**
 
 This way of starting Coroutines is not supported:
@@ -137,6 +118,17 @@ IEnumerator MyCoroutine() {
     // Your code here
 }
 ```
+
+## **GetComponent Instantly After Instantiate**
+
+You cannot use GetComponent immediately after instantiating
+
+```csharp
+GameObject obj = Instantiate(prefab);
+Rigidbody rb = obj.GetComponent(typeof(Rigidbody)); // This might not work immediately after Instantiate
+```
+
+Due to the current structure of T#, calling `GetComponent` right after `Instantiate` may not work as expected because the mono behavior might not be fully initialized yet.
 
 ## **Dictionary**
 
@@ -187,6 +179,266 @@ TerraList myList = new TerraList();
 myList.Add(1.5f);
 float firstItem = (float)myList[0];
 ```
+
+## Unity Events as Coroutines
+
+Converting Unity events into coroutines is not supported:
+
+```csharp
+IEnumerator OnCollisionEnter(Collision collision) { // Not allowed
+    yield return new WaitForSeconds(1);
+}
+
+```
+
+Instead, use regular event methods and start separate coroutines:
+
+```csharp
+void OnCollisionEnter(Collision collision) {
+    StartCoroutine(CollisionCoroutine(collision));
+}
+
+IEnumerator CollisionCoroutine(Collision collision) {
+    yield return new WaitForSeconds(1);
+    // Your code here
+}
+
+```
+
+## Enums
+
+Custom enums are not supported in T#:
+
+```csharp
+enum GameState { // Not allowed
+    Playing,
+    Paused,
+    GameOver
+}
+
+```
+
+Instead, use integer constants or string identifiers:
+
+```csharp
+private const int STATE_PLAYING = 0;
+private const int STATE_PAUSED = 1;
+private const int STATE_GAMEOVER = 2;
+
+```
+
+## Switch Statements
+
+Switch statements are not supported:
+
+```csharp
+switch (state) { // Not allowed
+    case 0:
+        // Do something
+        break;
+    default:
+        // Do something else
+        break;
+}
+
+```
+
+Use if-else statements instead:
+
+```csharp
+if (state == 0) {
+    // Do something
+}
+else {
+    // Do something else
+}
+
+```
+
+## Custom Scripts in Collections
+
+Custom scripts in Lists or Dictionaries are not supported:
+
+```csharp
+List<MyCustomScript> scriptList = new List<MyCustomScript>(); // Not allowed
+Dictionary<string, MyCustomScript> scriptDict = new Dictionary<string, MyCustomScript>(); // Not allowed
+
+```
+
+Instead, use GameObject or Component references and get the scripts when needed:
+
+```csharp
+List<GameObject> objectList = new List<GameObject>();
+// Get the script component when needed
+MyCustomScript script = objectList[0].GetComponent(typeof(MyCustomScript)) as MyCustomScript;
+
+```
+
+## LINQ Libraries
+
+LINQ operations are not supported:
+
+```csharp
+var filtered = myList.Where(x => x > 5).ToList(); // Not allowed
+
+```
+
+Use traditional loops instead:
+
+```csharp
+List<int> filtered = new List<int>();
+for (int i = 0; i < myList.Count; i++) {
+    if (myList[i] > 5) {
+        filtered.Add(myList[i]);
+    }
+}
+
+```
+
+## Structs in TerraList
+
+Custom structs cannot be stored in TerraList:
+
+```csharp
+TerraList structList = new TerraList();
+structList.Add(new MyStruct()); // Not allowed
+
+```
+
+## TryGetComponent
+
+TryGetComponent method is not supported:
+
+```csharp
+if (gameObject.TryGetComponent(typeof(Rigidbody), out Rigidbody rb)) { // Not allowed
+    // Use rb
+}
+
+```
+
+Use GetComponent instead with null checking:
+
+```csharp
+Rigidbody rb = gameObject.GetComponent(typeof(Rigidbody)) as Rigidbody;
+if (rb != null) {
+    // Use rb
+}
+
+```
+
+## Try-Catch Blocks
+
+Exception handling using try-catch blocks is not supported:
+
+```csharp
+try { // Not allowed
+    // Some code
+}
+catch (Exception e) {
+    // Handle error
+}
+
+```
+
+## Partial Classes
+
+Partial class definitions are not supported:
+
+```csharp
+partial class MyScript : MonoBehaviour { // Not allowed
+    // Code
+}
+
+```
+
+## Vector3 Boxing
+
+Boxing operations for Vector3 are not supported:
+
+```csharp
+object boxedVector = (object)Vector3.zero; // Not allowed
+Vector3 unboxedVector = (Vector3)boxedVector; // Not allowed
+
+```
+
+## Invoke Methods
+
+The Invoke and InvokeRepeating methods are not supported:
+
+```csharp
+Invoke("MethodName", 2.0f); // Not allowed
+InvokeRepeating("MethodName", 0f, 1.0f); // Not allowed
+
+```
+
+Use coroutines instead:
+
+```csharp
+StartCoroutine(InvokeWithDelay());
+
+IEnumerator InvokeWithDelay() {
+    yield return new WaitForSeconds(2.0f);
+    MethodName();
+}
+
+```
+
+## Action Parameters
+
+Actions are limited to a maximum of 4 parameters:
+
+```csharp
+Action<int, int, int, int, int> myAction; // Not allowed (more than 4 parameters)
+
+```
+
+## IPointer Events
+
+Interface implementations for pointer events are not supported:
+
+```csharp
+public class MyScript : MonoBehaviour, IPointerClickHandler { // Not allowed
+    public void OnPointerClick(PointerEventData eventData) {
+        // Code
+    }
+}
+
+```
+
+## PlayerPrefs
+
+Unity's PlayerPrefs system is not supported:
+
+```csharp
+PlayerPrefs.SetInt("Score", 100); // Not allowed
+int score = PlayerPrefs.GetInt("Score"); // Not allowed
+
+```
+
+## **Unity Lifecycle Methods**
+
+Several Unity lifecycle methods are not supported or may have limited functionality:
+
+```csharp
+void OnEnable() { // May not work as expected
+    // Code
+}
+
+void OnDisable() { // May not work as expected
+    // Code
+}
+
+void OnDestroy() { // May not work as expected
+    // Code
+}
+
+void LateUpdate() { // Not supported
+    // Code
+}
+
+```
+
+Use Start, Update, and custom methods instead, and manage object lifecycle manually when needed.
 
 ## **Miscellaneous**
 
