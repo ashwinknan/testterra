@@ -41,11 +41,14 @@
 * [T# Haptics & Extensions](scripting-custom-logic-components/t-haptics-and-extensions.md)
 * [Adding UI using T#](scripting-custom-logic-components/adding-ui-using-t.md)
 
-## IMPLEMENTATION IN ACTION
+***
 
-* [T# Code Examples](implementation-in-action/t-code-examples.md)
+* [T# Code Examples](t-code-examples.md)
+
+## RELEASE LOG
 
 ***
 
 * [Studio v10](studio-v10.md)
 * [Studio v11](studio-v11.md)
+* [Studio v12](studio-v12.md)

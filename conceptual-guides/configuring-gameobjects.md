@@ -147,7 +147,7 @@ Particles allow you to add moving elements such as fire, beams, aurora lights et
 ### **Selecting and Adding Particles**
 
 * **Selecting the Particles:** Start by opening the Quick Access Menu and selecting the Particles option. This will reveal a catalog of available particle effects with their preview suitable for your game's atmosphere and mechanics.
-* **Adding Particles :**Click on the effect you want and drag and drop it to the desired location in your game.&#x20;
+* **Adding Particles :**&#x43;lick on the effect you want and drag and drop it to the desired location in your game.&#x20;
 
 ### Customizing Particle Properties
 
