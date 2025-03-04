@@ -45,7 +45,7 @@ Release Date: 13 Dec 2024, 6:42 pm&#x20;
 * Brand new conflict page, to ease your frustration slightly
 * Brand new scripts tab
 * Almost-offline! support so internet disconnection does not kick you out. Instead you can continue with local save as long as you feel like
-* Socket improvements - your cloud save is less likely to save
+* Socket improvements - your cloud save is less likely to fail
 * Improved quality of life:
   1. Scroll improvements
   2. Multi-select remove components fixed
@@ -64,7 +64,7 @@ Release Date: 20 Dec 2024, 11:50 pm&#x20;
 
 <mark style="color:green;">`Change log`</mark>
 
-* Added animation blending support. You can ask me for reference of how to use
+* Added animation blending support
 * Null errors from UI - fixed caused due to importing a scroll view
 
 ## <mark style="color:yellow;">`v0.12.08`</mark>
