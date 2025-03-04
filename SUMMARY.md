@@ -42,6 +42,7 @@
 * [Adding UI using T#](scripting-custom-logic-components/adding-ui-using-t.md)
 * [Game Analytics](scripting-custom-logic-components/game-analytics.md)
 * [First-Time User Experience (FTUE) Tracking](scripting-custom-logic-components/first-time-user-experience-ftue-tracking.md)
+* [Leaderboard](scripting-custom-logic-components/leaderboard.md)
 
 ***
 
