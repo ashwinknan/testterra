@@ -41,6 +41,7 @@
 * [T# Haptics & Extensions](scripting-custom-logic-components/t-haptics-and-extensions.md)
 * [Adding UI using T#](scripting-custom-logic-components/adding-ui-using-t.md)
 * [Game Analytics](scripting-custom-logic-components/game-analytics.md)
+* [First-Time User Experience (FTUE) Tracking](scripting-custom-logic-components/first-time-user-experience-ftue-tracking.md)
 
 ***
 

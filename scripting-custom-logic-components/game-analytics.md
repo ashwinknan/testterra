@@ -400,26 +400,5 @@ With the 256-character limit for each game value, you need strategies to ensure 
 1. **Use Compact Representations**: Keep your format concise. Use numbers instead of strings where possible, and abbreviate longer identifiers.
 2. **Prioritize Recent Data**: When approaching the character limit, remove older entries in favor of newer ones. Recent player behavior is typically more relevant than historical data.
 3. **Aggregate Data**: Instead of recording every single event, consider aggregating data. For example, instead of recording each enemy kill separately, record the total kills per level.
-
-```csharp
-// Example of aggregating data
-public static void RecordAggregatedCombatStats(int levelNumber, Dictionary<string, int> killsByType)
-{
-    // Convert the dictionary to a compact string format
-    string aggregatedStats = $"{levelNumber}";
-    
-    foreach (var entry in killsByType)
-    {
-        aggregatedStats += $"_{entry.Key}:{entry.Value}";
-    }
-    
-    // Check if adding this would exceed the limit and handle appropriately
-    // ...
-    
-    combatStatisticsData = aggregatedStats;
-    SaveAndSendCombatStatisticsData();
-}
-```
-
 4. **Split Related Data**: If one category of data grows too large, consider splitting it across multiple game values. For example, you might separate player achievements into "combat achievements" and "exploration achievements".
 5. **Periodic Sending**: Send analytics data at key points rather than after every event to avoid unnecessary network traffic and to aggregate data efficiently.
