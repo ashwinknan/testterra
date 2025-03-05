@@ -52,7 +52,8 @@
 
 ***
 
-* [Studio v15 (Current Version)](studio-v15-current-version.md)
+* [Studio v16 (Current Version)](studio-v16-current-version.md)
+* [Studio v15](studio-v15.md)
 * [Studio v14](studio-v14.md)
 * [Studio v13](studio-v13.md)
 * [Studio v12](studio-v12.md)
