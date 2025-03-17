@@ -112,3 +112,87 @@ public class PlayerAnimationController : StudioBehavior
     }
 }
 ```
+
+### Animation Blending
+
+The following code illustrates how to blend animations using T sharp. Here we are blending the walk and run animations on the zombieGo gameobject:
+
+```csharp
+using System;
+using System.Collections;
+using Terra.Studio;
+using Terra.Studio.Exposed;
+using Terra.Studio.Exposed.Layers;
+using UnityEngine;
+public class ZombieController : StudioBehaviour
+{
+GameObject zombieGo;
+PlayAnimationTemplate playAnimation = null;
+float blendFactor = 0f;
+private string animA = "walk";
+private string animB = "run";
+private bool stopBlending = false;
+// Gets called at the start of the lifecycle of the GameObject
+private void Start()
+{
+    StopAllCoroutines();
+    StartCoroutine(DelayedSetup());
+}
+
+private IEnumerator DelayedSetup()
+{
+    yield return null;
+
+    zombieGo = GetGameObjectVariable("zombie");
+    playAnimation = GetTemplate(zombieGo, typeof(PlayAnimationTemplate)) as PlayAnimationTemplate;
+
+    yield return null;
+
+    while (!playAnimation.IsPlayingDefault())
+    {
+        Debug.Log($"Waiting for default animation to load!");
+        yield return null;
+    }
+
+
+    playAnimation.StopAnimationOverride();
+
+    playAnimation.InitializeBlending(animA, WrapMode.Loop, animB, WrapMode.Loop);
+
+    yield return new WaitForSeconds(5f);
+    Debug.Log("stopping blending");
+    stopBlending = true;
+
+    yield return new WaitForSeconds(1f);
+    Debug.Log("plaing death animation");
+
+    playAnimation.PlayAnimationOverride("Death", false); //
+    //playAnimation.StopBlendingAndReset();
+
+}
+
+int aState = 0;
+//// Gets called every frame
+private void Update()
+{
+    if (playAnimation == null) return;
+
+    if (!stopBlending)
+    {
+        playAnimation.BlendAnimations(animA, animB, blendFactor);
+
+        if (Input.GetKeyDown(KeyCode.F)) blendFactor = 0.1f;
+        else if (Input.GetKeyDown(KeyCode.G)) blendFactor = 0.5f;
+        else if (Input.GetKeyDown(KeyCode.H)) blendFactor = 1f;
+        //Debug.Log(blendFactor);
+    }
+}
+
+// Gets called whenever a broadcast is triggered by Behaviours or Other T# scripts
+public override void OnBroadcasted(string x)
+{
+
+}
+}
+```
+
