@@ -55,7 +55,8 @@
 
 ***
 
-* [Studio v16 (Current Version)](studio-v16-current-version.md)
+* [Studio v17 (Current Version)](studio-v17-current-version.md)
+* [Studio v16](studio-v16.md)
 * [Studio v15](studio-v15.md)
 * [Studio v14](studio-v14.md)
 * [Studio v13](studio-v13.md)
