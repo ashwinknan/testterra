@@ -4,15 +4,21 @@ description: Enables Multiplayer experiences
 
 # Multiplayer
 
-The `Multiplayer` static class acts as a gateway for managing multiplayer sessions in Terra Studio. It encapsulates access to the underlying MultiplayerSession and exposes a suite of properties, events, and methods for common multiplayer operations such as session management, property updates, remote procedure calls (RPCs), object spawning/destroying, and ownership handling. All operations are safely forwarded to the active session, if available. ​\
-\
-To activate this, you first need to make sure that the Multiplayer Mode is enabled in Game Settings and you have set the correct number of players required for your multiplayer game.&#x20;
+The `Multiplayer` static class acts as a gateway for managing multiplayer sessions in Terra Studio. It encapsulates access to the underlying MultiplayerSession and exposes a suite of properties, events, and methods for common multiplayer operations such as session management, property updates, remote procedure calls (RPCs), object spawning/destroying, and ownership handling. All operations are safely forwarded to the active session, if available. ​
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-04-01 at 3.56.12 PM.png" alt="" width="336"><figcaption><p>GameSettings has multipler enabled and Max Players set</p></figcaption></figure>
+### Prerequisites for activating multiplayer
 
-***
+#### Activate Multiplayer mode in Game Settings
 
-#### Properties and Events in MultiplayerServices
+You first need to make sure that the Multiplayer Mode is enabled in Game Settings and you have set the correct number of players required for your multiplayer game.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-04-01 at 3.56.12 PM.png" alt="" width="336"><figcaption><p>GameSettings has multiplayer enabled and Max Players set</p></figcaption></figure>
+
+#### Add the Network Script to an empty object
+
+Always create an empty object and any script containing the multiplayer script must be always added to that empty object only. Never add it to any other game-object with a mesh.&#x20;
+
+### Properties and Events in MultiplayerServices
 
 | Type     | Name                   | Description                                                                                                                      |
 | -------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
