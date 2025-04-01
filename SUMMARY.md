@@ -46,6 +46,7 @@
 * [Game Analytics](scripting-custom-logic-components/game-analytics.md)
 * [First-Time User Experience (FTUE) Tracking](scripting-custom-logic-components/first-time-user-experience-ftue-tracking.md)
 * [Leaderboard](scripting-custom-logic-components/leaderboard.md)
+* [Multiplayer](scripting-custom-logic-components/multiplayer.md)
 
 ***
 
