@@ -47,10 +47,21 @@
 * [First-Time User Experience (FTUE) Tracking](scripting-custom-logic-components/first-time-user-experience-ftue-tracking.md)
 * [Leaderboard](scripting-custom-logic-components/leaderboard.md)
 * [Multiplayer](scripting-custom-logic-components/multiplayer.md)
+* [T# Code Examples](scripting-custom-logic-components/t-code-examples.md)
 
-***
+## Rules for Studio Pro
 
-* [T# Code Examples](t-code-examples.md)
+* [Terra Pro: Creating & Using Scripts](rules-for-studio-pro/terra-pro-creating-and-using-scripts.md)
+* [Terra Pro: Unsupported Functionalities](rules-for-studio-pro/terra-pro-unsupported-functionalities.md)
+* [Terra Pro: T# Wrappers](rules-for-studio-pro/terra-pro-t-wrappers.md)
+* [Player Controller](rules-for-studio-pro/player-controller.md)
+* [UI](rules-for-studio-pro/ui.md)
+* [Animation](rules-for-studio-pro/animation.md)
+* [Sound Effects (SFX)](rules-for-studio-pro/sound-effects-sfx.md)
+* [Particle Effects (VFX)](rules-for-studio-pro/particle-effects-vfx.md)
+* [Game Analytics](rules-for-studio-pro/game-analytics.md)
+* [First-Time User Experience (FTUE) Tracking](rules-for-studio-pro/first-time-user-experience-ftue-tracking.md)
+* [Multiplayer](rules-for-studio-pro/multiplayer.md)
 
 ## RELEASE LOG
 
