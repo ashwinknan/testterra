@@ -1,38 +1,10 @@
 ---
 description: >-
-  List of the properties, events and methods wrappers available for each logic
-  template
+  List of the properties, events and methods wrappers available for each class
+  in Terra Studio Pro
 ---
 
-# Terra Pro: T# Wrappers
-
-## How to customize pre-built logic components
-
-Terra Studio provides wrappers to access and customize pre-built logic components.&#x20;
-
-To access the wrapper, we first declare a variable that helps retrieve the logic template component using the GetTemplate method. &#x20;
-
-```csharp
-//This line retrieves a template of type CollectableTemplate using the GetTemplate method and then casts it to the CollectableTemplate type.
-TemplateName template = (GetTemplate(typeof(TemplateName)) as TemplateName);
-```
-
-This variable allows you to access and modify the template's properties. We then use the variable to update the properties of the template:
-
-```csharp
-//Replace PropertyName with the property you want to change and newValue with the value you want to set.
-template.PropertyName = newValue;
-```
-
-#### Specific Example
-
-The code below illustrates how to do this using the CollectableTemplate Wrapper, where we set the `Score` property of the `collectable` is set to `10`.
-
-```csharp
-// Example to access the Collectable template wrapper and then set the values of one of its exposed properties
-CollectableTemplate collect = (GetTemplate(typeof(CollectableTemplate)) as CollectableTemplate);
-collect.Score = 10; // Set the score property to 10
-```
+# Available Wrappers
 
 ## TerraScene Class
 

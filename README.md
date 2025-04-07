@@ -14,28 +14,17 @@ layout:
 
 # Home
 
-<figure><img src=".gitbook/assets/letsterra_cover (1).jpg" alt=""><figcaption></figcaption></figure>
+## What is Terra Studio Pro?
 
-## Welcome to the Terra Studio Wiki
+Terra Studio Pro is a Unity SDK that enables dynamic, run-time modifications to games deployed on the Terra Client Platform. Terra Studio allows developers to make real-time changes to their Unity games without requiring users to manually update their applications. The system automatically manages content bundles, ensuring players always experience the most current version of your game without having to force update.&#x20;
 
-Terra Studio is committed to transforming imagination into reality. This Wiki serves as your comprehensive guide, containing all the essential information you need. Whether you have questions or require assistance, you're in the right place.
+### Terra Studio Pro seamlessly Integrates with Unity
 
-Make sure to bookmark this page, as we will regularly update it with the latest additions to the studio.&#x20;
+Terra Studio maintains the familiar Unity interface and workflow you already know. As an SDK built specifically for Unity, it integrates directly into the Unity Editor environment, allowing developers to:
 
-## What is Terra Studio?
+* Work with the same Unity tools and components you're accustomed to
+* Designate updatable assets using familiar inspector panels
+* Maintain your existing development practices with minimal learning curve
+* Deploy changes using workflows that mirror standard Unity processes
 
-Terra Studio is a **revolutionary new-age 3D game engine** aiming to empower a new generation of game creators. Designed to accelerate the game development process, making it **10 times faster** than traditional methods, Terra Studio enables game creators to bring their wildest game ideas to life without the steep learning curve associated with coding.
-
-Terra Studio helps developers create top-quality games quickly by focusing on creativity and design.
-
-## What you can do?
-
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-cover data-type="files"></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Create no code games</td><td><a href=".gitbook/assets/Screenshot 2024-03-14 160524.png">Screenshot 2024-03-14 160524.png</a></td><td><a href="overview/getting-started.md#create-your-new-game">#create-your-new-game</a></td></tr><tr><td>Add pre-made assets to the game scene</td><td><a href=".gitbook/assets/asset.png">asset.png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td>Add Behaviours to your assets</td><td><a href=".gitbook/assets/behavior.png">behavior.png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td>Upgrade player or object properties using level upgrader</td><td><a href=".gitbook/assets/level up.png">level up.png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td>Publish games on the Terra Kids App</td><td><a href=".gitbook/assets/PUBLISH GAME.png">PUBLISH GAME.png</a></td><td><a href="broken-reference">Broken link</a></td></tr><tr><td>Create remixes</td><td><a href=".gitbook/assets/remix.png">remix.png</a></td><td><a href="overview/getting-started.md#remix">#remix</a></td></tr></tbody></table>
-
-## Join Our Community
-
-If you have any questions that our wiki couldn't answer, feel free to join our official Discord server! Our team and community are eager to help you. Click [here](https://discord.com/invite/nFmUq4Tf) to join.
-
-<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
-
-Even if you're not actively looking for answers, you're more than welcome to join our Discord community. We regularly share updates to help you stay ahead in your game.
+This native integration means there's no need to learn a completely new system—if you know Unity, you already understand the fundamentals of working with Terra Studio.
