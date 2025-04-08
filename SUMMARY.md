@@ -5,8 +5,8 @@
 ## Scripting in Terra Studio Pro
 
 * [Scripting in Terra Studio](scripting-in-terra-studio-pro/scripting-in-terra-studio.md)
+* [Key Differences - T# versus C#](scripting-in-terra-studio-pro/key-differences-t-versus-c.md)
 * [Creating & Using Scripts](scripting-in-terra-studio-pro/creating-and-using-scripts.md)
-* [Unsupported Unity Functionalities](scripting-in-terra-studio-pro/unsupported-unity-functionalities.md)
 * [Available Wrappers](scripting-in-terra-studio-pro/available-wrappers.md)
 * [Player Controller](scripting-in-terra-studio-pro/player-controller.md)
 * [UI](scripting-in-terra-studio-pro/ui.md)
