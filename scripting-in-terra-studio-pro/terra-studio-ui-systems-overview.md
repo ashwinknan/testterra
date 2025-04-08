@@ -72,6 +72,6 @@ You can create UI using any of the following workflows:
 * Dynamically add elements like `Label`, `Button`, `Toggle`, etc., to your visual hierarchy.
 
 {% hint style="warning" %}
-While Unity UI systems are fully supported in Terra Studio Pro, code implementations should be adapted with T# limitations in mind. Refer to these differences and limitations [here](key-differences-t-versus-c.md)
+While Unity UI systems are fully supported in Terra Studio Pro, code implementations should be adapted with T# limitations in mind. Refer to these differences and limitations [here](key-differences-t-versus-c/)
 {% endhint %}
 

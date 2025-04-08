@@ -93,7 +93,7 @@ While Unity’s audio system is fully supported, ensure your scripting logic in 
 ***
 
 {% hint style="warning" %}
-For scripting limitations and safe patterns, refer to [Key Differences between T# & C#](key-differences-t-versus-c.md)
+For scripting limitations and safe patterns, refer to [Key Differences between T# & C#](key-differences-t-versus-c/)
 {% endhint %}
 
 .

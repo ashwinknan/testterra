@@ -109,7 +109,7 @@ Separate upper/lower body animations or isolate limb movement using layer masks.
 All Unity animation functionalities described above are fully available in Terra Studio Pro. Developers are encouraged to refer to Unity's official documentation for detailed usage patterns and editor workflows. Terra Studio ensures full runtime compatibility across the Animator pipeline.
 
 {% hint style="warning" %}
-For scripting and runtime control in animation, always consider the [Key Differences between T# & C#](key-differences-t-versus-c.md) to ensure that animation calls are T#-safe.
+For scripting and runtime control in animation, always consider the [Key Differences between T# & C#](key-differences-t-versus-c/) to ensure that animation calls are T#-safe.
 {% endhint %}
 
 

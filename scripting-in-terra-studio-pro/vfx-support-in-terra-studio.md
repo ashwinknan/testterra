@@ -72,6 +72,6 @@ if (ps != null) ps.Play();
 ***
 
 {% hint style="info" %}
-Use Unity's official workflows, tools, and assets without restriction. For ensure scripting integrations are compatible with T#, refer to the [Key Differences - T# Versus C#](key-differences-t-versus-c.md).
+Use Unity's official workflows, tools, and assets without restriction. For ensure scripting integrations are compatible with T#, refer to the [Key Differences - T# Versus C#](key-differences-t-versus-c/).
 {% endhint %}
 
