@@ -7,8 +7,6 @@ icon: file-plus-minus
 
 This section covers **core language-level differences** in T# that affect how you write basic logic, class structures, and common C# patterns. These are **not Unity-specific**, but general constraints imposed by the T# interpreter.
 
-## SYNTAX DIFFERENCES
-
 ### 🧠 MonoBehaviour vs TerraBehaviour
 
 In Unity, scripts connect to the engine by extending the built-in `MonoBehaviour` class. This allows the script to be attached to GameObjects and use lifecycle methods like `Start()` and `Update()`. T# scripts , however, don't inherit from the `Monobehaviour` Class.&#x20;
