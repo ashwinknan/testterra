@@ -14,7 +14,7 @@ The `TerraScene` class provides **scene management utilities** that let you load
 
 * `TerraScene.IsSceneDownloaded(string sceneName)`\
   Returns `true` if the specified scene has been downloaded.
-* `TerraScene.Load(string sceneName)`\
+* `TerraScene.LoadScene(string sceneName)`\
   Loads the specified scene.
 * `TerraScene.MoveGameObjectToScene(GameObject obj, Scene scene)`\
   Moves a given GameObject into a specified scene.

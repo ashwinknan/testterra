@@ -134,15 +134,3 @@ Action<PlayerStats> onStatsChanged;
 ```
 
 ***
-
-## PLAYER PREFS
-
-Unity's PlayerPrefs system is now fully supported:
-
-```csharp
-PlayerPrefs.SetInt("Score", 100); // Allowed
-int score = PlayerPrefs.GetInt("Score"); // Allowed
-PlayerPrefs.Save(); // Allowed
-// All PlayerPrefs methods work as they do in standard Unity
-
-```

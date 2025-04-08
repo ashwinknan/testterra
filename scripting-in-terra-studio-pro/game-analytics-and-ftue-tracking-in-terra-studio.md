@@ -6,6 +6,66 @@ This guide helps you track game events (like combat stats, level progress) and F
 
 ***
 
+## 🎮 Using PlayerPrefs with Analytics
+
+Terra Studio fully supports Unity's `PlayerPrefs` system for persistent local storage — and this becomes especially powerful when combined with analytics tracking.
+
+In your analytics implementation, **`PlayerPrefs` acts as the local cache for all analytics strings** before they’re sent to Mixpanel via Terra’s `SetGameAnalyticsPrefs()` methods.
+
+This ensures:
+
+* Your data is saved **even if the game is closed unexpectedly**
+* You can build up longer strings across sessions
+* You always retain a fallback before transmitting events
+
+### **✅ What You Can Store**
+
+You can store any stringified version of game data using:
+
+```csharp
+csharpCopyEditPlayerPrefs.SetString("Key", value);
+PlayerPrefs.GetString("Key");
+PlayerPrefs.Save(); // Optional, but ensures immediate persistence
+```
+
+Terra Studio internally uses `PlayerPrefs` to store:
+
+* Game value strings for progression, combat, sessions, FTUE, and more
+* FTUE milestone arrays (in JSON format)
+* Any transient data that you want to log incrementally over time
+
+### **🧠 Why PlayerPrefs Matters in Analytics**
+
+When you call:
+
+```csharp
+csharpCopyEditTerraScene.SetGameAnalyticsPrefs(...);
+```
+
+It pulls data from your locally maintained strings — most of which are stored and updated using `PlayerPrefs`. Without `PlayerPrefs`, you’d lose tracking progress on app restarts or session reloads.
+
+***
+
+### ✍️ Quick Example
+
+Here’s how you’d log a gameplay event and ensure it's retained:
+
+```csharp
+csharpCopyEditPlayerPrefs.SetString("LevelProgressionData", levelProgressionData);
+PlayerPrefs.Save(); // Ensures it's saved before calling analytics
+TerraScene.SetGameAnalyticsPrefs(...);
+```
+
+***
+
+By integrating `PlayerPrefs` with your analytics logic, you make sure your event data is always:
+
+* Persisted across sessions
+* Trimmed properly to meet limits
+* Sent when ready
+
+Use it as your **local data log** and rely on Terra Studio’s analytics API to **push it live** when the time is right.
+
 ## 🎯 How Game Analytics Work in Terra Studio
 
 Terra Studio provides **12 game values** to log analytics data. You have access to two built-in methods:
@@ -15,7 +75,9 @@ Terra Studio provides **12 game values** to log analytics data. You have access 
 
 Each accepts **6 values** (strings, up to **256 characters each**), allowing you to track up to **12 types of game data** simultaneously.
 
-> ⚠️ The **12th game value** is **reserved exclusively for FTUE tracking.**
+{% hint style="info" %}
+&#x20;The **12th game value** is **reserved exclusively for FTUE tracking.**
+{% endhint %}
 
 You can think of these values as containers — use them to store data like level completions, deaths, power-up usage, etc.
 
@@ -83,10 +145,10 @@ public static class GameAnalytics
 ```csharp
 public static void Initialize()
 {
-    levelProgressionData = StudioPrefs.GetString("LevelProgressionData", "");
-    combatStatisticsData = StudioPrefs.GetString("CombatStatisticsData", "");
+    levelProgressionData = PlayerPrefs.GetString("LevelProgressionData", "");
+    combatStatisticsData = PlayerPrefs.GetString("CombatStatisticsData", "");
     // ...continue for all
-    ftueData = StudioPrefs.GetString("FTUEData", "");
+    ftueData = PlayerPrefs.GetString("FTUEData", "");
 }
 ```
 
@@ -130,7 +192,7 @@ public static void RecordLevelCompletion(int levelNumber, float completionTime, 
 ```csharp
 private static void SaveAndSendLevelProgressionData()
 {
-    StudioPrefs.SetString("LevelProgressionData", levelProgressionData);
+    PlayerPrefs.SetString("LevelProgressionData", levelProgressionData);
     SendFirstSetOfGameValues();
 }
 ```
@@ -208,7 +270,7 @@ public static void RecordEnemyKills(int levelNumber, string enemyType, int killC
 
 private static void SaveAndSendCombatStatisticsData()
 {
-    StudioPrefs.SetString("CombatStatisticsData", combatStatisticsData);
+    PlayerPrefs.SetString("CombatStatisticsData", combatStatisticsData);
     SendFirstSetOfGameValues();
 }
 ```
@@ -235,8 +297,8 @@ private void InitializeFtueData()
     int totalFtueData = 20;
     ftueData = new int[totalFtueData];
 
-    if (StudioPrefs.HasKey("fTUEData")) {
-        ftueData = JsonConvert.DeserializeObject<int[]>(StudioPrefs.GetString("fTUEData"));
+    if (PlayerPrefs.HasKey("fTUEData")) {
+        ftueData = JsonConvert.DeserializeObject<int[]>(PlayerPrefs.GetString("fTUEData"));
         // Resize if version changed
         int currentLength = ftueData.Length;
         if (currentLength != totalFtueData) {
@@ -256,14 +318,14 @@ private void InitializeFtueData()
 public void LogFtueAnalytics()
 {
     string ftueString = JsonConvert.SerializeObject(ftueData);
-    StudioPrefs.SetString("fTUEData", ftueString);
+    PlayerPrefs.SetString("fTUEData", ftueString);
 
     string analyticsFormat = ftueString.TrimStart('[').TrimEnd(']');
     TerraScene.SetGameAnalyticsPrefs_2(
-        StudioPrefs.GetString("value6"),
-        StudioPrefs.GetString("value7"),
-        StudioPrefs.GetString("value8"),
-        StudioPrefs.GetString("value9"),
+        PlayerPrefs.GetString("value6"),
+        PlayerPrefs.GetString("value7"),
+        PlayerPrefs.GetString("value8"),
+        PlayerPrefs.GetString("value9"),
         "",
         analyticsFormat
     );
