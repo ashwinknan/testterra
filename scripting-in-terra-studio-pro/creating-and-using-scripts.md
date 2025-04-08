@@ -1,4 +1,8 @@
-# Terra Pro: Creating & Using Scripts
+---
+icon: square-code
+---
+
+# Creating & Using Scripts
 
 ## About T\#
 

@@ -1,5 +1,6 @@
 ---
 description: This page lists everything that is currently not supported in T#
+icon: file-plus-minus
 ---
 
 # Key Differences - T# versus C\#

@@ -1,4 +1,8 @@
-# Scripting in Terra Studio
+---
+icon: code
+---
+
+# Scripting Basics
 
 ## 🚀 Introducing T# (T-Sharp)
 
