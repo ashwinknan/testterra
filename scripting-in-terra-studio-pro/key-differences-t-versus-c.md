@@ -47,7 +47,7 @@ public class MyFirstScript : TerraBehaviour {
 ```
 
 {% hint style="success" %}
-All scripts in T# inherit from the `TerraBehavior` or the `TerraNetBehaviour` base class
+All scripts in T# must inherit from either `TerraBehaviour` (for single-player logic) or `TerraNetBehaviour` (for multiplayer features), depending on the game type.
 {% endhint %}
 
 ### 🌐 Multiplayer: `NetworkBehaviour` versus `TerraNetBehaviour`
@@ -214,7 +214,7 @@ Rigidbody rb = (Rigidbody)obj.GetComponent(typeof(Rigidbody)); // ✅ Works only
 ```
 
 {% hint style="warning" %}
-Make sure **“Awake Init” is enabled** on the Terra Machine component in the Unity Editor for this to work, or else the component may not be ready immediately after instantiation.
+Even when using the non-generic GetComponent, make sure “Awake Init” is enabled if calling it immediately after Instantiate().
 {% endhint %}
 
 ### ⏳ Coroutines in `Start`
@@ -701,11 +701,9 @@ T# is single-threaded. Keep logic lightweight and frame-safe. You can Break task
 In Unity, these are used for reflection, dynamic behavior, or type comparisons. These are not supported in T#.
 
 ```csharp
-Type type = GetType();
-Type componentType = typeof(Rigidbody);
+Type type = GetType(); // Not supported
+Type componentType = typeof(Rigidbody); // Not supported
 ```
-
-
 
 🔁 **What you instead need to do in T#:**\
 Instead of **`GetType()` or `typeof(),`** you need to use direct type references and avoid dynamic type inspection.
