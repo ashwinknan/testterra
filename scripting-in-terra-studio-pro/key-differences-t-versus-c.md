@@ -5,11 +5,11 @@ icon: file-plus-minus
 
 # Key Differences - T# versus C\#
 
-## 🔍 What's Different in T#?
-
 While T# is designed to feel instantly familiar to Unity C# developers, there are a few **important differences** to keep in mind. These tweaks exist to support the interpreted nature of T# and ensure smoother live editing inside Terra Studio.
 
 Most of your Unity habits will carry over just fine — but for the few edge cases, here's what you need to adjust:
+
+## SYNTAX DIFFERENCES
 
 ### 🧠 MonoBehaviour vs TerraBehaviour
 
@@ -50,22 +50,6 @@ public class MyFirstScript : TerraBehaviour {
 {% hint style="success" %}
 All scripts in T# must inherit from either `TerraBehaviour` (for single-player logic) or `TerraNetBehaviour` (for multiplayer features), depending on the game type.
 {% endhint %}
-
-### 🌐 Multiplayer: `NetworkBehaviour` versus `TerraNetBehaviour`
-
-For multiplayer games, Unity devs might use `NetworkBehaviour` from Netcode for GameObjects or Mirror.  In Terra Studio, **you must use `TerraNetBehaviour` instead**. It provides network-specific lifecycle methods & wrappers for multiplayer-enabled GameObjects.
-
-```csharp
-public class MyMultiplayerScript : TerraNetBehaviour {
-    public override void OnNetworkSpawn() {
-        // Code for when object spawns on the network
-    }
-
-    public override void OnNetworkDespawn() {
-        // Code for when object despawns from the network
-    }
-}
-```
 
 ### 🛠️ Default Variable Assigning
 
@@ -131,9 +115,10 @@ void Start() {
 
 Unity supports generic methods like `GetComponent<T>()`, `AddComponent<T>()`, and `FindObjectOfType<T>()` for flexible and type-safe component handling. These are popular for writing clean, reusable code. However, Generic versions of Unity methods like  `GetComponent<T>`, `AddComponent<T>`, `FindObjectOfType<T>`, and similar methods involving generics are not supported in T#.
 
-None of the following generic methods are supporte&#x64;**:**
+{% hint style="danger" %}
+None of the following generic methods are supported. Using them will always throw up an error
 
-```csharp
+```
 Rigidbody rb = gameObject.GetComponent<Rigidbody>();            // Not allowed
 Rigidbody[] rbs = gameObject.GetComponents<Rigidbody>();        // Not allowed
 gameObject.AddComponent<Rigidbody>();                           // Not allowed
@@ -144,6 +129,7 @@ Rigidbody[] rbs = GetComponentsInParent<Rigidbody>();           // Not allowed
 Rigidbody rb = GetComponentInChildren<Rigidbody>();             // Not allowed
 Rigidbody[] rbs = GetComponentsInChildren<Rigidbody>();         // Not allowed
 ```
+{% endhint %}
 
 🔁 **What you instead need to do in T# to work with components:**
 
@@ -154,7 +140,55 @@ Instead, in T#, non-generic alternatives should be used such as the following:
 Rigidbody rb = (Rigidbody)gameObject.GetComponent(typeof(Rigidbody)) as Rigidbody;
 ```
 
+### 🎮 Enums
+
+In Unity, developers often use `enum` to define named states or categories for readability and cleaner switch logic.This is not supported in T#.
+
+```csharp
+enum GameState {
+    Playing,
+    Paused,
+    GameOver
+}
+```
+
+🔁 **What you instead need to do in T# to represent states:**\
+Use constants (`int` or `string`) to represent each state.
+
+```csharp
+private const int STATE_PLAYING = 0;
+private const int STATE_PAUSED = 1;
+private const int STATE_GAMEOVER = 2;
+```
+
 ***
+
+### 🔄 Switch
+
+In Unity, `switch` statements are a clean way to handle multiple branches based on an integer, enum, or string value. This is not supported in T#.
+
+```csharp
+switch (state) {
+    case 0:
+        // Do something
+        break;
+    default:
+        // Fallback logic
+        break;
+}
+```
+
+🔁 **What you instead need to do in T#:**\
+Use `if-else` chains to replicate switch behavior.
+
+```csharp
+if (state == 0) {
+    // Do something
+}
+else {
+    // Fallback logic
+}
+```
 
 ### 🔁 `foreach` Loops
 
@@ -176,26 +210,50 @@ for (int i = 0; i < transform.childCount; i++) {
 }
 ```
 
-***
+## MULTIPLAYER
 
-### 📦 Unboxing
+## 🌐  `NetworkBehaviour` versus `TerraNetBehaviour`
 
-Unboxing is used in Unity when working with values stored as `object`, especially when dealing with collections, reflection, or generic types. Developers commonly cast the object back to its original type for reuse. However, **direct unboxing via casting is not supported in T#**.
-
-```csharp
-object boxedVal = (int)3;
-int value = (int)boxedVal; // ❌ Not supported in T#
-```
-
-🔁 **What you instead need to do in T# to avoid direct unboxing:**\
-Use `Convert` methods to safely extract values from boxed objects.
+For multiplayer games, Unity devs might use `NetworkBehaviour` from Netcode for GameObjects or Mirror.  In Terra Studio, **you must use `TerraNetBehaviour` instead**. It provides network-specific lifecycle methods & wrappers for multiplayer-enabled GameObjects.
 
 ```csharp
-object boxedVal = (int)3;
-int value = Convert.ToInt32(boxedVal); // ✅ Works in T#
+public class MyMultiplayerScript : TerraNetBehaviour {
+    public override void OnNetworkSpawn() {
+        // Code for when object spawns on the network
+    }
+
+    public override void OnNetworkDespawn() {
+        // Code for when object despawns from the network
+    }
+}
 ```
 
 ***
+
+## RESTRICTED UNITY APIs
+
+### 🚫 LateUpdate
+
+In Unity, `LateUpdate()` is often used to perform actions after all `Update()` calls — such as camera movement or following a character.**`LateUpdate()` is not supported in T#**.
+
+#### 🔁 What you instead need to do in T#:
+
+Use coroutines with `WaitForEndOfFrame()` to simulate end-of-frame logic.
+
+```csharp
+IEnumerator DelayedLogic() {
+    yield return new WaitForEndOfFrame();
+    // Logic that would have gone in LateUpdate
+}
+```
+
+Call the coroutine when needed, for example in `Start()` or `Update()`:
+
+```csharp
+void Start() {
+    StartCoroutine(DelayedLogic());
+}
+```
 
 ### 🧪 GetComponent after Instantiate
 
@@ -242,7 +300,53 @@ IEnumerator MyCoroutine() {
 }
 ```
 
-***
+### ⚡ Unity Events as Coroutines
+
+In Unity, developers sometimes write event callbacks (like `OnCollisionEnter`) as coroutines to introduce delays directly within the event flow. This technique is not supported in T#.
+
+```csharp
+IEnumerator OnCollisionEnter(Collision collision) {
+    yield return new WaitForSeconds(1);
+    // Continue logic
+}
+```
+
+🔁 **What you instead need to do in T# to delay event-based logic:**\
+Instead, use a normal event method and start a coroutine from it.
+
+```csharp
+void OnCollisionEnter(Collision collision) {
+    StartCoroutine(CollisionCoroutine(collision)); // ✅ Works
+}
+
+IEnumerator CollisionCoroutine(Collision collision) {
+    yield return new WaitForSeconds(1);
+    // Your delayed logic here
+}
+```
+
+### ⏲️ Invoke Methods
+
+Unity provides `Invoke()` and `InvokeRepeating()` to call methods after a delay or repeatedly without needing coroutines. These are not supported in T#.
+
+```csharp
+Invoke("MethodName", 2.0f);
+InvokeRepeating("MethodName", 0f, 1.0f);
+```
+
+🔁 **What you instead need to do in T#:**\
+Use coroutines to delay method calls.
+
+```csharp
+StartCoroutine(InvokeWithDelay());
+
+IEnumerator InvokeWithDelay() {
+    yield return new WaitForSeconds(2.0f);
+    MethodName();
+}
+```
+
+## COLLECTIONS & TYPES
 
 ### 🧾 Dictionaries
 
@@ -289,84 +393,17 @@ gameObjectList.Add(someGameObject);
 GameObject firstObject = (GameObject)gameObjectList[0];
 ```
 
-***
+### 📦 Structs in TerraList
 
-### ⚡ Unity Events as Coroutines
-
-In Unity, developers sometimes write event callbacks (like `OnCollisionEnter`) as coroutines to introduce delays directly within the event flow. This technique is not supported in T#.
+In Unity, structs are often used for lightweight data containers, and it’s common to store them in collections. This is not supported in T#.
 
 ```csharp
-IEnumerator OnCollisionEnter(Collision collision) {
-    yield return new WaitForSeconds(1);
-    // Continue logic
-}
-```
-
-🔁 **What you instead need to do in T# to delay event-based logic:**\
-Instead, use a normal event method and start a coroutine from it.
-
-```csharp
-void OnCollisionEnter(Collision collision) {
-    StartCoroutine(CollisionCoroutine(collision)); // ✅ Works
-}
-
-IEnumerator CollisionCoroutine(Collision collision) {
-    yield return new WaitForSeconds(1);
-    // Your delayed logic here
-}
-```
-
-***
-
-### 🎮 Enums
-
-In Unity, developers often use `enum` to define named states or categories for readability and cleaner switch logic.This is not supported in T#.
-
-```csharp
-enum GameState {
-    Playing,
-    Paused,
-    GameOver
-}
-```
-
-🔁 **What you instead need to do in T# to represent states:**\
-Use constants (`int` or `string`) to represent each state.
-
-```csharp
-private const int STATE_PLAYING = 0;
-private const int STATE_PAUSED = 1;
-private const int STATE_GAMEOVER = 2;
-```
-
-***
-
-### 🔄 Switch Statements
-
-In Unity, `switch` statements are a clean way to handle multiple branches based on an integer, enum, or string value. This is not supported in T#.
-
-```csharp
-switch (state) {
-    case 0:
-        // Do something
-        break;
-    default:
-        // Fallback logic
-        break;
-}
+TerraList structList = new TerraList();
+structList.Add(new MyStruct()); // ❌
 ```
 
 🔁 **What you instead need to do in T#:**\
-Use `if-else` chains to replicate switch behavior.
-
-```csharp
-if (state == 0) {
-    // Do something
-}
-else {
-    // Fallback logic
-}
-```
+Avoid storing custom structs in `TerraList`.Only primitive types (like `int`, `float`, `bool`) or supported objects (e.g., `GameObject`) should be added.
 
 ### 🧩 Custom Scripts in Collections
 
@@ -407,17 +444,132 @@ for (int i = 0; i < myList.Count; i++) {
 
 ***
 
-### 📦 Structs in TerraList
+## INPUT & UI
 
-In Unity, structs are often used for lightweight data containers, and it’s common to store them in collections. This is not supported in T#.
+### 🖱️ IPointer Events
+
+In Unity’s UI system, interfaces like `IPointerClickHandler` are used to detect and respond to user input events like button clicks or hovers. This is not supported in T#.
 
 ```csharp
-TerraList structList = new TerraList();
-structList.Add(new MyStruct()); // ❌
+public class MyScript : MonoBehaviour, IPointerClickHandler {
+    public void OnPointerClick(PointerEventData eventData) {
+        // Handle click
+    }
+}
+```
+
+🔁 **What you instead need to do in T# to detect user input:**\
+Use manual input checks inside `Update()` or `OnMouseDown()` if available.
+
+```csharp
+void Update() {
+    if (Input.GetMouseButtonDown(0)) {
+        // Perform raycast or bounds check to detect a click
+        HandleClick();
+    }
+}
+
+void HandleClick() {
+    Debug.Log("Custom click logic triggered.");
+}
+```
+
+### 🎞️ DOTween for UI Animations
+
+DOTween is widely used in Unity for smooth tween-based animations but DOTween is only partially supported in T#.&#x20;
+
+#### 🔁 What works in T#:
+
+Basic one-liners like this are supported:
+
+```csharp
+transform.DOMoveX(5, 2f); // ✅ Simple implementaiton like this works
+```
+
+{% hint style="warning" %}
+Advanced features like custom `Tweeners`, complex `Sequences`, and chaining may not work:
+
+```
+Sequence s = DOTween.Sequence(); // ❌ Limited or unsupported
+s.Append(...);
+```
+{% endhint %}
+
+### ASYNC & REFLECTION
+
+### **❌ `async` / `await`**
+
+In Unity, asynchronous methods using `async Task` are often used for non-blocking workflows. This is not supported in T# .&#x20;
+
+```csharp
+async Task MyAsyncMethod() {
+    await SomeTask();
+}
+```
+
+.
+
+🔁 **What you instead need to do in T#:**\
+Use coroutines for delays or async-like behavior.
+
+```csharp
+void Start() {
+    StartCoroutine(MyCoroutine());
+}
+
+IEnumerator MyCoroutine() {
+    yield return new WaitForSeconds(1f);
+    // Continue logic
+}
+```
+
+***
+
+### **❌ `Task.Run()`**
+
+Unity developers sometimes use `Task.Run` to offload work to background threads. This is not supported in T#.
+
+```csharp
+Task.Run(() => {
+    // Heavy operation
+});
 ```
 
 🔁 **What you instead need to do in T#:**\
-Avoid storing custom structs in `TerraList`.Only primitive types (like `int`, `float`, `bool`) or supported objects (e.g., `GameObject`) should be added.
+T# is single-threaded. Keep logic lightweight and frame-safe. You can Break tasks into smaller operations in `Update()` or use coroutines for pacing.
+
+***
+
+**❌ `GetType()` or `typeof()`**
+
+In Unity, these are used for reflection, dynamic behavior, or type comparisons. These are not supported in T#.
+
+```csharp
+Type type = GetType(); // Not supported
+Type componentType = typeof(Rigidbody); // Not supported
+```
+
+🔁 **What you instead need to do in T#:**\
+Instead of **`GetType()` or `typeof(),`** you need to use direct type references and avoid dynamic type inspection.
+
+## MISCELLANEOUS
+
+### 📦 Unboxing
+
+Unboxing is used in Unity when working with values stored as `object`, especially when dealing with collections, reflection, or generic types. Developers commonly cast the object back to its original type for reuse. However, **direct unboxing via casting is not supported in T#**.
+
+```csharp
+object boxedVal = (int)3;
+int value = (int)boxedVal; // ❌ Not supported in T#
+```
+
+🔁 **What you instead need to do in T# to avoid direct unboxing:**\
+Use `Convert` methods to safely extract values from boxed objects.
+
+```csharp
+object boxedVal = (int)3;
+int value = Convert.ToInt32(boxedVal); // ✅ Works in T#
+```
 
 ### 🧪 TryGetComponent
 
@@ -501,31 +653,6 @@ Vector3 position = new Vector3(0, 0, 0); // ✅ Typed usage is safe
 transform.position = position;
 ```
 
-
-
-***
-
-### ⏲️ Invoke Methods
-
-Unity provides `Invoke()` and `InvokeRepeating()` to call methods after a delay or repeatedly without needing coroutines. These are not supported in T#.
-
-```csharp
-Invoke("MethodName", 2.0f);
-InvokeRepeating("MethodName", 0f, 1.0f);
-```
-
-🔁 **What you instead need to do in T#:**\
-Use coroutines to delay method calls.
-
-```csharp
-StartCoroutine(InvokeWithDelay());
-
-IEnumerator InvokeWithDelay() {
-    yield return new WaitForSeconds(2.0f);
-    MethodName();
-}
-```
-
 ***
 
 ### 🔢 Action Parameters
@@ -557,37 +684,7 @@ Action<PlayerStats> onStatsChanged;
 
 ***
 
-### 🖱️ IPointer Events
-
-In Unity’s UI system, interfaces like `IPointerClickHandler` are used to detect and respond to user input events like button clicks or hovers. This is not supported in T#.
-
-```csharp
-public class MyScript : MonoBehaviour, IPointerClickHandler {
-    public void OnPointerClick(PointerEventData eventData) {
-        // Handle click
-    }
-}
-```
-
-🔁 **What you instead need to do in T# to detect user input:**\
-Use manual input checks inside `Update()` or `OnMouseDown()` if available.
-
-```csharp
-void Update() {
-    if (Input.GetMouseButtonDown(0)) {
-        // Perform raycast or bounds check to detect a click
-        HandleClick();
-    }
-}
-
-void HandleClick() {
-    Debug.Log("Custom click logic triggered.");
-}
-```
-
-***
-
-## PlayerPrefs
+## PLAYER PREFS
 
 Unity's PlayerPrefs system is now fully supported:
 
@@ -598,113 +695,3 @@ PlayerPrefs.Save(); // Allowed
 // All PlayerPrefs methods work as they do in standard Unity
 
 ```
-
-***
-
-### 🔄 Unity Lifecycle Methods
-
-In Unity, lifecycle methods like `OnEnable`, `OnDisable`, `OnDestroy`, and `LateUpdate` are commonly used to manage object states and time-sensitive operations. These methods are not supported  in T#.&#x20;
-
-```csharp
-void OnEnable() {
-    // Initialization logic
-}
-
-void OnDisable() {
-    // Clean-up logic
-}
-
-void OnDestroy() {
-    // Final teardown
-}
-
-void LateUpdate() {
-    // Execute after Update
-}
-```
-
-.
-
-🔁 **What you instead need to do in T#:**\
-Use `Start()` and `Update()` for most logic, and manage lifecycle events manually using flags or custom methods. For delayed or post-frame execution, use coroutines instead of `LateUpdate()`.
-
-```csharp
-bool isInitialized = false;
-
-void Start() {
-    isInitialized = true;
-    // Initialization logic
-}
-
-void Update() {
-    if (!isInitialized) return;
-
-    // Game loop logic
-    if (shouldCleanup) {
-        Cleanup();
-    }
-}
-
-void Cleanup() {
-    // Manual cleanup logic
-}
-```
-
-***
-
-### ⚙️ Miscellaneous Limitations
-
-### **❌ `async` / `await`**
-
-In Unity, asynchronous methods using `async Task` are often used for non-blocking workflows. This is not supported in T# .&#x20;
-
-```csharp
-async Task MyAsyncMethod() {
-    await SomeTask();
-}
-```
-
-.
-
-🔁 **What you instead need to do in T#:**\
-Use coroutines for delays or async-like behavior.
-
-```csharp
-void Start() {
-    StartCoroutine(MyCoroutine());
-}
-
-IEnumerator MyCoroutine() {
-    yield return new WaitForSeconds(1f);
-    // Continue logic
-}
-```
-
-***
-
-### **❌ `Task.Run()`**
-
-Unity developers sometimes use `Task.Run` to offload work to background threads. This is not supported in T#.
-
-```csharp
-Task.Run(() => {
-    // Heavy operation
-});
-```
-
-🔁 **What you instead need to do in T#:**\
-T# is single-threaded. Keep logic lightweight and frame-safe. You can Break tasks into smaller operations in `Update()` or use coroutines for pacing.
-
-***
-
-**❌ `GetType()` or `typeof()`**
-
-In Unity, these are used for reflection, dynamic behavior, or type comparisons. These are not supported in T#.
-
-```csharp
-Type type = GetType(); // Not supported
-Type componentType = typeof(Rigidbody); // Not supported
-```
-
-🔁 **What you instead need to do in T#:**\
-Instead of **`GetType()` or `typeof(),`** you need to use direct type references and avoid dynamic type inspection.
