@@ -15,3 +15,4 @@
 * [Game Analytics](scripting-in-terra-studio-pro/game-analytics.md)
 * [First-Time User Experience (FTUE) Tracking](scripting-in-terra-studio-pro/first-time-user-experience-ftue-tracking.md)
 * [Multiplayer](scripting-in-terra-studio-pro/multiplayer.md)
+* [Scripting in Terra Studio](scripting-in-terra-studio-pro/scripting-in-terra-studio.md)
