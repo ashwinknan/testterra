@@ -4,6 +4,7 @@
 
 ## Scripting in Terra Studio Pro
 
+* [Scripting in Terra Studio](scripting-in-terra-studio-pro/scripting-in-terra-studio.md)
 * [Creating & Using Scripts](scripting-in-terra-studio-pro/creating-and-using-scripts.md)
 * [Unsupported Unity Functionalities](scripting-in-terra-studio-pro/unsupported-unity-functionalities.md)
 * [Available Wrappers](scripting-in-terra-studio-pro/available-wrappers.md)
@@ -15,4 +16,3 @@
 * [Game Analytics](scripting-in-terra-studio-pro/game-analytics.md)
 * [First-Time User Experience (FTUE) Tracking](scripting-in-terra-studio-pro/first-time-user-experience-ftue-tracking.md)
 * [Multiplayer](scripting-in-terra-studio-pro/multiplayer.md)
-* [Scripting in Terra Studio](scripting-in-terra-studio-pro/scripting-in-terra-studio.md)
