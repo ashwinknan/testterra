@@ -8,8 +8,11 @@ icon: square-code
 
 **T# (pronounced T-Sharp)** is Terra Studio’s scripting language, designed to feel familiar to Unity developers with a syntax similar to C#. It gives creators the **freedom to write custom logic** for their games .
 
-If you already know Unity C#, you’ll feel right at home. However, **T# has a few important differences** to support live editing and interpreted execution.\
-👉 Be sure to check out the [Key Differences - T# versus C# ](key-differences-t-versus-c/)section to avoid surprises.
+If you already know Unity C#, you’ll feel right at home. However, **T# has a few important differences** to support live editing and interpreted execution.
+
+{% hint style="info" %}
+&#x20;Be sure to check out the [Key Differences - T# versus C# ](key-differences-t-versus-c/) section to avoid surprises.
+{% endhint %}
 
 ## 🛠️ Creating & Using Scripts in Terra Studio
 
@@ -200,7 +203,7 @@ T# supports a **subset of Unity-style lifecycle methods**, along with some limit
 The `Start` method runs **once at the beginning of a GameObject’s lifecycle** — just after all variables and components have been initialized. This is where you should fetch object variables, set up references, or run any custom initialization logic.
 
 ```csharp
-csharpCopyEditprivate void Start()
+private void Start()
 {
     Debug.Log("GameObject has started!");
 }
@@ -211,7 +214,7 @@ csharpCopyEditprivate void Start()
 The `Update` method is called **once per frame**. Use this for dynamic logic such as input handling, movement, or timers.
 
 ```csharp
-csharpCopyEditprivate void Update()
+private void Update()
 {
     float distance = speed * Time.deltaTime * Input.GetAxis("Horizontal");
     transform.Translate(Vector3.right * distance);
@@ -222,7 +225,7 @@ csharpCopyEditprivate void Update()
 
 ### 🛞 Physics Events
 
-## **`FixedUpdate()`**
+#### **`FixedUpdate()`**
 
 This is used for physics-based updates. It runs at a fixed interval and is ideal for applying forces or detecting rigidbody behavior.
 
