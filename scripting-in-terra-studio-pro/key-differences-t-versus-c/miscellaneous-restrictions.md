@@ -5,23 +5,6 @@ icon: file-plus-minus
 
 # Miscellaneous Restrictions
 
-### 📦 Unboxing
-
-Unboxing is used in Unity when working with values stored as `object`, especially when dealing with collections, reflection, or generic types. Developers commonly cast the object back to its original type for reuse. However, **direct unboxing via casting is not supported in T#**.
-
-```csharp
-object boxedVal = (int)3;
-int value = (int)boxedVal; // ❌ Not supported in T#
-```
-
-🔁 **What you instead need to do in T# to avoid direct unboxing:**\
-Use `Convert` methods to safely extract values from boxed objects.
-
-```csharp
-object boxedVal = (int)3;
-int value = Convert.ToInt32(boxedVal); // ✅ Works in T#
-```
-
 ### 🧪 TryGetComponent
 
 Unity provides `TryGetComponent` for safe and efficient component lookup. This is not supported in T#.
