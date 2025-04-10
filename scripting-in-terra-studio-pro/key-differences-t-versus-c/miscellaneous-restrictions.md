@@ -151,3 +151,32 @@ void HandleAction() {
 ```
 
 This mirrors the intent of the delegate (`onAction()`), but uses a direct call to `HandleAction()` triggered by a simple condition.
+
+
+
+### :hourglass\_flowing\_sand: event Keyword
+
+In Unity C#, the `event` keyword is commonly used to define multicast delegates for broadcasting state changes, input, or gameplay events between components. However, **the `event` keyword is not supported in T#**.
+
+```csharp
+public event Action OnPlayerDied; // ❌ Not allowed in T#
+```
+
+This includes both:
+
+* Built-in .NET event patterns (e.g., `event EventHandler`)
+* Custom `Action`/`Func` event fields
+
+***
+
+🔁 **What you instead need to do in T#:**\
+Use **direct method calls**, **coroutines**, or **simple boolean flags** to trigger responses. You can also use centralized manager scripts (e.g., `GameManager`) with public methods to manually notify other components.
+
+```csharp
+// Instead of firing an event
+void OnPlayerDeath() {
+    gameOverManager.TriggerGameOver(); // Explicit method call
+}
+```
+
+This ensures your code remains compatible with the interpreted and sandboxed nature of the T# scripting environment.
