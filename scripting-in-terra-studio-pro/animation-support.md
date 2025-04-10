@@ -93,6 +93,30 @@ Separate upper/lower body animations or isolate limb movement using layer masks.
 
 ***
 
+## 🧩 Animation Events — Scripting Support in T\#
+
+In addition to Unity's animation timeline features, **Terra Studio Pro supports runtime animation event handling** via a T#-safe scripting method. Developers can respond to animation-triggered events using an override function. This pattern is **allowed** and fully supported in T#:
+
+```csharp
+public override void OnAnimationEvent(string eventName)
+{
+    if (eventName.Equals("ShootPoint"))
+    {
+        // Do something when this animation event is triggered
+    }
+}
+```
+
+{% hint style="info" %}
+Define the animation event within the Unity Animation window and enter `"ShootPoint"` (or any string identifier) as the event name. Then respond to that name in your T# script using the override shown above.
+{% endhint %}
+
+This method enables developers to tie animation frames directly to gameplay logic (e.g., triggering effects, spawning projectiles, syncing audio) without relying on Unity’s delegate-based event system — which is unsupported in T#.
+
+{% hint style="warning" %}
+`OnAnimationEvent(string eventName)` is the **only valid way** to receive animation events in T# scripts. Custom UnityEvents, delegates, or `AnimationEvent.functionName` targeting arbitrary methods are not supported in the T# runtime.
+{% endhint %}
+
 ## 🪡 Usage Recommendations
 
 * Use Mecanim for all new animation logic.
