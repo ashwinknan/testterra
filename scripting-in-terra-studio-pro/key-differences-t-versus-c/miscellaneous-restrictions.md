@@ -117,3 +117,37 @@ Action<PlayerStats> onStatsChanged;
 ```
 
 ***
+
+### 🎯 **Delegates**&#x20;
+
+In Unity, **delegates** are often used for callbacks, event systems, and decoupled communication between components. However, **delegates are not supported in T#**. This includes both custom delegate types and the use of `Action` or `Func` for assigning methods to variables or passing logic around.
+
+```csharp
+public delegate void MyDelegate();
+public MyDelegate onAction; // ❌ Not allowed in T#
+```
+
+🔁 **What you instead need to do in T#**:&#x20;
+
+Use direct method calls, conditionals, or simple flags/interfaces to replace dynamic delegate behavior.\
+T# favors explicit invocation over dynamic assignment.
+
+```csharp
+private bool shouldTriggerAction = false;
+
+void Start() {
+    shouldTriggerAction = true; // Simulating delegate assignment
+}
+
+void Update() {
+    if (shouldTriggerAction) {
+        HandleAction(); // Explicit method call instead of delegate
+    }
+}
+
+void HandleAction() {
+    Debug.Log("Action triggered.");
+}
+```
+
+This mirrors the intent of the delegate (`onAction()`), but uses a direct call to `HandleAction()` triggered by a simple condition.
