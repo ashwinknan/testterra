@@ -20,3 +20,7 @@
 * [🔥 VFX Support in Terra Studio](scripting-in-terra-studio-pro/vfx-support-in-terra-studio.md)
 * [📊 Game Analytics & FTUE Tracking in Terra Studio](scripting-in-terra-studio-pro/game-analytics-and-ftue-tracking-in-terra-studio.md)
 * [🌐 Multiplayer in Terra Studio](scripting-in-terra-studio-pro/multiplayer-in-terra-studio.md)
+
+***
+
+* [Page 1](page-1.md)
