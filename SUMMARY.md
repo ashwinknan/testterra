@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Welcome to Flow](README.md)
+* [Getting Access](getting-access.md)
 * [Use Cases](use-cases.md)
 
 ## PRODUCT FEATURES
@@ -12,3 +13,7 @@
 * [📊 Auto-Profiler](product-features/auto-profiler.md)
 * [🖼 UI Builder](product-features/ui-builder.md)
 * [📈 Analytics Ninja](product-features/analytics-ninja.md)
+
+## Group 1
+
+* [Account Management](group-1/account-management.md)
