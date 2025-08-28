@@ -14,6 +14,7 @@
 * [🖼 UI Builder](product-features/ui-builder.md)
 * [📈 Analytics Ninja](product-features/analytics-ninja.md)
 
-## Group 1
+## GENERAL
 
-* [Account Management](group-1/account-management.md)
+* [Account Management](general/account-management.md)
+* [Plans, Usage & Pricing](general/plans-usage-and-pricing.md)
