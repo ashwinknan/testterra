@@ -1,30 +1,17 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# Welcome to Flow
 
-# Home
+Flow is a Unity-native AI copilot built for LiveOps teams built by Terra.
 
-## What is Terra Studio Pro?
+It understands your Unity project, your data, and your live game context. With Flow, you can debug issues, build UI, analyze performance, query gameplay analytics, and even ship code updates—all in a fraction of the time.
 
-Terra Studio Pro is a Unity SDK that enables dynamic, run-time modifications to games deployed on the Terra Client Platform. Terra Studio allows developers to make real-time changes to their Unity games without requiring users to manually update their applications. The system automatically manages content bundles, ensuring players always experience the most current version of your game without having to force update.&#x20;
+By connecting to your Unity project and data sources, Flow indexes your project and continuously stays aware of configurations, events, and player behaviors—so every response is tailored to your live game.
 
-### Terra Studio Pro seamlessly Integrates with Unity
+With Flow, LiveOps teams can:
 
-Terra Studio maintains the familiar Unity interface and workflow you already know. As an SDK built specifically for Unity, it integrates directly into the Unity Editor environment, allowing developers to:
+* **Ship faster**: No more waiting for long app release cycles—push fixes and updates instantly.
+* **Debug smarter**: Detect and resolve issues in minutes, not hours.
+* **Profile automatically**: Capture performance snapshots directly from real players without manual setup.
+* **Understand players instantly**: Ask questions in plain English and get answers, insights, and visualizations powered by your own analytics.
+* **Orchestrate LiveOps seamlessly**: Monitor, test, and roll out changes—all from one command centre.
 
-* Work with the same Unity tools and components you're accustomed to
-* Designate updatable assets using familiar inspector panels
-* Maintain your existing development practices with minimal learning curve
-* Deploy changes using workflows that mirror standard Unity processes
-
-This native integration means there's no need to learn a completely new system—if you know Unity, you already understand the fundamentals of working with Terra Studio.
+If you encounter any issues or have questions,  drop us a note at [**flow@letsterra.com**](mailto:ashwin@letsterra.com). Our team will respond as quickly as possible. In some cases, we may need to ask follow-up questions to diagnose the root cause, not just the symptom.
