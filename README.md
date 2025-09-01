@@ -1,6 +1,12 @@
+---
+description: The most advanced co-pilot for Unity
+---
+
 # Welcome to Flow
 
-<p align="center"><a href="https://flow.letsterra.com" class="button primary">Back to Website</a></p>
+<figure><img src=".gitbook/assets/flowwwF.png" alt="" width="375"><figcaption></figcaption></figure>
+
+<p align="center"><a href="https://flow.letsterra.com" class="button primary">Visit Website</a></p>
 
 Flow is a Unity-native AI copilot built for LiveOps teams built by Terra.
 
