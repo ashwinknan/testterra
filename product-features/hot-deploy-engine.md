@@ -118,7 +118,7 @@ _What you see:_
 * Choice to deploy now or later
 * Clear indication of which build will be updated
 
-<figure><img src="../.gitbook/assets/Screenshot 2025-08-22 at 6.06.26 PM.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-01 at 5.47.37 PM.png" alt="" width="188"><figcaption></figcaption></figure>
 {% endstep %}
 
 {% step %}
