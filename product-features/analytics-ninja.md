@@ -139,4 +139,22 @@ How it works:
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-08-28 at 6.00.55 PM.png" alt=""><figcaption></figcaption></figure>
 {% endstep %}
+
+{% step %}
+### Ask any question about your data
+
+Enter your query in plan English.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-01 at 2.49.05 PM.png" alt=""><figcaption></figcaption></figure>
+
+
+{% endstep %}
+
+{% step %}
+### Get a detailed analysis with visualization
+
+You can follow-up and ask more questions for details&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-01 at 2.48.53 PM.png" alt=""><figcaption></figcaption></figure>
+{% endstep %}
 {% endstepper %}
