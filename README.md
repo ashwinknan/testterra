@@ -6,8 +6,10 @@ description: The Unity-Native AI Copilot that makes your Live Game Ops 10x faste
 
 <p align="center"><a href="https://flow.letsterra.com" class="button primary">Visit Website</a></p>
 
-**Flow is the LiveOps companion every Unity dev wishes they had.**\
-It plugs directly into your Unity project, understands your data, and keeps track of your live game context—so you can ship faster, debug smarter, and keep players happy without leaving the Editor.
+### **Flow is the LiveOps companion every Unity dev wishes they had.**
+
+It plugs directly into your Unity project, understands your data, and keeps track of your live game context—so you can ship faster, debug smarter, and keep players happy without leaving the Editor.\
+
 
 It understands your Unity project, your data, and your live game context. With Flow, you can debug issues, build UI, analyze performance, query gameplay analytics, and even ship code updates—all in a fraction of the time.
 
