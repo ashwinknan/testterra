@@ -1,8 +1,8 @@
 # Table of contents
 
 * [Welcome to Flow](README.md)
-* [Getting Access](getting-access.md)
 * [Use Cases](use-cases.md)
+* [Getting Access](getting-access.md)
 
 ## PRODUCT FEATURES
 
