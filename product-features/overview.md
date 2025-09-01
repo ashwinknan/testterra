@@ -18,7 +18,7 @@ The Foundation provides the underlying intelligence and capabilities. The Assist
 
 Three core systems provide the intelligence and capabilities that every assistant depends on.
 
-#### [🔥 Hot Deploy Engine](broken-reference)
+#### [🔥 Hot Deploy Engine](hot-deploy-engine.md)
 
 Your core runtime deployment system that breaks the traditional build-deploy-test cycle.
 
@@ -26,7 +26,7 @@ Your core runtime deployment system that breaks the traditional build-deploy-tes
 * **Real-Time Sync**: Keeps game state synchronized across all devices instantly
 * **Zero Downtime**: Players experience changes seamlessly without interruption or restarts
 
-#### [🗺 Asset Atlas (aka Project Context)](broken-reference)
+#### [🗺 Asset Atlas (aka Project Context)](overview.md#asset-atlas-aka-project-context)
 
 A comprehensive knowledge graph that understands your entire project ecosystem.
 
@@ -34,7 +34,7 @@ A comprehensive knowledge graph that understands your entire project ecosystem.
 * **Natural Language Queries**: Ask questions like "What assets are unused but packed?" or "Which prefabs reference this shader?" and get immediate answers
 * **Contextual Intelligence**: Powers advanced features like automatic summarization and flow diagrams for economy, design, and monetization systems
 
-#### [⚡ WirePilot](broken-reference)
+#### [⚡ WirePilot](overview.md#wirepilot)
 
 An intelligent system for automatic wiring and scaffolding that maintains your game's integrity as it grows.
 
@@ -48,19 +48,19 @@ An intelligent system for automatic wiring and scaffolding that maintains your g
 
 Specialized AI tools that handle specific development tasks. Each assistant uses the foundation layer to provide intelligent, context-aware solutions.
 
-#### [🖼 UI Builder](broken-reference)
+#### [🖼 UI Builder](ui-builder.md)
 
 **Fast interface creation with automatic wiring**
 
 Creates UI layouts and automatically handles connections between UI elements and your code. Uses WirePilot to wire UI elements to scripts and data, while Asset Atlas finds relevant prefabs, sprites, and animations.
 
-#### [📊 Auto-Profiler](broken-reference)
+#### [📊 Auto-Profiler](overview.md#auto-profiler)
 
 **AI-powered performance debugging**
 
 Captures runtime performance data from real player devices. When frame drops, memory leaks, or performance spikes occur, AI analysis identifies the most likely causes. Asset Atlas maps performance issues to specific assets and scripts, converting hours of log analysis into prioritized lists of problems to fix.
 
-#### [📈 Analytics Ninja](broken-reference)
+#### [📈 Analytics Ninja](overview.md#analytics-ninja)
 
 **Natural language telemetry queries**
 
