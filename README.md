@@ -4,8 +4,6 @@ description: The  Unity Co-pilot that helps develops ship LiveOps updates 10x fa
 
 # Welcome to Flow
 
-<figure><img src=".gitbook/assets/flowwwF.png" alt="" width="375"><figcaption></figcaption></figure>
-
 <p align="center"><a href="https://flow.letsterra.com" class="button primary">Visit Website</a></p>
 
 Flow is a Unity-native AI copilot built for LiveOps teams built by Terra.
