@@ -143,11 +143,4 @@ _What happens:_
 * **State Preservation:** Updates logic while preserving current game state and memory.
 * **Cross‑Platform Runtime:** Provides consistent APIs across Windows, macOS, Android, and iOS.
 
-### 🔑 Key Difference from “Hot Reload”
-
-* **Hot Reload** = a dev-time tool that helps you see changes instantly **while coding**.
-* **Hot Deploy** = a runtime system that pushes code updates to **players in production builds**.
-
-Think of hot reload as an **editor convenience**, and Hot Deploy as a **live deployment engine**.
-
 ***
