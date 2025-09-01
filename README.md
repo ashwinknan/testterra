@@ -1,5 +1,5 @@
 ---
-description: The most advanced co-pilot for Unity
+description: The  Unity Co-pilot that helps develops ship LiveOps updates 10x faster
 ---
 
 # Welcome to Flow
@@ -23,5 +23,3 @@ With Flow, LiveOps teams can:
 * **Profile automatically**: Capture performance snapshots directly from real players without manual setup.
 * **Understand players instantly**: Ask questions in plain English and get answers, insights, and visualizations powered by your own analytics.
 * **Orchestrate LiveOps seamlessly**: Monitor, test, and roll out changes—all from one command centre.
-
-If you encounter any issues or have questions,  drop us a note at [**flow@letsterra.com**](mailto:ashwin@letsterra.com). Our team will respond as quickly as possible. In some cases, we may need to ask follow-up questions to diagnose the root cause, not just the symptom.

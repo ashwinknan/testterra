@@ -45,4 +45,4 @@ All studio members sign in using Google Auth SSO with their  Google account. No 
 
 ### Support
 
-For account setup or team management questions, contact [flow@letsterra.com](mailto:flow@letsterra.com)
+For account setup or team management questions, contact [support@letsterra.com](mailto:flow@letsterra.com)

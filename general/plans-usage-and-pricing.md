@@ -66,7 +66,7 @@ Admins can see:
 
 #### Buying Credits
 
-1. Contact [flow@letsterra.com](mailto:flow@letsterra.com) to purchase credit packages
+1. Contact [support@letsterra.com](mailto:flow@letsterra.com) to purchase additional credit packages
 2. Credits are added to your studio account after wire transfer processing
 3. All team members share the same credit pool
 
@@ -137,7 +137,7 @@ You get up to 3 attempts at the same task. Beyond that you'll spend credits as i
 
 <summary><strong>How do I upgrade/downgrade plans?</strong></summary>
 
-&#x20;Contact [flow@letsterra.com](mailto:flow@letsterra.com) for plan changes.
+&#x20;Contact [support@letsterra.com](mailto:flow@letsterra.com) for plan changes.
 
 </details>
 
