@@ -2,6 +2,8 @@
 
 Flow transforms your game project from static assets and code into a **living system** — patchable, observable, and improvable in real time. Instead of traditional development cycles that require builds, deployments, and downtime, Flow lets you modify, monitor, and enhance your game while players are actively using it.
 
+<figure><img src="../.gitbook/assets/Screenshot 2025-09-01 at 3.25.18 PM.png" alt=""><figcaption><p>Flow appears as a chatbot on the left</p></figcaption></figure>
+
 ### How Flow Works
 
 Flow operates on two integrated layers:
