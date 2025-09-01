@@ -24,6 +24,36 @@ Hot Deploy Engine lets you modify C# scripts and instantly deploy those changes 
 {% step %}
 #### Open any script you wish to edit&#x20;
 
+Let's say your script is as below&#x20;
+
+```csharp
+/*
+ * Basic Unity shop manager with purchase button and $9.99 price display.
+ * Handles button clicks and logs purchase events.
+ */
+ 
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ShopManager : MonoBehaviour
+{
+    public Button purchaseButton;
+    public Text priceText;
+
+    void Start()
+    {
+        priceText.text = "$9.99";
+        purchaseButton.onClick.AddListener(OnPurchaseClick);
+    }
+
+    void OnPurchaseClick()
+    {
+        Debug.Log("Purchase initiated");
+        // Process purchase logic
+    }
+}
+```
+
 Make changes to any C# script in your project using your normal editor (VS Code, Visual Studio, etc.).
 
 _What you do:_ Normal coding workflow—edit, save, continue working
@@ -36,7 +66,39 @@ _What you do:_ Normal coding workflow—edit, save, continue working
 
 Hot Deploy Engine monitors your project and detects when scripts are modified.
 
-_What you see:_
+```csharp
+/*
+ * Enhanced shop manager with discount features.
+ * Adds 20% off label, reduces price to $7.99, and includes analytics tracking.
+ */
+
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ShopManager : MonoBehaviour
+{
+    public Button purchaseButton;
+    public Text priceText;
+    public Text discountLabel;
+
+    void Start()
+    {
+        priceText.text = "$7.99"; // Limited time offer!
+        discountLabel.text = "20% OFF!";
+        discountLabel.gameObject.SetActive(true);
+        purchaseButton.onClick.AddListener(OnPurchaseClick);
+    }
+
+    void OnPurchaseClick()
+    {
+        Debug.Log("Discounted purchase initiated");
+        Analytics.TrackEvent("discount_purchase_clicked");
+        // Process discounted purchase logic
+    }
+}
+```
+
+_What you see in VS Code:_
 
 * File marked as "Modified" in your editor
 * Diff view showing exactly what changed (additions, modifications)
