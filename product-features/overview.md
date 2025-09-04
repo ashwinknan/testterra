@@ -2,6 +2,8 @@
 
 Flow transforms your game project from static assets and code into a **living system** — patchable, observable, and improvable in real time. Instead of traditional development cycles that require builds, deployments, and downtime, Flow lets you modify, monitor, and enhance your game while players are actively using it.
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 <figure><img src="../.gitbook/assets/Screenshot 2025-09-01 at 3.25.18 PM.png" alt=""><figcaption><p>Flow appears as a chatbot on the left</p></figcaption></figure>
 
 ### How Flow Works
@@ -80,3 +82,5 @@ Flow is an integrated system where each component enhances the others:
 * **Hot Deploy Engine** enables all assistants to push changes instantly without downtime
 
 This integration means each assistant has full knowledge of your project structure, dependencies, and systems. When you use any Flow tool, it understands your codebase and can make intelligent decisions about how changes should propagate through your game.
+
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>

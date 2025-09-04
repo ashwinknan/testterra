@@ -13,6 +13,8 @@ Profiler pinpoints the costly calls, highlights oversized assets, and proposes o
 
 Auto Profiler is an intelligent performance analysis tool designed to reduce the complexity of Unity profiling. While Unity’s built-in Profiler is powerful, it often requires expert knowledge to interpret correctly, and sifting through performance logs can be time‑consuming. Auto Profiler streamlines this process by capturing performance data automatically and using AI‑powered analysis to highlight the most likely performance bottlenecks.
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 ***
 
 ### Feature Overview

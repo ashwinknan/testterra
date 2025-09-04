@@ -11,6 +11,8 @@ Type: _“Use this figma link a shop screen with item cards, purchase buttons, a
 UI Builder instantly lays out the screen, hooks up the UI events, and leaves you with editable components ready for polish.
 {% endhint %}
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 UI Builder is a feature in Flow that eliminates the traditional friction between design and implementation. Instead of exporting assets, hand‑creating hierarchies, and re‑anchoring layouts, developers can paste a Figma share URL and within minutes receive a fully structured Unity Canvas with prefabs, anchors, and components. This saves hours of repetitive work and ensures design fidelity, making iteration cycles dramatically faster.
 
 ### How UI Builder Works

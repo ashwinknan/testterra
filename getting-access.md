@@ -8,6 +8,8 @@ Instead of building a one-size-fits-all solution, we're working directly with Un
 
 We're also learning from each team we work with, which helps us build something that solves real problems that Unity developers actually face.
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 ### Requesting Access
 
 {% hint style="info" %}

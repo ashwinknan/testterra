@@ -4,6 +4,8 @@ description: Push updates to players without a full app release
 
 # 🔥 Hot Deploy Engine
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 Hot Deploy Engine is a runtime system that lets you deliver new C# code directly into a running Unity game — even one that players already have installed.
 
 Unlike “hot reload” tools (which only speed up coding in the editor), Hot Load actually updates **production builds in players’ hands**. That means you can fix bugs, patch logic, or roll out new features instantly — without waiting for an app store review or forcing players to reinstall.

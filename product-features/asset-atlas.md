@@ -8,6 +8,8 @@ Asset Atlas is the intelligence layer for your game project — a complete **kno
 
 Atlas automatically understands your Unity project so you can ask it questions and get instant answers about your code, assets, and how things connect.
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 {% hint style="info" %}
 **You ask:** "What scripts are in my project and how are they organized?"
 

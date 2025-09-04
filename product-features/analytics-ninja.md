@@ -4,6 +4,8 @@ description: Ask natural language questions about your game — no SQL, no schem
 
 # 📈 Analytics Ninja
 
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+
 ### Feature Overview
 
 Analytics Ninja transforms game analytics from manual SQL workflows into conversational intelligenc&#x65;**.** Connect your existing analytics platform, ask questions in plain English, and get precise answers with rich visualizations—no code required.
