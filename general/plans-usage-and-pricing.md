@@ -10,11 +10,11 @@ description: >-
 
 See \[flow pricing page] for detailed plan information . Flow offers three plans for users.&#x20;
 
-| Plan Name  | Price        | What you get               |
-| ---------- | ------------ | -------------------------- |
-| Kickstart  | $0           | 20 credits, 1 month access |
-| Flexible   | $50          | 5 credits, no expiry       |
-| Enterprise | $500 onwards | Bulk deal based on volume  |
+| Plan Name | Price               | What you get                                                                                                                |
+| --------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| Free      | $0                  | <p>One time grant of 250 credits</p><p>Credits never expire</p>                                                             |
+| Starter   | $299/month onwards  | <p>Minimum 1,500 credits per month</p><p>Unused credits carry over</p><p>Priority support</p>                               |
+| Growth    | $1499/month onwards | <p>Minimum 10,000 credits per month</p><p>Lowest price per credit</p><p>Unused credits carry over</p><p>Premium support</p> |
 
 ### How Credits Work
 
@@ -109,9 +109,7 @@ All team members can:
 ### Billing & Payments
 
 **Current Payment Method**: Wire transfer for all plans\
-**Kickstart**: No billing - credits expire after 1 month trial\
-**Flexible**: Pay-per-package as needed via wire transfer\
-**Enterprise**: Monthly invoicing with wire transfer payment
+
 
 _We're actively integrating direct payment methods for Flexible and Enterprise customers_
 
@@ -122,14 +120,6 @@ _We're actively integrating direct payment methods for Flexible and Enterprise c
 <summary><strong>What happens at 0 credits?</strong></summary>
 
 &#x20;Flow becomes read-only until more credits are purchased. No work is lost.
-
-</details>
-
-<details>
-
-<summary><strong>Do retries cost extra credits?</strong></summary>
-
-You get up to 3 attempts at the same task. Beyond that you'll spend credits as if it were a fresh new task&#x20;
 
 </details>
 
