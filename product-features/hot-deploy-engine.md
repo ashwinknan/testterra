@@ -255,22 +255,20 @@ Each assembly operates independently—you can update your UI code without touch
 The trade-off is complexity: you need to manage dependencies between assemblies and ensure updates don't break compatibility with other systems. Most projects work well with a single assembly initially.
 {% endhint %}
 
-### Roadmap & Current Limitations
+### Enterprise Features & Custom Development
 
-Some enterprise features aren't built-in yet, but we're actively working on them. Here's what you'll need to handle yourself for now:
+These features aren't part of our standard product since every organization has different needs. We build them custom after understanding your specific requirements:
 
-**Build Pipeline Integration**&#x20;
+**Build Pipeline Integration** We design CI/CD integrations that fit your existing workflow.
 
-You'll need to integrate Hot Deploy Engine into your existing CI/CD pipeline. We're developing streamlined build tools and would love to understand your specific workflow to prioritize features.
+**Deployment Management** We build hosting, versioning, and rollback systems based on your infrastructure needs.
 
-**Deployment Management**&#x20;
+**Security & Signing** We create signing and encryption solutions that work with your security requirements.
 
-You're responsible for hosting and distributing your hot updates. This means setting up your own CDN, versioning system, and rollback mechanisms. Managed hosting and automated rollback systems are on our development roadmap.
+**Enterprise Deployment** We develop staged rollouts and multi-DLL systems tailored to your deployment processes.
 
-**Security & Signing**&#x20;
+{% hint style="info" %}
+Contact us at the link below to discuss your specific needs. We'll design solutions that fit your exact requirements and timeline.
+{% endhint %}
 
-Code signing, encryption, and validation need to be implemented by your team based on your security requirements. We're planning standardized security features for future releases.
-
-**Enterprise Deployment**&#x20;
-
-Complex scenarios like multiple DLLs per platform or staged rollouts require custom development work. We're building more sophisticated deployment options based on customer feedback.
+<p align="center"><a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button primary">Contact us</a> </p>
