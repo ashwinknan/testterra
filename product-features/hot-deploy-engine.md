@@ -17,6 +17,10 @@ Hot Deploy Engine works on all Unity platforms and passes app store reviews:
 * Console platforms ✓
 * Desktop platforms ✓
 
+### How Hot Deploy Works
+
+Hot Deploy Engine uses an AOT+Interpreter system. Your main app contains the "foundation" (Unity engine, core systems, UI frameworks), while your game logic runs as interpreted code that can be updated anytime.
+
 ### What Hot Deploy Engine Does
 
 Hot Deploy Engine is designed to feel invisible during development. You work exactly like you always have—no special tools, no different workflow, no learning curve.
@@ -160,16 +164,6 @@ _What happens:_
 {% endstepper %}
 
 
-
-### How Hot Deploy Works
-
-Hot Deploy Engine uses an AOT+Interpreter system. Your main app contains the "foundation" (Unity engine, core systems, UI frameworks), while your game logic runs as interpreted code that can be updated anytime.
-
-**Performance:** Interpreted code runs at 69%-85% the speed of native code. For most game logic (UI, gameplay systems, business logic), this difference is unnoticeable.
-
-**Memory:** Hot-loaded code uses about 5-6 times more memory than native code for metadata, plus about 1MB per execution thread. Objects themselves use identical memory to native code.
-
-**Compatibility:** Works on all Unity platforms including iOS and Android.
 
 ### Setting Up Your Project for Hot Deploy
 
