@@ -14,7 +14,7 @@ See \[flow pricing page] for detailed plan information . Flow offers three plans
 | --------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | Free      | $0                  | <p>One time grant of 250 credits</p><p>Credits never expire</p>                                                             |
 | Starter   | $299/month onwards  | <p>Minimum 1,500 credits per month</p><p>Unused credits carry over</p><p>Priority support</p>                               |
-| Growth    | $1499/month onwards | <p>Minimum 10,000 credits per month</p><p>Lowest price per credit</p><p>Unused credits carry over</p><p>Premium support</p> |
+| Growth    | $1999/month onwards | <p>Minimum 10,000 credits per month</p><p>Lowest price per credit</p><p>Unused credits carry over</p><p>Premium support</p> |
 
 ### How Credits Work
 
