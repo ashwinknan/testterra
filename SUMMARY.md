@@ -18,3 +18,7 @@
 
 * [Account Management](general/account-management.md)
 * [Plans, Usage & Pricing](general/plans-usage-and-pricing.md)
+
+## Case Studies
+
+* [Adding a Complex Progression System to a live game](case-studies/adding-a-complex-progression-system-to-a-live-game.md)
