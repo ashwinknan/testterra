@@ -37,7 +37,7 @@ What seemed like a simple screen addition was actually a sophisticated technical
 
 ## What was pushed using Hot Deploy&#x20;
 
-Multiple scripts were modified—changes that would normally require a full app release. Three existing scripts were updated (**`HomescreenUI.cs, CueController.cs, GameManager.c`s**) and two new ones were added (**`CueShopUI.cs`**` ``and`` `**`CueDataManager.cs`**).&#x20;
+Multiple scripts were modified—changes that would normally require a full app release. Three existing scripts were updated (**`HomescreenUI.cs, CueController.cs, GameManager.cs`**) and two new ones were added (**`CueShopUI.cs`** and **`CueDataManager.cs`**).&#x20;
 
 Hot Deploy Engine deployed this entire system to players **without requiring any one to update their app.**&#x20;
 
@@ -81,7 +81,7 @@ public class CueShopUI : MonoBehaviour
 ```
 {% endcode %}
 
-{% code title="CueController.cs Modified" overflow="wrap" %}
+{% code title="Modified Script: CueController.cs" overflow="wrap" %}
 ```csharp
 // Modified existing gameplay to use new cue parameters
 public class CueController : MonoBehaviour 
