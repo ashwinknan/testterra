@@ -1,25 +1,53 @@
 ---
-description: Push updates to the player build without a full app release
+description: >-
+  Deploy any C# code update to 100% of players—without them downloading an app
+  update
 ---
 
 # 🔥 Hot Deploy Engine
 
 <a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
 
-Hot Deploy Engine lets you update your Unity game's code instantly—even for games already installed on players' devices. Push new features, fix bugs, or adjust game balance without waiting for app store approvals or forcing players to reinstall.
+Hot Deploy Engine is your delivery system that ensures every improvement you make reaches all your players—including the 20-30% who normally never update their apps.
 
-Instead of rebuilding your entire app when you change code, Hot Deploy Engine separates your game logic into "hot-updatable" code that can be changed anytime. Your players get these updates automatically while playing, without interruption.
+Not just server config tweaks. Real gameplay transformations:
 
+* New progression systems
+* Game mechanics & features
+* Bug fixes & balance changes
+* UI system changes
+* Core feature transformations
+
+**Hot Deploy is the delivery engine.** Every solution you build, every problem you solve—it reaches 100% of your players without app store friction.
+
+{% hint style="info" %}
 Hot Deploy Engine works on all Unity platforms and passes app store reviews:
 
 * iOS App Store approval ✓
 * Android Play Store approval ✓
 * Console platforms ✓
 * Desktop platforms ✓
+{% endhint %}
+
+### The Problem Hot Deploy Solves
+
+When you ship traditional app updates:
+
+* **20-30% of active players never download them**
+* The rest take **2-3 weeks** to adopt
+* Your retention features miss the at-risk players who need them most
+
+{% hint style="warning" %}
+Server configs reach everyone but only let you tweak parameters.
+{% endhint %}
+
+{% hint style="success" %}
+**Hot Deploy changes this:** Ship actual C# code—real gameplay transformations—to all players without download barriers.
+{% endhint %}
 
 ### How Hot Deploy Works
 
-Hot Deploy Engine uses an AOT+Interpreter system. Your main app contains the "foundation" (Unity engine, core systems, UI frameworks), while your game logic runs as interpreted code that can be updated anytime.
+Hot Deploy Engine uses a system where your main app contains the "foundation" (Unity engine, core systems, UI frameworks), while your game logic runs as interpreted code that can be updated anytime.
 
 ### What Hot Deploy Engine Does
 
@@ -253,16 +281,17 @@ The trade-off is complexity: you need to manage dependencies between assemblies 
 
 These features aren't part of our standard product since every organization has different needs. We build them custom after understanding your specific requirements:
 
-**Build Pipeline Integration** We design CI/CD integrations that fit your existing workflow.
+**Build Pipeline Integration:** We design CI/CD integrations that fit your existing workflow.
 
-**Deployment Management** We build hosting, versioning, and rollback systems based on your infrastructure needs.
+**Deployment Management:** We build hosting, versioning, and rollback systems based on your infrastructure needs.
 
-**Security & Signing** We create signing and encryption solutions that work with your security requirements.
+**Security & Sign-in:** We create signing and encryption solutions that work with your security requirements.
 
-**Enterprise Deployment** We develop staged rollouts and multi-DLL systems tailored to your deployment processes.
+**Enterprise Deployment:** We develop staged rollouts and multi-DLL systems tailored to your deployment processes.
 
 {% hint style="info" %}
 Contact us at the link below to discuss your specific needs. We'll design solutions that fit your exact requirements and timeline.
 {% endhint %}
 
 <p align="center"><a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button primary">Contact us</a> </p>
+
