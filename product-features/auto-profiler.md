@@ -6,14 +6,16 @@ description: >-
 
 # 📊 Auto-Profiler
 
-{% hint style="info" %}
-Type: _“The framerate drops in the boss fight — find the issue and suggest fixes.”_\
-Profiler pinpoints the costly calls, highlights oversized assets, and proposes optimizations — from code tweaks to asset compression.
-{% endhint %}
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
 
 Auto Profiler is an intelligent performance analysis tool designed to reduce the complexity of Unity profiling. While Unity’s built-in Profiler is powerful, it often requires expert knowledge to interpret correctly, and sifting through performance logs can be time‑consuming. Auto Profiler streamlines this process by capturing performance data automatically and using AI‑powered analysis to highlight the most likely performance bottlenecks.
 
-<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a> <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>
+{% hint style="success" %}
+Type: _“The frame rate drops in the boss fight — find the issue and suggest fixes.”_\
+Profiler pinpoints the costly calls, highlights oversized assets, and proposes optimizations — from code tweaks to asset compression.
+
+**Integrated with Hot Deploy:** Once you implement optimizations, deploy them to 100% of players without app updates. Performance improvements reach everyone—including the 20-30% of players on older devices who normally never update their apps.
+{% endhint %}
 
 ***
 
