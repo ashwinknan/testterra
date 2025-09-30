@@ -21,4 +21,4 @@
 
 ## Case Studies
 
-* [Adding a Complex Progression System to a live game](case-studies/adding-a-complex-progression-system-to-a-live-game.md)
+* [Case Study: When Config Tweaks Weren't Enough](case-studies/case-study-when-config-tweaks-werent-enough.md)
