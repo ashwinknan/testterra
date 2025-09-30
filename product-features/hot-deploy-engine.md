@@ -6,7 +6,7 @@ description: >-
 
 # 🔥 Hot Deploy Engine
 
-<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a>           <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>             <a href="../case-studies/case-study-when-config-tweaks-werent-enough.md" class="button primary">Ready Case Study </a>
+<a href="https://flow.letsterra.com/" class="button primary">Visit Website</a>           <a href="https://cal.com/terra-demo/30min?overlayCalendar=true" class="button secondary">Schedule a demo</a>             <a href="../case-studies/case-study-when-config-tweaks-werent-enough.md" class="button primary">Read Case Study </a>
 
 Hot Deploy Engine is your delivery system that ensures every improvement you make reaches all your players—including the 20-30% who normally never update their apps.
 
