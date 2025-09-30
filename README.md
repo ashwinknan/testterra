@@ -1,36 +1,62 @@
 ---
-description: The Unity-Native AI Copilot that makes your Live Game Ops 10x faster
+description: The Live Game Transformation Platform for Unity
 ---
 
 # Welcome to Flow
 
 <p align="center"><a href="https://flow.letsterra.com" class="button primary">Visit Website</a></p>
 
-### **Flow is the LiveOps companion every Unity dev wishes they had.**
+### **Flow is the LiveOps platform you wish you had.**
 
-It plugs directly into your Unity project, understands your data, and keeps track of your live game context—so you can ship faster, debug smarter, and keep players happy without leaving the Editor.\
+Flow is your **AI copilot for Unity development** paired with **an innovative run-time deployment engine** that helps you reach every player without an app update. Build better solutions faster, then ensure 100% of your players experience them.
 
+### The Two Problems Flow Solves
 
-It understands your Unity project, your data, and your live game context. With Flow, you can debug issues, build UI, analyze performance, query gameplay analytics, and even ship code updates—all in a fraction of the time.
+#### **Problem 1: Development Bottlenecks Slow You Down**
 
-By connecting to your Unity project and data sources, Flow indexes your project and continuously stays aware of configurations, events, and player behaviors—so every response is tailored to your live game.
+Finding bugs, optimizing performance, creating UI—manual work that keeps you from building what matters.
 
-### Why Unity Teams Love Flow
+#### **Problem 2: Your Best Work Never Reaches All Players**
 
-* ⚡ **No More Release Bottlenecks**\
-  Push fixes, balance tweaks, and UI changes live—skip the painful release cycle grind.
-* 🛠 **Debug With Context**\
-  Flow sees what’s happening inside your game and surfaces issues in minutes, not hours.
-* 🎮 **Performance From Real Players**\
-  Forget test rigs—Flow auto-profiles performance snapshots straight from real player sessions.
-* 🔍 **Ask, Don’t Query**\
-  “Which ability is overused?” “Where are players dropping out?” Just ask in plain English—Flow translates into charts, insights, and answers.
-* 🎛 **One Command Center**\
-  Monitor events, test rollouts, and orchestrate LiveOps without juggling tools.
+When you finally ship:
 
-### Flow is built for the Way Unity Devs Work
+* **20-30% of active players never download the update**
+* The rest take **2-3 weeks** to adopt
+* Your retention features miss the players who need them most
 
-Flow **feels native**—not bolted on. It speaks your project’s language, knows your configs, and indexes your events. Every suggestion, debug step, and insight is tied to _your_ actual code and data.
+{% hint style="success" %}
+**Flow solves both: AI copilot helps devs  do their best work. Hot Deploy ensures every player experiences it.**
+{% endhint %}
 
-👉 Instead of fighting release pipelines and tooling overhead, you focus on what matters: **building, fixing, and shipping games players love.**
+### Why AI Copilot + Hot Deploy Changes Everything
+
+#### **AI Tools Alone:**
+
+* Help you build better solutions ✅&#x20;
+* But 20-30% of players never experience them ❌
+* Takes 3 weeks to reach the rest ❌
+
+#### **Hot Deploy Alone:**
+
+* Reach 100% of players ✅
+* But you still do all the heavy lifting manually ❌
+
+#### **Flow = AI Copilot + Hot Deploy:**
+
+* AI accelerates your best work ✅&#x20;
+* Every solution reaches 100% of players ✅&#x20;
+* At-risk players benefit from your improvements ✅&#x20;
+
+<p align="center"><strong>One platform. Two problems solved</strong></p>
+
+### How Flow Works Together
+
+1. **Build** with Flow's integrated tools (UI Importer, AI Debugger, AI Profiler)
+2. **Deploy** via Hot Deploy to 100% of your players
+3. **Measure** impact with Analytics Engine
+4. **Iterate** based on real player data—deploy again instantly
+
+**The complete workflow: Build → Deploy → Measure → Iterate**
+
+All without app store friction. All reaching 100% of players.
 
