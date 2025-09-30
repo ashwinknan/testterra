@@ -12,17 +12,28 @@ Flow is your **AI copilot for Unity development** paired with **an innovative ru
 
 ### The Two Problems Flow Solves
 
-#### **Problem 1: Development Bottlenecks Slow You Down**
+#### Problem 1: Development Takes Too Long
 
-Finding bugs, optimizing performance, creating UI—manual work that keeps you from building what matters.
+Finding bugs, optimizing performance, creating UI—repetitive work that keeps you from solving real player problems.
 
-#### **Problem 2: Your Best Work Never Reaches All Players**
+**How Flow solves it:**\
+Flow's AI copilot features handle implementation overhead while you focus on creative decisions:
 
-When you finally ship:
+* [**UI Builder**](product-features/ui-builder.md) transforms Figma designs into Unity UI (30 seconds)
+* [**WirePilot**](product-features/wirepilot.md) scaffolds complete game systems from natural language requests and auto-wires components
+* [**Asset Atlas**](product-features/asset-atlas.md) indexes your entire Unity project so you can ask questions about any asset or system
+* [**AI Profiler**](product-features/auto-profiler.md) identifies bottlenecks from real player sessions
 
-* **20-30% of active players never download the update**
-* The rest take **2-3 weeks** to adopt
-* Your retention features miss the players who need them most
+#### Problem 2: Your Solutions Don't Reach At-Risk Players
+
+When you ship via app updates, 30-40% of active players never download them. The rest take 2-3 weeks. Your retention features miss the players most likely to churn.
+
+**How Flow solves it:**\
+[**Hot Deploy Engine**](product-features/hot-deploy-engine.md) deploys C# code to 90% of active players without them needing to download an update:
+
+* New progression systems, game mechanics, core features reach everyone
+* Players restart once (3 seconds) and experience improvements
+* At-risk players who skip updates get retention features when they need them
 
 {% hint style="success" %}
 **Flow solves both: AI copilot helps devs  do their best work. Hot Deploy ensures every player experiences it.**
@@ -51,7 +62,7 @@ When you finally ship:
 
 ### How Flow Works Together
 
-1. **Build** with Flow's integrated tools (UI Importer, AI Debugger, AI Profiler)
+1. **Build** with Flow's integrated tools (UI Importer, AI Profiler)
 2. **Deploy** via Hot Deploy to 100% of your players
 3. **Measure** impact with Analytics Engine
 4. **Iterate** based on real player data—deploy again instantly
